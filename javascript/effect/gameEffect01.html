@@ -89,7 +89,7 @@
             <div class="music__header">
                 <div>***</div>
                 <h2>Music player</h2>
-                <div>***</div>
+                <div class="music__close">X</div>
             </div>
             <div class="music__contents">
                 <img class="volume_icon" src="../assets/img/volume.svg" alt="볼륨" />
@@ -504,7 +504,7 @@
             </div>
             <div class="memory__result">           
                 <div class="result">게임 오버</div>
-                맞힌 개수 :<span class="resultScore">0j개</span>
+                맞힌 개수 :<span class="resultScore">0개</span>
                 <div class="result__restart">다시 시작하기</div>
             </div>
             <div class="memory__clear">           
@@ -525,11 +525,19 @@
     <script src="../assets/js/memory.js"></script>
     <script>
 
+        const Musicplayer = document.querySelector(".icon_box .icon1");
+
         const QuizIcon = document.querySelector(".icon_box .icon2");
         const QuizGame = document.querySelector(".search__inner");
 
         const MemoryIcon = document.querySelector(".icon_box .icon3");
         const MemoryGame = document.querySelector(".memory__inner");
+
+        // 1번 아이콘
+        Musicplayer.addEventListener("click",()=>{
+            musicWrap.classList.toggle("show");
+        })
+
 
         // 2번 아이콘
         QuizIcon.addEventListener("click",()=>{

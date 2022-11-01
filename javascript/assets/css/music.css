@@ -1,6 +1,13 @@
 @import url("https://webfontworld.github.io/earlyfont/EF_Macho.css");
 
 .music__wrap {
+    display: none;
+}
+.music__wrap.show {
+    display: block;
+}
+.music__close {
+    cursor: pointer;
 }
 .music__inner {
     width: 450px;

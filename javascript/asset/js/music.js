@@ -78,6 +78,8 @@ const musicListBtn = musicWrap.querySelector("#control-list");
 const musicList = musicWrap.querySelector(".music__list");
 const musicListUl = musicWrap.querySelector(".music__list ul");
 const closeBtn = musicWrap.querySelector(".music__list .close_btn");
+const musicClose = musicWrap.querySelector(".music__close");
+
 
 let musicIndex = 1;         // 현재 음악 인덱스
 
@@ -317,3 +319,8 @@ audioVolume.addEventListener("change", function (e) {
         volumeOffIcon.classList.remove("show");
     }
 });
+
+// 뮤직플레이어 종료
+musicClose.addEventListener("click", ()=>{
+    musicWrap.classList.remove("show")
+})
