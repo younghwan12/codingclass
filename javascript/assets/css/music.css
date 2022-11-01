@@ -9,6 +9,9 @@
 .music__close {
     cursor: pointer;
 }
+.music__close:hover {
+    color: red;
+}
 .music__inner {
     width: 450px;
     background: #000;
