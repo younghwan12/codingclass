@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../../javascript05.html">문자열 객체</a></li>
+                <li><a href="../../javascript06.html">배열 객체</a></li>
+                <li><a href="../../javascript07.html">수학 객체</a></li>
+                <li><a href="../../javascript08.html">숫자 객체</a></li>
+                <li><a href="../../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../../javascript10.html">요소 객체</a></li>
+                <li><a href="../../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+        <h2 class="t_tit" >프로그래머스 1단계 : 정수 제곱근 판별</h2>
+        <p class="t_box">코딩테스트 연습 &gt; 연습문제 &gt; 정수 제곱근 판별</p>
+        <hr>
+        <h3 class="t_tit2">✔ 문제 설명</h3>
+        <p class="t_desc">임의의 양의 정수 n에 대해, n이 어떤 양의 정수 x의 제곱인지 아닌지 판단하려 합니다. n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 양의 정수 x의 제곱이 아니라면 -1을 리턴하는 함수를 완성하세요.</p>
+        <h3 class="t_tit2">✔ 제한 사항</h3>
+        <p class="t_desc2">n은 1이상, 50000000000000 이하인 양의 정수입니다.</p>
+        <h3 class="t_tit2">✔ 입출력 예</h3>
+        <table class="t_table">
+        <tbody>
+        <tr>
+        <th>N</th>
+        <th>return</th>
+        </tr>
+        <tr>
+        <td class="ce">121</td>
+        <td class="ce">144</td>
+        </tr>
+        <tr>
+        <td class="ce">3</td>
+        <td class="ce">-1</td>
+        </tr>
+        </tbody>
+        </table>
+        <h3 class="t_tit2" data-ke-size="size23">✔ 문제풀이</h3>
+        <div class="t_code">
+<pre class="matlab"><code>function solution(n) {
+    var answer = 0;
+    let num = Math.sqrt(n);
+    if(num % 1 === 0 ) return (num+1) * (num+1)
+    else return -1
+    return answer;
+}
+</code></pre>
+</div>
+        <p class="t_tit2" data-ke-size="size16">✔ 설명</p>
+        <p class="t_box" data-ke-size="size16">Math.sqrt() 함수는 숫자의 제곱근을 반환하고 음수라면 NaN을 반환합니다. if문을 사용해서 true, false일 때 출력해주면 됩니다. 참 쉽죠?</p>
+        <p class="t_tit2" data-ke-size="size16">✔ 다른사람의 풀이</p>
+        <div class="t_code">
+<pre class="matlab"><code>function nextSqaure(n){
+    var result = 0;
+    var n = Math.sqrt(n);
+    result = Number.isInteger(n) ? Math.pow(n+1, 2) : 'no';
+    return result;
+}
+</code></pre>
+</div>
+            <p class="t_box" data-ke-size="size16">푸는 방법은 저와 같지만 삼항연산자를 사용하였군요. 사람사는거 다 똑같나 봅니다.</p>
+        <div class="t_link" style="display: flex;"><a href="https://https://school.programmers.co.kr/learn/courses/30/lessons/12934" target="_blank" rel="noopener">문제 보기</a></div>
+        </div>
+        </div>
+        </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
