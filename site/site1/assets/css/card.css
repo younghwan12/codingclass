@@ -1,0 +1,50 @@
+/* cardType */
+.card_inner {
+    display: flex;
+    justify-content: space-between;           /*양쪽 정렬*/
+}
+.card {
+    width: 32%;
+    background: #f5f5f5;
+}
+.card__body {
+    padding: 24px;
+}
+.card__body .tit {
+    font-size: 24px;
+    margin-bottom: 10px;
+    /* 한줄효과 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+}
+.card__body .desc {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 300;
+    /* 4줄이상이면 ...으로 표시 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+}
+
+@media(max-width : 768px) {
+    .card_inner {
+        display: block;
+    }
+    .card {
+        width: 98%;
+        margin-bottom: 15px;
+    }
+    .card__body .tit {
+        font-size: 20px;
+    }
+    .card__body .desc {
+        font-size: 16px;
+    }
+}

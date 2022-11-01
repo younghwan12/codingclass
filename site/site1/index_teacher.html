@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+
+    <!-- SEO -->
+    <meta name="author" content="왕자님">
+    <meta name="description" content="사이트 만들기 튜토리얼입니다.">
+    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 왕자님">
+    <meta name="robots" content="all">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common_t.css">
+
+    <!-- CSS(섹션별) -->
+    <link rel="stylesheet" href="assets/css/header_t.css">
+    <link rel="stylesheet" href="assets/css/slider_t.css">
+    <link rel="stylesheet" href="assets/css/image_t.css">
+    <link rel="stylesheet" href="assets/css/imgTexT_t.css">
+    <link rel="stylesheet" href="assets/css/card_t.css">
+    <link rel="stylesheet" href="assets/css/banner_t.css">
+    <link rel="stylesheet" href="assets/css/text_t.css">
+    <link rel="stylesheet" href="assets/css/footer_t.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/swiper.css"/>
+
+    <style>
+        /* #headerType {display: none;} */
+    </style>
+
+</head>
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="headerType" class="header__wrap nexon">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">alcohol <em>journalist</em></a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li class="active"><a href="#imageType">WHISKEY</a></li>
+                    <li><a href="#imgTextType">SITE</a></li>
+                    <li><a href="#cardType">BEER</a></li>
+                    <li><a href="#bannerType">BANNER</a></li>
+                    <li><a href="#textType">FOOD</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">Log in</a>
+            </div>
+            <div class="header__ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <!-- //headerType -->
+
+    <main id="mainType">
+        <section id="sliderType" class="slider__wrap content__item">
+            <h2 class="blind">슬라이드 영역</h2>
+            <div class="slider__inner">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide img1">
+                            <div class="desc">
+                                <span>alcohol</span>
+                                <h3>Drinks</h3>
+                                <p>
+                                    세상에 아주 다양한 술들이 있습니다.<br>
+                                    지금 만나러 가시죠
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide img2">
+                            <div class="desc">
+                                <span>alcohol</span>
+                                <h3>Drinks</h3>
+                                <p>
+                                    세상에 아주 다양한 술들이 있습니다.<br>
+                                    지금 만나러 가시죠
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="swiper-slide img3">
+                            <div class="desc">
+                                <span>alcohol</span>
+                                <h3>Drinks</h3>
+                                <p>
+                                    세상에 아주 다양한 술들이 있습니다.<br>
+                                    지금 만나러 가시죠
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>   
+                </div>            
+            </div>
+        </section>
+        <!-- //sliderType -->
+
+        <section id="imageType" class="type image__wrap nexon section content__item">
+            <h2>WHISKEY</h2>
+            <p>평소에 흔히 볼수있는 위스키 리스트입니다.</p>
+            <div class="image__inner container">
+                <article class="image img1">
+                    <h3 class="image__title">JACKDANIELS</h3>
+                    <p class="image__desc">잭다니엘 블랙라벨입니다. 도수는 40도 최소 4년 숙성한 위스키로서, 콜라를 섞어 잭콕으로 먹던가, 온더락잔에 얼음과 같이 드시면 됩니다. 사실 맛은 없다.</p>
+                    <a class="image__btn" href="/" title="자세히 보기">자세히 보기</a>
+                </article>
+                <article class="image img2">
+                    <h3 class="image__title">JAMESON</h3>
+                    <p class="image__desc">아일랜드 위스키 재임슨입니다. 레이디가가와 리아나가 사랑한 술로 알려져 더욱 유명해졌으며, 하이볼과 샷으로 먹지만 스트레이트로 마실 때 맛있는 술입니다.</p>
+                    <a class="image__btn yellow" href="/" title="자세히 보기">자세히 보기</a>
+                </article>
+            </div>
+        </section>
+        <!-- //imageType -->
+
+        <section id="imgTextType" class="type imgText__wrap nexon section gray content__item">
+            <h2 class="blind">유용한 사이트 살펴보기</h2>
+            <div class="imgText__inner container">
+                <div class="imgText__txt">
+                    <span>이미지 텍스트 유형01</span>
+                    <h3>다양한 술 종류 알아보기</h3>
+                    <p>다양한 술의 종류들에 대해서 알아볼 수 있으며 그에 따른 전문 사이트입니다.</p>
+                    <ul>
+                        <li><a href="/">위스키 사이트</a></li>
+                        <li><a href="/">와인 사이트</a></li>
+                        <li><a href="/">소주 사이트</a></li>
+                        <li><a href="/">맥주 사이트</a></li>
+                        <li><a href="/">막걸리 사이트</a></li>
+                        <li><a href="/">고량주 사이트</a></li>
+                    </ul>
+                </div>
+                <div class="imgText__img img1">
+                    <a href="/">위스키 사이트</a>
+                </div>
+                <div class="imgText__img img2">
+                    <a href="/" class="blue">와인 사이트</a>
+                </div>
+            </div>
+        </section>
+        <!-- //imgTextType -->
+
+        <section id="cardType" class="type card__wrap nexon section content__item">
+            <h2>세계맥주 추천</h2>
+            <p>편의점에서 보는 세계맥주 어떤걸 사야할지 모르시겠다구요?</p>
+            <div class="card_inner container">
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="assets/img/card_bg01_01.jpg" alt="축구 기초 강의">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">홉하우스13</h3>
+                        <p class="desc">맥주를 별로 선호하지 않는 제가 좋아하는 몇 안 되는 맥주입니다. 쌉쌀하고 강한 향이 따라오는 진한 라거로써 안주가 필요 없이 술 자체로 즐길수 있는 매력을 가지고있습니다.</p>
+                        <a class="btn" href="/">
+                            더 자세히 보기
+                        <span aria-hidden="true">
+                            <svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/>
+                            </svg>
+                        </span>
+                        </a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="assets/img/card_bg01_02.jpg" alt="드리블 기초 강의">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">기네스</h3>
+                        <p class="desc">호불호가 갈리는 기네스 흑맥주입니다. 탄산이 거의 없으며 쌉싸름 하고 진한 흑맥주의 맛을 잘 느낄수 있는 매력을 가지고 있습니다. 크리미한 거품을 빠트릴 순 없겠죠?</p>
+                        <a class="btn" href="/">
+                            더 자세히 보기
+                            <span aria-hidden="true">
+                                <svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="assets/img/card_bg01_03.jpg" alt="슈팅 기초 강의">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="tit">하이네켄</h3>
+                        <p class="desc">네덜란드의 맥주 브랜드. 유럽뿐만 아니라 세계적으로 인지도와 판매량에서 최상위 브랜드입니다. 소맥맛과 비슷하며 소맥을 좋아하는 사람에게 추천합니다. 벌꿀향이 나는 것은 포인트!</p>
+                        <a class="btn" href="/">
+                            더 자세히 보기
+                            <span aria-hidden="true">
+                                <svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- //cardType -->
+
+        <section id="bannerType" class="type banner__wrap nexon section content__item">
+            <h2 class="blind">배너 영역</h2>
+            <div class="banner__inner">
+                <h3 class="title">술믈리에 이XX</h3>
+                <p class="desc">더 다양한 정보는 구글링 해보시길 바랍니다.
+                    <a href="https://younghwan112.tistory.com/" title="블로그로 이동">https://google.co.kr/</a>
+                </p>
+                <span class="small">배너 유형01</span>
+            </div>
+        </section>
+        <!-- //bannerType -->
+
+        <section id="textType" class="type text__wrap nexon section content__item">
+            <span class="blind">텍스트 유형01</span>
+            <h2 class="mb70">술과 잘맞는 음식궁합</h2>
+            <div class="text__inner container">
+                <div class="text t1">
+                    <h3 class="text__title">위스키</h3>
+                    <p class="text__desc">어떤 음식과도 궁합이 맞는 위스키입니다. 온더락 잔에 다크 초콜릿과 함께해도 좋고, 과일과 함께해도 좋은 음식입니다.</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">와인</h3>
+                    <p class="text__desc">와인엔 치즈라는 말이 있을정도로 궁합이 잘맞지만 사실 다른음식들과도 잘 맞습니다. 레드와인은 스테이크와 함께 화이트와인은</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">소주</h3>
+                    <p class="text__desc">소주하면 생각나는 음식은 한국인이라면 삼겹살일겁니다. 삼쏘는 최고의 조합이며, 사실 어느 음식점을 가더라도 판매하고 있을정도로</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">맥주</h3>
+                    <p class="text__desc">간단하게 즐길수있는 주류로, 치킨에 맥주 치맥, 간단하게 견과류, 마른안주 어떤음식과도 조합이 좋습니다.</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">막걸리</h3>
+                    <p class="text__desc">비오는날 생각나는 주류로, 막걸리는 무조건 파전류와 함께해야하 한다는 인식이 있습니다. 파전이 없는 막걸리는 상상할 수 없습니다.</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">고량주</h3>
+                    <p class="text__desc">흔히 중식당에서 회식을 하면 볼수있는 주류로, 중국 술이기 때문에 중국음식들과 조합이 좋습니다, 유산슬, 깐풍기, 탕수육등등 생각나네요.</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+            </div>
+        </section>
+        <!-- //textType -->
+
+    </main>
+    <!-- //mainType -->
+
+    <footer id="footerType" class="type footer__wrap nexon section gray content__item">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>사이트</h3>
+                    <ul>
+                        <li><a href="#">웹표준 사이트</a></li>
+                        <li><a href="#">반응형 사이트</a></li>
+                        <li><a href="#">패럴랙스 사이트</a></li>
+                        <li><a href="#">포트폴리오 사이트</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>헤더 영역</h3>
+                    <ul>
+                        <li><a href="#">메뉴 유형01</a></li>
+                        <li><a href="#">메뉴 유형02</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>슬라이드 영역</h3>
+                    <ul>
+                        <li><a href="#">슬라이드 유형01</a></li>
+                        <li><a href="#">슬라이드 유형02</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>이미지 영역</h3>
+                    <ul>
+                        <li><a href="#">이미지 유형01</a></li>
+                        <li><a href="#">이미지 유형02</a></li>
+                        <li><a href="#">이미지/텍스트 유형01</a></li>
+                        <li><a href="#">이미지/텍스트 유형02</a></li>
+                        <li><a href="#">텍스트 유형01</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>컨텐츠 영역</h3>
+                    <ul>
+                        <li><a href="#">카드 유형01</a></li>
+                        <li><a href="#">카드 유형02</a></li>
+                        <li><a href="#">카드 유형03</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>푸터 영역</h3>
+                    <ul>
+                        <li><a href="#">푸터 메뉴 유형01</a></li>
+                        <li><a href="#">푸터 컨텍트 유형02</a></li>
+                        <li><a href="#">푸터 이메일 유형03</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__right">
+                2022 LeeYounghwan. Portfolio is Power<br>
+                All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- //footerType -->
+</body>
+<script src="assets/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
+
+    const btnStop = document.querySelector(".swiper-button-stop");
+    const btnStart = document.querySelector(".swiper-button-play");
+    const btnHam = document.querySelector(".header__ham");
+    const btnMenu = document.querySelector(".header__menu");
+    const btnMenuList = btnMenu.querySelectorAll("ul li a")
+
+    btnStart.style.display ="none";
+
+    btnStop.addEventListener("click", ()=>{
+        swiper.autoplay.stop();
+        btnStart.style.display ="block";
+        btnStop.style.display ="none";
+    });
+    btnStart.addEventListener("click", ()=>{
+        swiper.autoplay.start();
+        btnStart.style.display ="none";
+        btnStop.style.display ="block";
+    });
+
+    btnHam.addEventListener("click", () => {
+        btnHam.classList.toggle("active");
+        btnMenu.classList.toggle("active")
+        document.body.classList.toggle("fixed");
+    });
+
+    btnMenuList.forEach((list) => {
+        list.addEventListener("click", () => {
+            btnHam.classList.toggle("active");
+            btnMenu.classList.toggle("active")
+            document.body.classList.toggle("fixed");
+        });
+    })
+
+    window.addEventListener("resize", ()=> {
+        let width = window.innerWidth;
+        if(width > 1300){
+            document.body.classList.remove("fixed");
+            btnMenu.classList.remove("active");
+            btnHam.classList.remove("active");
+        }
+    });
+</script>
+
+<script>
+    window.addEventListener("scroll", ()=>{
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            document.querySelectorAll(".type").forEach((element, index)=>{
+                if(scrollTop >= element.offsetTop - 2){
+                    document.querySelectorAll(".header__menu li").forEach(li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".header__menu li:nth-child(" + (index + 1) + ")").classList.add("active");
+                };
+            })
+        })
+
+        document.querySelectorAll(".header__menu li a").forEach(li => {
+                li.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    document.querySelector(li.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+
+        const menuBtn = document.querySelector(".header__icon");
+        const menu = document.querySelector(".header__menu");
+        menuBtn.addEventListener("mouseover", () => {
+            menu.classList.add("on");
+        });
+        menu.addEventListener("mouseleave", () => {
+            menu.classList.remove("on");
+        });
+</script>
+
+</html>

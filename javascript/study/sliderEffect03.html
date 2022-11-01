@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">슬라이더 효과</h2>
+            <p class="t_desc">슬라이드 이펙트 - 좌로 움직이기(연속적으로)</p>
+            <p class="t_box">이번에는 사진을 우에서 좌로 한칸씩 땡겨가면서 다음사진으로 넘어가고, 5개의 사진이 연속적으로 계속 나오는 슬라이드를 만들어보겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/javascript/effect/sliderEffect03.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/javascript/effect/sliderEffect03.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/javascript/effect/sliderEffect03.html" target="_blank">원본 사이트 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <div class="t_code">
+<pre><code class="language-html">&lt;section id="sliderType01"&gt;
+    &lt;div class="slider__wrap"&gt;
+        &lt;div class="slider__img"&gt;
+            &lt;div class="slider__inner"&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg03.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg04.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg05.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg06.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="../assets/img/effect_bg07.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+</div>
+<h3 class="t_tit2">CSS 작성</h3>
+<p class="t_desc2">이미지 5번에서 1번으로 돌아갈때 부드럽게 넘어가기 위하여 가상변수6번도 이미지1번으로 만들어줍니다.</p>
+            <div class="t_code">
+<pre><code class="language-css">@import url('https://webfontworld.github.io/NanumBarunGothic/NanumBarunGothic.css');
+.slider__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider__img {           /* 이미지 보이는 영역 */
+    position: relative;
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+}
+.slider__inner {         /* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
+    display: flex;
+    flex-wrap: wrap;
+    width: 4800px;
+    height: 450px;
+}
+.slider {                /* 개별적인 이미지 */
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+.slider::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px;
+}
+.slider:nth-child(1)::before {content: '이미지1'}
+.slider:nth-child(2)::before {content: '이미지2'}
+.slider:nth-child(3)::before {content: '이미지3'}
+.slider:nth-child(4)::before {content: '이미지4'}
+.slider:nth-child(5)::before {content: '이미지5'}
+.slider:nth-child(6)::before {content: '이미지1'}
+
+@media (max-width: 800px){
+    .slider__img {
+        width: 400px;
+        height: 225px;
+    }
+}
+</code></pre>
+            </div>
+            
+<h3 class="t_tit2">JS 작성</h3>
+<p class="t_desc2">
+    첫번째 이미지를 복사해 6번째 사진이 나오는자리에 넣어주고, 5번 사진에서 1번사진으로 다시 넘어 갈 땐 setTimeout으로 0.7s뒤에 실행하게 만들어 애니메이션 효과가 부드럽게 만들어줍니다.
+</p>
+<div class="t_result">
+        <div class="t_code">
+<pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap"); 
+const sliderImg = document.querySelector(".slider__img");       //보여지는 영역
+const sliderInner = document.querySelector(".slider__inner");   //움직이는 영역 
+const slider = document.querySelectorAll(".slider");            //각각 이미지
+
+let currentIndex = 0;                                                   //현재 보이는 이미지
+let sliderCount = slider.length;                                        //이미지 갯수
+let sliderWidth = sliderImg.offsetWidth;                                //이미지 가로값
+let sliderClone = sliderInner.firstElementChild.cloneNode(true);      //첫번째 이미지 복사
+sliderInner.appendChild(sliderClone);                                   //첫번째 이미지를 마지막에 넣어줌
+
+function sliderEffect(){
+    currentIndex++;
+    sliderInner.style.transition = "all 0.6s";
+
+    sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)";
+
+
+    // sliderInner.style.transform = "translateX(-800px)"   800 * 1
+    // sliderInner.style.transform = "translateX(-1600px)"  800 * 2
+    // sliderInner.style.transform = "translateX(-2400px)"  800 * 3
+    // sliderInner.style.transform = "translateX(-3200px)"  800 * 4
+    // sliderInner.style.transform = "translateX(-4000px)"  800 * 5
+    // sliderInner.style.transform = "translateX(-4800px)"  800 * 6
+
+    // 마지막 사진에 위치 했을 때
+    if(currentIndex == sliderCount){
+        // 0.7s 뒤에 실행한다는 setTimeout을 줘서 5번에서 6번 넘어갈때 부드럽게 넘어가도록 설정합니다.
+        setTimeout(() => {
+            sliderInner.style.transition = "0s";
+            sliderInner.style.transform = "translateX(0px)"
+        }, 700);
+        
+        currentIndex = 0;
+    }
+
+    
+}
+setInterval(sliderEffect, 2000);
+</code></pre>
+        </div>
+</div>
+            
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

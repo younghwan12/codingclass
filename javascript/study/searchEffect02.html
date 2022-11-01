@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">Search Effect02</h2>
+            <p class="t_desc2">검색기능 예제2번입니다. indexOf로 만든 1번과는 다르게 includes()를 사용해서 제작하였습니다.includes() 메서드는 배열이 특정 요소를 포함하고 있는지 판별합니다.
+                그래서 사용자가 입력한 값을 미리 만들어놓은 input박스의 요소를 포함하고 있다면 보이게, 없다면 숨겨서 제작하였습니다.
+            </p>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/javascript/effect/searchEffect02.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/javascript/effect/searchEffect02.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/javascript/effect/searchEffect01.html" target="_blank">원본 사이트 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <p class="t_desc">searchEffect01 번과 마찬가지로 사용자가 이용 하기 위한 input 박스를 만들어 줍니다. 검색 대상도 데이터 이름으로 설정해 둡니다.</p>
+            <div class="t_code">
+<pre><code class="language-html">&lt;main id="main"&gt;
+&lt;div class="search__wrap"&gt;
+    &lt;span&gt;includes()를 이용하여 검색하기&lt;/span&gt;
+    &lt;h1&gt;CSS 속성 검색하기&lt;/h1&gt;
+    &lt;div class="search__box"&gt;
+        &lt;label for="search"&gt;검색하기&lt;/label&gt;
+        &lt;input type="text" id="search" placeholder="CSS 속성 및 유형을 입력해주세요!"&gt;
+    &lt;/div&gt;
+    &lt;div class="search__info"&gt;
+        &lt;div class="type"&gt;플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요!&lt;/div&gt;
+        &lt;div&gt;전체 속성 갯수 : &lt;span class="num"&gt;0&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="search__list"&gt;
+        &lt;div class="html"&gt;
+            &lt;ul&gt;
+                &lt;li data-name="align-color" data-type="플렉스"&gt;&lt;strong&gt;align-color&lt;/strong&gt; : align-color 속성은 콘텐츠 아이템의 색상을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="align-content" data-type="플렉스"&gt;&lt;strong&gt;align-content&lt;/strong&gt; : align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="align-items" data-type="플렉스"&gt;&lt;strong&gt;align-items&lt;/strong&gt; : align-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="align-self" data-type="플렉스"&gt;&lt;strong&gt;align-self&lt;/strong&gt; : align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="all" data-type="기타"&gt;&lt;strong&gt;all&lt;/strong&gt; : all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation" data-type="애니메이션"&gt;&lt;strong&gt;animation&lt;/strong&gt; : animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-delay" data-type="애니메이션"&gt;&lt;strong&gt;animation-delay&lt;/strong&gt; : animation-delay 속성은 애니메이션 지연 시간을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-direction" data-type="애니메이션"&gt;&lt;strong&gt;animation-direction&lt;/strong&gt; : animation-direction 속성은 애니메이션 움직임 방향을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-duration" data-type="애니메이션"&gt;&lt;strong&gt;animation-duration&lt;/strong&gt; : animation-duration 속성은 애니메이션 움직임 시간을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-fill-mode" data-type="애니메이션"&gt;&lt;strong&gt;animation-fill-mode&lt;/strong&gt; : animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-iteration-count" data-type="애니메이션"&gt;&lt;strong&gt;animation-iteration-count&lt;/strong&gt; : animation-iteration-count 속성은 애니메이션 반복 횟수 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-name" data-type="애니메이션"&gt;&lt;strong&gt;animation-name&lt;/strong&gt; : animation-name 속성은 애니메이션 keyframe 이름을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-play-state" data-type="애니메이션"&gt;&lt;strong&gt;animation-play-state&lt;/strong&gt; : animation-play-state 속성은 애니메이션 진행상태를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="animation-timeline" data-type="애니메이션"&gt;&lt;strong&gt;animation-timeline&lt;/strong&gt; : animation-timeline 속성은 요소에 적용할 스크롤 애니메이션을 설명하는 하나 이상의 at-규칙 이름을 지정합니다&lt;/li&gt;
+                &lt;li data-name="animation-timing-function" data-type="애니메이션"&gt;&lt;strong&gt;animation-timing-function&lt;/strong&gt; : animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="appearance" data-type="기타"&gt;&lt;strong&gt;appearance&lt;/strong&gt; : appearance 속성은 운영 체제의 테마를 기반으로 하는 UI 컨트롤의 기본 모양을 제어하는 ​​데 사용됩니다 ..&lt;/li&gt;
+                &lt;li data-name="aspect-ratio" data-type="기타"&gt;&lt;strong&gt;aspect-ratio&lt;/strong&gt; : aspect-ratio 속성은 자동 크기 및 기타 레이아웃 기능 계산에 사용되는 상자의 기본 종횡비를 설정 합니다.&lt;/li&gt;
+                &lt;li data-name="backdrop-filter" data-type="효과"&gt;&lt;strong&gt;backdrop-filter&lt;/strong&gt; : backdrop-filter 속성은 배경에 그래픽 효과를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="backface-visibility" data-type="기타"&gt;&lt;strong&gt;backface-visibility&lt;/strong&gt; : backface-visibility 속성은 요소의 뒷면을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background" data-type="백그라운드"&gt;&lt;strong&gt;background&lt;/strong&gt; : background 속성은 백그라운드 속성을 일괄적으로 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-attachment" data-type="백그라운드"&gt;&lt;strong&gt;background-attachment&lt;/strong&gt; : background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-blend-mode" data-type="백그라운드"&gt;&lt;strong&gt;background-blend-mode&lt;/strong&gt; : background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-clip" data-type="백그라운드"&gt;&lt;strong&gt;background-clip&lt;/strong&gt; : background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt;/li&gt;
+                &lt;li data-name="background-color" data-type="백그라운드"&gt;&lt;strong&gt;background-color&lt;/strong&gt; : background-color 속성은 백그라운드 색을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-image" data-type="백그라운드"&gt;&lt;strong&gt;background-image&lt;/strong&gt; : background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-origin" data-type="백그라운드"&gt;&lt;strong&gt;background-origin&lt;/strong&gt; : background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt;/li&gt;
+                &lt;li data-name="background-position" data-type="백그라운드"&gt;&lt;strong&gt;background-position&lt;/strong&gt; : background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-position-x" data-type="백그라운드"&gt;&lt;strong&gt;background-position-x&lt;/strong&gt; : background-position-x 속성은 백그라운드 이미지의 x축 위치 영역을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-position-y" data-type="백그라운드"&gt;&lt;strong&gt;background-position-y&lt;/strong&gt; : background-position-y 속성은 백그라운드 이미지의 y축 위치 영역을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-repeat" data-type="백그라운드"&gt;&lt;strong&gt;background-repeat&lt;/strong&gt; : background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="background-size" data-type="백그라운드"&gt;&lt;strong&gt;background-size&lt;/strong&gt; : background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="block-size" data-type="기타"&gt;&lt;strong&gt;block-size&lt;/strong&gt; : block-size 속성은 쓰기 모드에 따라 요소 블록의 가로 또는 세로 크기를 정의합니다..&lt;/li&gt;
+                &lt;li data-name="border" data-type="보더"&gt;&lt;strong&gt;border&lt;/strong&gt; : border 속성은 테두리 속성을 일괄적으로 설정합니다.&lt;/li&gt;
+                &lt;li data-name="border-block" data-type="보더"&gt;&lt;strong&gt;border-block&lt;/strong&gt; : border-block 속성은 개별 논리적 블록 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성 입니다.&lt;/li&gt;
+                &lt;li data-name="border-block-color" data-type="보더"&gt;&lt;strong&gt;border-block-color&lt;/strong&gt; : border-block-color 속성은 방향 및 텍스트 방향에 따라 물리적 테두리 색상에 매핑되는 요소의 블록 테두리 색상을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-block-end" data-type="보더"&gt;&lt;strong&gt;border-block-end&lt;/strong&gt; : border-block-end 속성은 블록 끝 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성 입니다.&lt;/li&gt;
+                &lt;li data-name="border-block-end-color" data-type="보더"&gt;&lt;strong&gt;border-block-end-color&lt;/strong&gt; : border-block-end-color 속성은 블록 끝 테두리 색상을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-block-end-style" data-type="보더"&gt;&lt;strong&gt;border-block-end-style&lt;/strong&gt; : border-block-end-style 속성은 블록 끝 스타일 속성을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-block-end-width" data-type="보더"&gt;&lt;strong&gt;border-block-end-width&lt;/strong&gt; : border-block-end-width 속성은 블록 끝 크기 값을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-block-start" data-type="보더"&gt;&lt;strong&gt;border-block-start&lt;/strong&gt; : border-block-start 속성은 블록 처음 테두리 속성 값을 스타일 시트의 한 위치에 설정하기 위한 약식 속성 입니다.&lt;/li&gt;
+                &lt;li data-name="border-block-start-color" data-type="보더"&gt;&lt;strong&gt;border-block-start-color&lt;/strong&gt; : border-block-start-color 속성은 블록 처음 테두리 색상을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-block-start-style" data-type="보더"&gt;&lt;strong&gt;border-block-start-style&lt;/strong&gt; : border-block-start-style 속성은 블록 처음 스타일 속성을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-block-start-width" data-type="보더"&gt;&lt;strong&gt;border-block-start-width&lt;/strong&gt; : border-block-start-width 속성은 블록 처음 크기값을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-block-style" data-type="보더"&gt;&lt;strong&gt;border-block-style&lt;/strong&gt; : border-block-style 속성은 블록의 테두리 스타일 속성을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-block-width" data-type="보더"&gt;&lt;strong&gt;border-block-width&lt;/strong&gt; : border-block-width 속성은 블록의 테두리 크기값을 정의합니다.&lt;/li&gt;
+                &lt;li data-name="border-bottom" data-type="보더"&gt;&lt;strong&gt;border-bottom&lt;/strong&gt; : border-bottom 속성은 테두리 아래쪽 속성을 일괄적으로 설정합니다.&lt;/li&gt;
+                &lt;li data-name="data"&gt;&lt;strong&gt;data&lt;/strong&gt; : data 태그는 주어진 요소의 데이터 값을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="datalist"&gt;&lt;strong&gt;datalist&lt;/strong&gt; : datalist 태그는 선택 목록과 자동 완성 기능을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="dd"&gt;&lt;strong&gt;dd&lt;/strong&gt; : dd 태그는 설명 목록의 항목을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="del"&gt;&lt;strong&gt;del&lt;/strong&gt; : del 태그는 문서의 삭제된 텍스트를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="details"&gt;&lt;strong&gt;details&lt;/strong&gt; : details 태그는 접기/펼치기 목록을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="dfn"&gt;&lt;strong&gt;dfn&lt;/strong&gt; : dfn 태그는 용어를 정의할 때 설정합니다.&lt;/li&gt;
+                &lt;li data-name="dialog"&gt;&lt;strong&gt;dialog&lt;/strong&gt; : dialog 태그는 팝업 정보을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="dir"&gt;&lt;strong&gt;dir&lt;/strong&gt; : dir 태그는 파일 및 폴더의 디렉토리를 설정합니다. 현재는 사용하지 않습니다.&lt;/li&gt;
+                &lt;li data-name="div"&gt;&lt;strong&gt;div&lt;/strong&gt; : div 태그는 문서의 영역을 나누거나 그룹화 할 때 설정합니다.&lt;/li&gt;
+                &lt;li data-name="dl"&gt;&lt;strong&gt;dl&lt;/strong&gt; : dl 태그는 설명 목록을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="dt"&gt;&lt;strong&gt;dt&lt;/strong&gt; : dt 태그는 설명 목록 항목의 제목을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="em"&gt;&lt;strong&gt;em&lt;/strong&gt; : em 태그는 텍스트를 강조할 때 설정합니다.&lt;/li&gt;
+                &lt;li data-name="embed"&gt;&lt;strong&gt;embed&lt;/strong&gt; : embed 태그는 외부 콘텐츠를 사용할 수 있도록 설정합니다.&lt;/li&gt;
+                &lt;li data-name="fieldset"&gt;&lt;strong&gt;fieldset&lt;/strong&gt; : fieldset 태그는 폼 컨트롤 요소의 내부 영역을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="figcaption"&gt;&lt;strong&gt;figcaption&lt;/strong&gt; : figcaption 태그는 figure 요소의 설명 또는 제목을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="figure"&gt;&lt;strong&gt;figure&lt;/strong&gt; : figure 태그는 인용, 도표, 사진, 코드 등의 독립적인 콘텐츠를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="font"&gt;&lt;strong&gt;font&lt;/strong&gt; : font 태그는 폰트의 크기, 색, 종류를 설정합니다.&lt;/li&gt;
+                &lt;li data-name="footer"&gt;&lt;strong&gt;footer&lt;/strong&gt; : footer 태그는 사이트 관련 정보 및 관련 링크 콘텐츠 섹션을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="form"&gt;&lt;strong&gt;form&lt;/strong&gt; : form 태그는 웹 서버에 정보를 제공하는 폼 컨트롤 유형을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="frame"&gt;&lt;strong&gt;frame&lt;/strong&gt; : frame 태그는 다른 HTML문서가 표시 될 수 있는 특정 영역을 설정합니다.&lt;/li&gt;
+                &lt;li data-name="frameset"&gt;&lt;strong&gt;frameset&lt;/strong&gt; : frameset 태그는 레이아웃 구성을 위한 프레임을 설정합니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;                
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+</div>
+</code></pre>
+<h3 class="t_tit2">CSS 작성</h3>
+<p class="t_desc">스타일시트를 이용해서 폰트의 종류,크기와 디자인을 완성시켜줍니다.</p>
+            <div class="t_code">
+<pre><code class="language-css">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NexonLv1Gothic';
+    color: #223547;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--htmlColor);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* header */
+#header {}
+#header nav {
+    margin: 10px;
+}
+#header nav ul {}
+#header nav li {
+    position: relative;
+    display: inline;
+}
+#header nav li a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--htmlColor);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'NexonLv1Gothic';
+}
+#header nav li.active a {
+    background-color: var(--htmlColor);
+    color: #fff;
+}
+#header nav li .sub {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 400px;
+}
+#header nav li .sub li a {
+    width: auto;
+    background-color: transparent;
+    color: var(--htmlColor);
+    border: 0;
+    text-align: left;
+    line-height: 1.2;
+}
+#header nav li .sub li.active a {
+    text-decoration: underline;
+}
+/* main */
+#main {
+    margin: 50px 10px;
+}
+.search__wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 3px solid var(--htmlColor);
+    border-radius: 20px;
+    background-color: #f1f3f6;
+    padding: 30px;
+    text-align: center;
+}
+.search__wrap > span {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.search__wrap > h1 {
+    font-family: 'Tmon';
+    color: var(--htmlColor);
+    font-size: 6vw;
+    margin-bottom: 10px;
+}
+.search__box {
+    margin-bottom: 20px;
+}
+.search__box label {
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden
+}
+.search__box input {
+    border: 2px solid var();
+    padding: 15px 40px;
+    width: 70%;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.search__list li {
+    text-align: left;
+    line-height: 1.7;
+}
+.search__list li.hide {
+    display: none;
+}
+.search__list li {
+
+}
+
+.search__list li.show {
+    display: block;
+}
+.search__info {
+    text-align: right;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--htmlColor);
+}
+.search__info .type {
+    text-align: center;
+    margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+    .search__wrap {
+        padding: 20px;
+    }
+    .search__wrap > span {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .search__wrap > h1 {
+        font-size: 44px;
+    }
+    .search__box input {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}
+/* footer */
+#footer {
+    text-align: center;
+}
+
+#footer a {
+    color: #000;
+    font-family: 'NexonLv1Gothic';
+    padding-bottom: 50px;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+</code></pre>
+<h3 class="t_tit2">JS 작성</h3>
+<p class="t_desc">스크립트 부분입니다. input박스와 목록 리스트를 설정합니다. cssName을 searchList에 있는 모든 이름을 가져오는걸로 설정한뒤
+    cssName에 사용자가 찾는 단어를 포함한다면 hide를 remove하고, 포함하지않는다면 hide를 add해 보이지 않게 설정하였습니다.
+</p>
+            <div class="t_code">
+<pre><code class="language-js">const searchBox = document.querySelector(".search__box input");   //input 박스
+const searchList = document.querySelectorAll(".search__list ul li");    //목록 리스트
+
+const searchInfo = document.querySelector(".search__info .num");
+
+//속성 갯수 설정하기
+
+
+searchInfo.textContent = searchList.length;
+
+searchBox.addEventListener("keyup", ()=>{
+    const searchWord = searchBox.value;   //사용자가 입력한 키워드
+
+    searchList.forEach(el => {
+        const cssName = el.dataset.name;
+        // console.log(cssName);
+
+        if(cssName.includes(searchWord)){
+            el.classList.remove("hide");
+        } else {
+            el.classList.add("hide");
+        }
+    });
+})
+</code></pre>
+</div> 
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

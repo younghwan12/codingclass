@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: "NexonLv1Gothic";
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;            
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: normal;
+            text-align: center;
+            margin-bottom: 87px;
+        }
+        .section > p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #000;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        /* textType */
+        .text__inner {
+        }
+        .text__top {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .text__bottom {
+            display: flex;
+        }
+        .text {
+            width: 33%;
+            position: relative;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        .text__inner .text:hover {
+            background-color: #f5f5f5;
+        }
+        .text .icon {
+            height: 60px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        .text img {
+            height: 24px;
+            position: absolute;
+            left: 38px;
+            top: 38px;
+        }
+        .icon__box {
+            width: 60px;
+            height: 60px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        .text .h3 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        .text .desc {
+            font-size: 18px;
+            margin-top: 10px;
+            line-height: 1.4;
+            font-weight: 300;
+            margin-bottom: 19px;
+        }
+        .text .text__btn {
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="textType01" class="text__wrap nexon section">
+        <p class="text__type">텍스트 유형01</p>
+        <h2>노래 플레이리스트 모음</h2>
+        <div class="text__inner container">
+            <div class="text__top">
+                <article class="text">
+                    <figure class="icon__box">
+                        <img src="img/icon01.png" alt="icon">
+                    </figure>
+                    <h3 class="h3">카페에서 듣기좋은 리스트</h3>
+                    <p class="desc">카페에서 듣기좋은 플레이 리스트입니다<br>카페에서 듣기좋은 플레이 리스트입니다<br>카페에서 듣기좋은 플레이 리스트입니다</p>
+                    <a class="text__btn" href="/" title="더보기">더보기</a>
+                </article>
+                <article class="text">
+                    <figure class="icon__box" style="background-color: #3e2020;">
+                        <img src="img/icon02.png" alt="icon">
+                    </figure>
+                    <h3 class="h3">비오는날 듣기좋은 리스트</h3>
+                    <p class="desc">비오는날 듣기좋은 플레이 리스트입니다<br>비오는날 듣기좋은 플레이 리스트입니다<br>비오는날 듣기좋은 플레이 리스트입니다</p>
+                    <a class="text__btn" href="/" title="더보기">더보기</a>
+                </article>
+                <article class="text">
+                    <figure class="icon__box" style="background-color: #fff282;">
+                        <img src="img/icon03.png" alt="icon">
+                    </figure>
+                    <h3 class="h3">시간가는줄 모르는 플레이리스트</h3>
+                    <p class="desc">듣느라 시간가는줄 모르는 플레이리스트요<br>듣느라 시간가는줄 모르는 플레이리스트요<br>듣느라 시간가는줄 모르는 플레이리스트요</p>
+                    <a class="text__btn" href="/" title="더보기">더보기</a>
+                </article>
+            </div>
+            <div class="text__bottom">
+                <article class="text">
+                    <figure class="icon__box" style="background-color: #64a092;">
+                        <img src="img/icon04.png" alt="icon">
+                    </figure>
+                    <h3 class="h3">X톡 하면서 듣기좋은 리스트</h3>
+                    <p class="desc">X톡 하면서 듣기좋은 플레이 리스트입니다<br>X톡 하면서 듣기좋은 플레이 리스트입니다<br>X톡 하면서 듣기좋은 플레이 리스트입니다</p>
+                    <a class="text__btn" href="/" title="더보기">더보기</a>
+                </article>
+                <article class="text">
+                    <figure class="icon__box" style="background-color: #ff8282;">
+                        <img src="img/icon05.png" alt="icon">
+                    </figure>
+                    <h3 class="h3">게임하면서 듣기좋은 리스트</h3>
+                    <p class="desc">게임하면서 듣기 좋은 플레이 리스트입니다<br>게임하면서 듣기 좋은 플레이 리스트입니다<br>게임하면서 듣기 좋은 플레이 리스트입니다</p>
+                    <a class="text__btn" href="/" title="더보기">더보기</a>
+                </article>
+                <article class="text">
+                    <figure class="icon__box" style="background-color: #9bff82;">
+                        <img src="img/icon06.png" alt="icon">
+                    </figure>
+                    <h3 class="h3">이별후 듣는 플레이리스트</h3>
+                    <p class="desc">들으면 눈물나는 플레이리스트 입니다<br>들으면 눈물나는 플레이리스트 입니다<br>들으면 눈물나는 플레이리스트 입니다</p>
+                    <a class="text__btn" href="/" title="더보기">더보기</a>
+                </article>
+            </div>            
+        </div>
+    </section>
+</body>
+</html>

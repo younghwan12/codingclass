@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+        .svgBox {
+            padding: 40px;
+        }
+        .svgBox > svg {
+            width: 160px; height: 160px; background: #FFEBEE;
+            margin: 6px;
+        }
+        .sample {
+            border: 1px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹 표준, 웹 호환성, 웹 접근성의 이해</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">animation</h2>
+            <p class="t_desc2">animation : name | duration | timing-function | delay | iteration | direction | fill-mode | play-state
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>종류</th>
+                        <th>예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>animation-name</td>
+                        <td>@keyframe에 지정된 이름을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>animation-duration</td>
+                        <td>애니메이션이 실행되는 시간을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>animation-timing-function</td>
+                        <td>애니메이션 키프레임 움직임을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>animation-delay</td>
+                        <td>애니메이션이 시작되기 전까지 시간을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>animation-iteration</td>
+                        <td>애니메이션 반복 횟수를 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>animation-derection</td>
+                        <td>애니메이션 방향을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>animation-fill-mode</td>
+                        <td>애니메이션 끝나고 난 뒤 어떤 값을 적용할지 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>animation-play-state</td>
+                        <td>애니메이션 실행 상태를 설정합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <br>
+            <h2 class="t_tit">transtion</h2>
+            <p class="t_desc2">transtion : property | durtion | timing-function | delay</p>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>종류</th>
+                        <th>예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>transition-property</td>
+                        <td>트렌지션을 적용할 CSS 속성 대상을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>transition-druation</td>
+                        <td>트렌지션 작동시간을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>transition-timing-function</td>
+                        <td>트렌지션 움직임 효과를 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>transition-delay</td>
+                        <td>트렌지션이 시작되기 전까지 시간을 설정합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <h2 class="t_tit">timing-function</h2>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width: 30%">
+                    <col style="width: 70%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>종류</th>
+                        <th>예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>linear</td>
+                        <td>일정한 간격으로 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>ease</td>
+                        <td>처음에는 서서히 가속하고 마지막 부분에서 급격히 감속합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>ease-in</td>
+                        <td>처음에는 천천히 시작하고 마지막에 가속합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>ease-out</td>
+                        <td>처음에는 최대 속도로 시작하고 마지막에 감속합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>ease-in-out</td>
+                        <td>처음에는 제로 속도로 시작하고, 중간 지점에서 최고 속도로 움직이고, 마지막 부분에서 서서히 감속합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>step-start</td>
+                        <td>애니메이션을 시작점에서 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>step-end</td>
+                        <td>애니메이션을 끝점에서 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>steps(int, start/end)</td>
+                        <td>애니메이션을 단계별을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>cubic-bezier(n,n,n,n)</td>
+                        <td>버지니아 곡선 값을 만들어서 설정합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="t_tit2">timing-function 예시 (코드는 코드팬으로 확인하세요!)</h2>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="CSS_timingfunction" src="https://codepen.io/younghwan12/embed/PoePEya?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/PoePEya">
+                    CSS_timingfunction</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+            <h2 class="t_tit2">timing-function 예시2 (코드는 코드팬으로 확인하세요!)</h2>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="CSS_timingfunction2" src="https://codepen.io/younghwan12/embed/mdLepax?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/mdLepax">
+                    CSS_timingfunction2</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+            <h2 class="t_tit2">cubic-bezier 예시 (코드는 코드팬으로 확인하세요!)</h2>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="cubic-bezier" src="https://codepen.io/younghwan12/embed/zYjvROK?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/zYjvROK">
+                    cubic-bezier</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+            <h2 class="t_tit2">animation-delay 예시 (코드는 코드팬으로 확인하세요!)</h2>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="CSS_animation-delay" src="https://codepen.io/younghwan12/embed/eYrpVJz?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/eYrpVJz">
+                    CSS_animation-delay</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+            <h2 class="t_tit2">animation-iteration-count 예시 (코드는 코드팬으로 확인하세요!)</h2>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="CSS_animation-iteration-count" src="https://codepen.io/younghwan12/embed/ZEobrOO?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/ZEobrOO">
+                    CSS_animation-iteration-count</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+            <h2 class="t_tit2">animation-direction 예시 (코드는 코드팬으로 확인하세요!)</h2>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="CSS_animation-direction" src="https://codepen.io/younghwan12/embed/YzLyeGv?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/YzLyeGv">
+                    CSS_animation-direction</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+            <h2 class="t_tit2">animation-fill-mode 예시 (코드는 코드팬으로 확인하세요!)</h2>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="CSS_animation-fill-mode" src="https://codepen.io/younghwan12/embed/bGMVLvG?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/bGMVLvG">
+                    CSS_animation-fill-mode</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+            <h2 class="t_tit2">animation-play-state 예시 (코드는 코드팬으로 확인하세요!)</h2>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="CSS_animation-fill-mode" src="https://codepen.io/younghwan12/embed/wvjKyob?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/wvjKyob">
+                    CSS_animation-fill-mode</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+            
+            
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- 웹 표준 준수 img에 alt태그에 사진이없을 때 사진을 대신하는 이름을 alt태그로 적는다 -->

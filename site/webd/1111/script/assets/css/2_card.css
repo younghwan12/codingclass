@@ -1,0 +1,79 @@
+.card__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    width: 32%;
+    position: relative;
+}
+.card .card_img2 {
+    position: absolute;
+    left: 322px;
+    top: 395px;
+    width: 55px;
+    height: 45px;
+}
+.card_tit {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card_tit ul {
+}
+.card_tit li {
+    display: inline-block;
+}
+
+.card_tit li.active a {
+    color: #000;
+}
+.card_tit li a.active {
+    color: #fff;
+}
+.card_tit li a {
+    color: #ccc;
+}
+
+.card_tit {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card_tit em {
+    color: #cdcdcd;
+}
+.card_desc {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    line-height: 20px;
+}
+.card_desc1 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+.card_desc2 {
+    margin-top: 15px;
+    font-weight: 600;
+}
+.card_desc3 {
+    margin-top: 15px;
+    font-weight: 600;
+}
+.card_desc3 em {
+    margin-left: 5px;
+    color: #666;
+}

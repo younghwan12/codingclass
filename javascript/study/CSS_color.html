@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹 표준, 웹 호환성, 웹 접근성의 이해</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">색상 표현법</h2>
+            <p class="t_desc">안녕하세요. 오늘은 CSS에서 색상을 표현하는 방법을 간단히 설명드리겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">1. 색상명으로 표현</h3>
+            <p class="t_desc2">
+                색상의 이름을 나타내는 방법으로, 약 140가지의 색상 이름들이 브라우저에 미리 정의되어 있습니다
+            </p>
+            <p class="t_box">
+                ex) red yellow brown...
+            <div class="t_code">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;p style="background-color:red;"&gt;colorname : red&lt;/p&gt;
+    &lt;p style="background-color:green;"&gt;colorname : green&lt;/p&gt;
+    &lt;p style="background-color:blue;"&gt;colorname : blue&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        <p class="t_desc" style="color: #000; background-color: red;">colorname : red</p>
+                        <p class="t_desc" style="color: #000; background-color: green;">colorname : green</p>
+                        <p class="t_desc" style="color: #000; background-color: blue;">colorname : blue</p>
+                    </div>
+                </details>               
+            </div>
+            <h3 class="t_tit2">2. RGB값으로 표현</h3>
+            <p class="t_desc2">
+                rgb(red, green, blue)와 같은 형식으로 색을 표현합니다. 여기서 red, green, blue 각각의 변수에는 0에서 255사이의 정수를 입력하거나 백분율 값을 지정하여 색상을 결정짓습니다.
+            </p>
+            <p class="t_box">
+                ex) rgb(255, 255, 255)
+            <div class="t_code">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;p style="background-color: rgb(255, 0, 0);"&gt;red&lt;/p&gt;
+    &lt;p style="background-color: rgb(0, 255, 0);"&gt;green&lt;/p&gt;
+    &lt;p style="background-color: rgb(0, 0, 255);"&gt;blue&lt;p&gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        <p class="t_desc" style="color: #000; background-color: red;">red</p>
+                        <p class="t_desc" style="color: #000; background-color: green;">green</p>
+                        <p class="t_desc" style="color: #000; background-color: blue;">blue</p>
+                    </div>
+                </details>               
+            </div>
+
+            <h3 class="t_tit2">3. RGBA값으로 표현</h3>
+            <p class="t_desc2">
+                RGB 표현의 확장으로, 불투명도를 지정하는 기능이 추가된 것입니다.rgba(red, greed, blue, alpha)로 표현하며 alpha 변수의 값은 0.0(투명)과 1.0(불투명) 사이의 값 중 지정한다.
+            </p>
+            <p class="t_box">
+                ex) rgba(255, 255, 255, 0.4) ...
+            <div class="t_code">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;p style="background-color: rgba(255, 0, 0, 0.2);"&gt;red&lt;/p&gt;
+    &lt;p style="background-color: rgba(255, 0, 0, 0.4);"&gt;red&lt;/p&gt;
+    &lt;p style="background-color: rgba(0, 255, 0, 0.6);"&gt;red&lt;/p&gt;
+    &lt;p style="background-color: rgba(0, 0, 255, 0.8);"&gt;red&lt;p&gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        <p class="t_desc" style="color: #000; background-color: rgba(255, 0, 0, 0.2);">red</p>
+                        <p class="t_desc" style="color: #000; background-color: rgba(255, 0, 0, 0.4);">red</p>
+                        <p class="t_desc" style="color: #000; background-color: rgba(255, 0, 0, 0.6);">red</p>
+                        <p class="t_desc" style="color: #000; background-color: rgba(255, 0, 0, 0.8);">red</p>
+                    </div>
+                </details>               
+            </div>
+
+            <h3 class="t_tit2">4. HEX값으로 표현</h3>
+            <p class="t_desc2">
+                #RRGGBB 형식의 16진수 색상 값을 이용하여 표현하는 방법입니다. RR, GG, BB는 각각 red, green, blue를 나타내는 값이며 16진수 00에서 FF사이의 값으로 결정됩니다.
+            </p>
+            <p class="t_box">
+                ex) #000000, #FF00FF ...
+            <div class="t_code">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;p style="background-color:#000000; color:#FFFFFF" &gt;black &lt;/p &gt;
+    &lt;p style="background-color:#FF0000;" &gt;red &lt;/p &gt; 
+    &lt;p style="background-color:#00FF00;" &gt;green &lt;/p &gt;
+    &lt;p style="background-color:#0000FF;" &gt;blue &lt;/p &gt; 
+    &lt;p style="background-color:#FFFF00;" &gt;yellow &lt;/p &gt;
+    &lt;p style="background-color:#FF00FF;" &gt;fuchsia &lt;/p &gt; 
+    &lt;p style="background-color:#00FFFF;" &gt;aqua &lt;/p &gt;
+    &lt;p style="background-color:#FFFFFF;" &gt;white &lt;/p &gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        <p class="t_desc" style="color: #FFF; background-color: #000000">black</p>
+                        <p class="t_desc" style="color: #000; background-color: #FF0000;">red</p>
+                        <p class="t_desc" style="color: #000; background-color: #00FF00;">green</p>
+                        <p class="t_desc" style="color: #000; background-color: #0000FF;">blue</p>
+                        <p class="t_desc" style="color: #000; background-color: #FFFF00;">yellow</p>
+                        <p class="t_desc" style="color: #000; background-color: #FF00FF;">fuchsia</p>
+                        <p class="t_desc" style="color: #000; background-color: #00FFFF;">aqua</p>
+                        <p class="t_desc" style="color: #000; background-color: #FFFFFF;">white</p>
+                    </div>
+                </details>               
+            </div>
+            
+            <h3 class="t_tit2">5. HSL/HSLA값으로 표현</h3>
+            <p class="t_desc2">
+                HSL는 Hue(색상), Saturation(채도), Lightness(명도)로 색상을 정의하는 방법입니다.
+                색상은 0부터 360까지의 색상환에 따라 결정되며 0:red, 120:green, 240:blue로 나타납니다. 채도와 명도는 백분율로 나타냅니다.
+                HSLA는 HSL방식에서 불투명도 지정 기능이 추가된 것이며 HSLA(색상,채도,명도,불투명도) 형식으로 나타냅니다.
+            </p>
+            <p class="t_box">
+                ex) rgb(255, 255, 255)
+            <div class="t_code">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;p style="background-color:hsl(0,100%,80%);" &gt;채도 100%, 밝기 80% &lt;/p &gt;
+    &lt;p style="background-color:hsl(0,100%,60%);" &gt;채도 100%, 밝기 60% &lt;/p &gt;
+    &lt;p style="background-color:hsl(0,100%,40%);" &gt;채도 100%, 밝기 40% &lt;/p &gt;
+    &lt;p style="background-color:hsl(0,100%,20%);" &gt;채도 100%, 밝기 20% &lt;/p &gt;
+   
+    &lt;p style="background-color:hsl(0,80%,50%);" &gt;채도 80%, 밝기 50% &lt;/p &gt;
+    &lt;p style="background-color:hsl(0,60%,50%);" &gt;채도 60%, 밝기 50% &lt;/p &gt;
+    &lt;p style="background-color:hsl(0,40%,50%);" &gt;채도 40%, 밝기 50% &lt;/p &gt;
+    &lt;p style="background-color:hsl(0,20%,50%);" &gt;채도 20%, 밝기 50% &lt;/p &gt;
+&lt;/body&gt;
+</code></pre>
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div>
+                        <p class="t_desc" style=" color: #000; background-color:hsl(0,100%,80%);">채도 100%, 밝기 80%</p>
+                        <p class="t_desc" style=" color: #000; background-color:hsl(0,100%,60%);">채도 100%, 밝기 60%</p>
+                        <p class="t_desc" style=" color: #000; background-color:hsl(0,100%,40%);">채도 100%, 밝기 40%</p>
+                        <p class="t_desc" style=" color: #000; background-color:hsl(0,100%,20%);">채도 100%, 밝기 20%</p><br>
+                        <p class="t_desc" style=" color: #000; background-color:hsl(0,80%,50%);">채도 80%, 밝기 50%</p>
+                        <p class="t_desc" style=" color: #000; background-color:hsl(0,60%,50%);">채도 60%, 밝기 50%</p>
+                        <p class="t_desc" style=" color: #000; background-color:hsl(0,40%,50%);">채도 40%, 밝기 50%</p>
+                        <p class="t_desc" style=" color: #000; background-color:hsl(0,20%,50%);">채도 20%, 밝기 50%</p>
+                    </div>
+                </details>               
+            </div>
+
+            <h3 class="t_tit2">Opacity 속성</h3>
+            <p class="t_desc2">추가 Opacity 속성은 전체 요소(배경색, 텍스트 색상 포함)의 불투명도를 설정하는 속성입니다.속성 값은 0.0(투명)에서 1.0(불투명)사이의 값다.
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- 웹 표준 준수 img에 alt태그에 사진이없을 때 사진을 대신하는 이름을 alt태그로 적는다 -->

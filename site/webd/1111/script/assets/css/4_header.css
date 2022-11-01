@@ -1,0 +1,20 @@
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 60px !important;
+}
+.header__inner h1 {
+    width: 200px;
+}
+.header__inner nav ul {
+}
+.header__inner nav ul li {
+    display: inline-block;
+}
+.header__inner nav ul li a {
+    font-size: 20px;
+    padding: 20px;
+}

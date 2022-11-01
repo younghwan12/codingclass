@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #swap {
+        width: 100%;
+
+    }
+    #header {
+        width: 100%;
+        height: 200px;
+        background-color: #111;
+        overflow: hidden;
+    }
+    #header .h1 {
+        width: 300px;
+        height: 200px;
+        background-color: #222;
+        float: left;
+    }
+    #header .h2 {
+        width: 900px;
+        height: 200px;
+        background-color: #332;
+        float: left;
+        overflow: hidden;
+    }
+    #header .h2 .h2top {
+        width: 900px;
+        height: 100px;
+        background-color: #102;
+        float: left;
+    }
+    #header .h2 .h2top {
+        width: 900px;
+        height: 100px;
+        background-color: #666;
+        float: left;
+    }
+    #ad {
+        width: 100%;
+        height: 800px;
+        background-color: #222;
+        
+    }
+    #ad .adtop {
+        width: 1200px;
+        height: 400px;
+        background-color: #333;
+        float: left;
+        overflow: hidden;
+    }
+    #ad .adtop .adtop1 {
+        width: 600px;
+        height: 200px;
+        background-color: #123;
+        float: left;
+    }
+    #ad .adtop .adtop2 {
+        width: 600px;
+        height: 200px;
+        background-color: #456;
+        float: left;
+    }
+    #ad .adtop .adtop3 {
+        width: 600px;
+        height: 200px;
+        background-color: #234;
+        float: left;
+    }
+    #ad .adtop .adtop4 {
+        width: 600px;
+        height: 200px;
+        background-color: #345;
+        float: left;
+    }
+    #ad .admid {
+        width: 1200px;
+        height: 300px;
+        background-color: #555;
+        overflow: hidden;
+    }
+    #ad .admid .admid1 {
+        width: 1200px;
+        height: 100px;
+        background-color: 413;
+        float: left;
+    }
+    #ad .admid .admid2 {
+        width: 1200px;
+        height: 100px;
+        background-color: #234;
+        float: left;
+    }
+    #ad .admid .admid3 {
+        width: 1200px;
+        height: 100px;
+        background-color: #512;
+        float: left;
+    }
+    #ad .adbot {
+        width: 1200px;
+        height: 100px;
+        background-color: #666;
+        overflow: hidden;
+    }
+    #ad .adbot .adbot1 {
+        width: 600px;
+        height: 100px;
+        background-color: #123;
+        float: left;
+    }
+    #ad .adbot .adbot2 {
+        width: 600px;
+        height: 100px;
+        background-color: #333;
+        float: left;
+    }
+
+    #notice {
+        width: 100%;
+        height: 400px;
+        background-color: #333;
+        overflow: hidden;
+    }
+    #notice .notop {
+        width: 1200px;
+        height: 200px;
+        background-color: #666;
+        float: left;
+        overflow: hidden;
+    }
+    #notice .notop .notop1 {
+        width: 200px;
+        height: 200px;
+        background-color: #000;
+        float: left;
+    }
+    #notice .notop .notop2 {
+        width: 200px;
+        height: 200px;
+        background-color: #111;
+        float: left;
+    }
+    #notice .notop .notop3 {
+        width: 200px;
+        height: 200px;
+        background-color: #222;
+        float: left;
+    }
+    #notice .notop .notop4 {
+        width: 200px;
+        height: 200px;
+        background-color: #111;
+        float: left;
+    }
+    #notice .notop .notop5 {
+        width: 200px;
+        height: 200px;
+        background-color: #222;
+        float: left;
+    }
+    #notice .notop .notop6 {
+        width: 200px;
+        height: 200px;
+        background-color: #555;
+        float: left;
+    }
+    #notice .nobot {
+        width: 1200px;
+        height: 200px;
+        background-color: #123;
+        float: left;
+        overflow: hidden;
+    }
+    #notice .nobot .nobot1 {
+        width: 600px;
+        height: 200px;
+        background-color: #888;
+        float: left;
+    }
+    #notice .nobot .nobot2 {
+        width: 600px;
+        height: 200px;
+        background-color: #235;
+        float: left;
+    }
+    #footer {
+        width: 100%;
+        height: 200px;
+        background-color: #444;
+    }
+    #footer .container {
+        width: 1200px;
+        height: 200px;
+        background-color: #935;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1200px;
+        height: inherit;
+        background-color: rgb(4, 0, 0, 0.3);
+    }
+</style>
+<body>
+    <div id="swap">
+        <div id="header">
+            <div class="container">
+                <div class="h1"></div>
+                <div class="h2">
+                    <div class="h2top"></div>
+                    <div class="h2bot"></div>
+                </div>
+            </div>
+        </div>
+        <div id="ad">
+            <div class="container">
+                <div class="adtop">
+                    <div class="adtop1"></div>
+                    <div class="adtop2"></div>
+                    <div class="adtop3"></div>
+                    <div class="adtop4"></div>
+                </div>
+                <div class="admid">
+                    <div class="admid1"></div>
+                    <div class="admid2"></div>
+                    <div class="admid3"></div>
+                </div>
+                <div class="adbot">
+                    <div class="adbot1"></div>
+                    <div class="adbot2"></div>
+                </div>
+            </div>
+        </div>
+        <div id="notice">
+            <div class="container">
+                <div class="notop">
+                    <div class="notop1"></div>
+                    <div class="notop2"></div>
+                    <div class="notop3"></div>
+                    <div class="notop4"></div>
+                    <div class="notop5"></div>
+                    <div class="notop6"></div>
+                </div>
+                <div class="nobot">
+                    <div class="nobot1"></div>
+                    <div class="nobot2"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>

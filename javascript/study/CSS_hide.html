@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹 표준, 웹 호환성, 웹 접근성의 이해</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">요소 숨기기</h2>
+            <p class="t_desc">안녕하세요. 오늘은 css를 이용해서 요소를 안보이게 하는방법을 알려드리겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">display: none</h3>
+            <p class="t_desc2">
+                display: none 는 렌더링트리와 접근성 트리에서 사라지게 합니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">.button {
+    display : none;
+}
+</code></pre>
+            </div>
+            <h3 class="t_tit2">visibility: hidden</h3>
+            <p class="t_desc2">
+                visibility: hidden은 렌더링트리와 접근성 트리에서 사라지게 합니다. hidden은 별도의 CSS가 없이도 HTML을 통해서 완전히 마스킹할 수 있어서 편리한 점이 있습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">.button {
+    visibility: hidden;
+}
+</code></pre>
+            </div>
+            <h3 class="t_tit2">opacity: 0</h3>
+            <p class="t_desc2">
+                opacity: 0은 엘리먼트의 요소를 안보이게 하지만, visibility: hidden과 마찬가지로 빈공간이 남아 있게 됩니다. 이 콘텐츠에 접근할 수 있는지 여부는 접근성 기술에 따라 다릅니다. 따라서 일관되게 숨기려면 이것을 사용하지 않는 것이 좋습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">.button {
+    opacity: 0;
+}
+</code></pre>
+            </div>
+            <h3 class="t_tit2">transform: scale(0)</h3>
+            <p class="t_desc2">
+                transform: scale(0)시각적으로 엘리먼트를 감추지만, opacity: 0과 마찬가지로 빈공간이 남습니다. 그러나 스크린 리더에서는 이 요소에 접근할 수가 있습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">.button {
+    transform: scale(0);
+}
+</code></pre>
+            </div>
+            <h3 class="t_tit2">width: 0, height: 0</h3>
+            <p class="t_desc2">
+                width: 0, height: 0는 특정 요소의 너비와 높이를 0으로 설정하여 숨기는 방식으로, 스크린리더 또한 이 엘리먼트가 접근 가능하지 않은 것으로 간주하고 건너뜁니다. 다만 SEO차원에서 좋지 않습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">.button {
+    width: 0;
+    height: 0;
+}
+</code></pre>
+            </div>
+            <h2 class="t_tit2">표</h2>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>method</th>
+                        <th>animation</th>
+                        <th>area</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">display: none;</td>
+                        <td class="ce">X</td>
+                        <td class="ce">X</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">opacity: 0;</td>
+                        <td class="ce">O</td>
+                        <td class="ce">O</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">visibility: hidden;</td>
+                        <td class="ce">X</td>
+                        <td class="ce">X</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">transform: scale(0);</td>
+                        <td class="ce">O</td>
+                        <td class="ce">X</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">width: 0; height: 0;</td>
+                        <td class="ce">X</td>
+                        <td class="ce">X</td>
+                    </tr>
+                </tbody>
+            </table>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- 웹 표준 준수 img에 alt태그에 사진이없을 때 사진을 대신하는 이름을 alt태그로 적는다 -->

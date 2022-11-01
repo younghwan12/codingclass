@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 만들기</h2>
+            <p class="t_desc">
+                실전 연습 사이트
+            </p>
+            <hr>                
+            <h3 class="t_tit2">Figma</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FDNvQLuiYf3yVX1KIgUDAQF%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0~%3Fnode-id%3D637%253A10499" allowfullscreen></iframe>
+            </div>
+            <h3 class="t_tit2">HTML 보기</h3>
+            <div class="t_result">
+                <details>
+                    <summary>소스 보기</summary>
+                    <div class="t_code">
+<pre><code class="language-html">&lt;body&gt;
+    &lt;div id="skip"&gt;
+        &lt;a href="#"&gt;헤더 영역 바로가기&lt;/a&gt;
+        &lt;a href="#"&gt;슬라이드 영역 바로가기&lt;/a&gt;
+        &lt;a href="#"&gt;이미지 영역 바로가기&lt;/a&gt;
+        &lt;a href="#"&gt;이미지/텍스트 영역 바로가기&lt;/a&gt;
+        &lt;a href="#"&gt;카드 영역 바로가기&lt;/a&gt;
+        &lt;a href="#"&gt;배너 영역 바로가기&lt;/a&gt;
+        &lt;a href="#"&gt;텍스트 영역 바로가기&lt;/a&gt;
+        &lt;a href="#"&gt;푸터 영역 바로가기&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- //skip --&gt;
+  
+    &lt;header id="headerType" class="header__wrap nexon"&gt;
+        &lt;div class="header__inner"&gt;
+            &lt;div class="header__logo"&gt;
+                &lt;a href="#"&gt;alcohol &lt;em&gt;journalist&lt;/em&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;nav class="header__menu"&gt;
+                &lt;ul&gt;
+                    &lt;li class="active"&gt;&lt;a href="#imageType"&gt;WHISKEY&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#imgTextType"&gt;SITE&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#cardType"&gt;WORLD BEER&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#bannerType"&gt;BANNER&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#textType"&gt;FOOD&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+            &lt;div class="header__member"&gt;
+                &lt;a href="#"&gt;Log in&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;a href="#" class="header__icon"&gt;
+                &lt;img src="assets/img/Burger.png" alt=""&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;!-- //headerType --&gt;
+  
+    &lt;main id="mainType"&gt;
+        &lt;section id="sliderType" class="slider__wrap content__item"&gt;
+            &lt;h2 class="blind"&gt;슬라이드 영역&lt;/h2&gt;
+            &lt;div class="slider__inner"&gt;
+                &lt;div class="slider"&gt;
+                    &lt;div class="slider__img"&gt;
+                        &lt;div class="desc"&gt;
+                            &lt;span&gt;alcohol&lt;/span&gt;
+                            &lt;h3&gt;variety of drinks&lt;/h3&gt;
+                            &lt;p&gt;
+                                세상에 아주 다양한 술들이 있습니다.&lt;br&gt;
+                                지금 만나러 가시죠
+                            &lt;/p&gt;
+                            &lt;div class="btn"&gt;
+                                &lt;a href="#"&gt;자세히 보기&lt;/a&gt;
+                                &lt;a href="#" class="black"&gt;사이트 보기&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="slider__arrow"&gt;
+                        &lt;a href="#" class="left"&gt;&lt;span class="ir"&gt;이전 이미지&lt;/span&gt;&lt;/a&gt;
+                        &lt;a href="#" class="right"&gt;&lt;span class="ir"&gt;다음 이미지&lt;/span&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="slider__dot"&gt;
+                        &lt;a href="#" class="dot active"&gt;&lt;span class="ir"&gt;1&lt;/span&gt;&lt;/a&gt;
+                        &lt;a href="#" class="dot"&gt;&lt;span class="ir"&gt;2&lt;/span&gt;&lt;/a&gt;
+                        &lt;a href="#" class="dot"&gt;&lt;span class="ir"&gt;3&lt;/span&gt;&lt;/a&gt;
+                        &lt;a href="#" class="play"&gt;&lt;span class="ir"&gt;플레이&lt;/span&gt;&lt;/a&gt;
+                        &lt;a href="#" class="stop"&gt;&lt;span class="ir"&gt;정지&lt;/span&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //sliderType --&gt;
+  
+        &lt;section id="imageType" class="type image__wrap nexon section content__item"&gt;
+            &lt;h2&gt;WHISKEY&lt;/h2&gt;
+            &lt;p&gt;평소에 흔히 볼수있는 위스키 리스트입니다.&lt;/p&gt;
+            &lt;div class="image__inner container"&gt;
+                &lt;article class="image img1"&gt;
+                    &lt;h3 class="image__title"&gt;JACKDANIELS&lt;/h3&gt;
+                    &lt;p class="image__desc"&gt;잭다니엘 블랙라벨입니다. 도수는 40도 최소 4년 숙성한 위스키로서, 콜라를 섞어 잭콕으로 먹던가, 온더락잔에 얼음과 같이 드시면 됩니다. 사실 맛은 없다.&lt;/p&gt;
+                    &lt;a class="image__btn" href="/" title="자세히 보기"&gt;자세히 보기&lt;/a&gt;
+                &lt;/article&gt;
+                &lt;article class="image img2"&gt;
+                    &lt;h3 class="image__title"&gt;JAMESON&lt;/h3&gt;
+                    &lt;p class="image__desc"&gt;아일랜드 위스키 재임슨입니다. 레이디가가와 리아나가 사랑한 술로 알려져 더욱 유명해졌으며, 하이볼과 샷으로 먹지만 스트레이트로 마실 때 맛있는 술입니다.&lt;/p&gt;
+                    &lt;a class="image__btn yellow" href="/" title="자세히 보기"&gt;자세히 보기&lt;/a&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //imageType --&gt;
+  
+        &lt;section id="imgTextType" class="type imgText__wrap nexon section gray content__item"&gt;
+            &lt;h2 class="blind"&gt;유용한 사이트 살펴보기&lt;/h2&gt;
+            &lt;div class="imgText__inner container"&gt;
+                &lt;div class="imgText__txt"&gt;
+                    &lt;span class="blind"&gt;이미지 텍스트 유형01&lt;/span&gt;
+                    &lt;h3&gt;다양한 술 종류 알아보기&lt;/h3&gt;
+                    &lt;p&gt;다양한 술의 종류들에 대해서 알아볼 수 있으며 그에 따른 전문 사이트입니다.&lt;/p&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="/"&gt;위스키 사이트&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/"&gt;와인 사이트&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/"&gt;소주 사이트&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/"&gt;맥주 사이트&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/"&gt;막걸리 사이트&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/"&gt;고량주 사이트&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="imgText__img img1"&gt;
+                    &lt;a href="/"&gt;위스키 사이트&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="imgText__img img2"&gt;
+                    &lt;a href="/" class="blue"&gt;와인 사이트&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //imgTextType --&gt;
+  
+        &lt;section id="cardType" class="type card__wrap nexon section content__item"&gt;
+            &lt;h2&gt;세계맥주 추천&lt;/h2&gt;
+            &lt;p&gt;편의점에서 보는 세계맥주 어떤걸 사야할지 모르시겠다구요?&lt;/p&gt;
+            &lt;div class="card_inner container"&gt;
+                &lt;article class="card"&gt;
+                    &lt;figure class="card__header"&gt;
+                        &lt;img src="assets/img/card_bg01_01.jpg" alt="축구 기초 강의"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="card__body"&gt;
+                        &lt;h3 class="tit"&gt;홉하우스13&lt;/h3&gt;
+                        &lt;p class="desc"&gt;맥주를 별로 선호하지 않는 제가 좋아하는 몇 안 되는 맥주입니다. 쌉쌀하고 강한 향이 따라오는 진한 라거로써 안주가 필요 없이 술 자체로 즐길수 있는 매력을 가지고있습니다.&lt;/p&gt;
+                        &lt;a class="btn" href="/"&gt;
+                            더 자세히 보기
+                        &lt;span aria-hidden="true"&gt;
+                            &lt;svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                                &lt;path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/&gt;
+                            &lt;/svg&gt;
+                        &lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+                &lt;article class="card"&gt;
+                    &lt;figure class="card__header"&gt;
+                        &lt;img src="assets/img/card_bg01_02.jpg" alt="드리블 기초 강의"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="card__body"&gt;
+                        &lt;h3 class="tit"&gt;기네스&lt;/h3&gt;
+                        &lt;p class="desc"&gt;호불호가 갈리는 기네스 흑맥주입니다. 탄산이 거의 없으며 쌉싸름 하고 진한 흑맥주의 맛을 잘 느낄수 있는 매력을 가지고 있습니다. 크리미한 거품을 빠트릴 순 없겠죠?&lt;/p&gt;
+                        &lt;a class="btn" href="/"&gt;
+                            더 자세히 보기
+                            &lt;span aria-hidden="true"&gt;
+                                &lt;svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                                    &lt;path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/&gt;
+                                &lt;/svg&gt;
+                            &lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+                &lt;article class="card"&gt;
+                    &lt;figure class="card__header"&gt;
+                        &lt;img src="assets/img/card_bg01_03.jpg" alt="슈팅 기초 강의"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="card__body"&gt;
+                        &lt;h3 class="tit"&gt;하이네켄&lt;/h3&gt;
+                        &lt;p class="desc"&gt;네덜란드의 맥주 브랜드. 유럽뿐만 아니라 세계적으로 인지도와 판매량에서 최상위 브랜드입니다. 소맥맛과 비슷하며 소맥을 좋아하는 사람에게 추천합니다. 벌꿀향이 나는 것은 포인트!&lt;/p&gt;
+                        &lt;a class="btn" href="/"&gt;
+                            더 자세히 보기
+                            &lt;span aria-hidden="true"&gt;
+                                &lt;svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                                    &lt;path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/&gt;
+                                &lt;/svg&gt;
+                            &lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //cardType --&gt;
+  
+        &lt;section id="bannerType" class="type banner__wrap nexon section content__item"&gt;
+            &lt;h2 class="blind"&gt;배너 영역&lt;/h2&gt;
+            &lt;div class="banner__inner"&gt;
+                &lt;h3 class="title"&gt;술믈리에 이XX&lt;/h3&gt;
+                &lt;p class="desc"&gt;더 다양한 정보는 구글링 해보시길 바랍니다.
+                    &lt;a href="https://younghwan112.tistory.com/" title="블로그로 이동"&gt;https://google.co.kr/&lt;/a&gt;
+                &lt;/p&gt;
+                &lt;span class="small blind"&gt;배너 유형01&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //bannerType --&gt;
+  
+        &lt;section id="textType" class="type text__wrap nexon section content__item"&gt;
+            &lt;span class="blind"&gt;텍스트 유형01&lt;/span&gt;
+            &lt;h2 class="mb70"&gt;술과 잘맞는 음식궁합&lt;/h2&gt;
+            &lt;div class="text__inner container"&gt;
+                &lt;div class="text t1"&gt;
+                    &lt;h3 class="text__title"&gt;위스키&lt;/h3&gt;
+                    &lt;p class="text__desc"&gt;어떤 음식과도 궁합이 맞는 위스키입니다. 온더락 잔에 다크 초콜릿과 함께해도 좋고, 과일과 함께해도 좋은 음식입니다.&lt;/p&gt;
+                    &lt;a class="text_btn" href="/"&gt;더보기&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="text t2"&gt;
+                    &lt;h3 class="text__title"&gt;와인&lt;/h3&gt;
+                    &lt;p class="text__desc"&gt;와인엔 치즈라는 말이 있을정도로 궁합이 잘맞지만 사실 다른음식들과도 잘 맞습니다. 레드와인은 스테이크와 함께 화이트와인은&lt;/p&gt;
+                    &lt;a class="text_btn" href="/"&gt;더보기&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="text t3"&gt;
+                    &lt;h3 class="text__title"&gt;소주&lt;/h3&gt;
+                    &lt;p class="text__desc"&gt;소주하면 생각나는 음식은 한국인이라면 삼겹살일겁니다. 삼쏘는 최고의 조합이며, 사실 어느 음식점을 가더라도 판매하고 있을정도로&lt;/p&gt;
+                    &lt;a class="text_btn" href="/"&gt;더보기&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="text t4"&gt;
+                    &lt;h3 class="text__title"&gt;맥주&lt;/h3&gt;
+                    &lt;p class="text__desc"&gt;간단하게 즐길수있는 주류로, 치킨에 맥주 치맥, 간단하게 견과류, 마른안주 어떤음식과도 조합이 좋습니다.&lt;/p&gt;
+                    &lt;a class="text_btn" href="/"&gt;더보기&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="text t5"&gt;
+                    &lt;h3 class="text__title"&gt;막걸리&lt;/h3&gt;
+                    &lt;p class="text__desc"&gt;비오는날 생각나는 주류로, 막걸리는 무조건 파전류와 함께해야하 한다는 인식이 있습니다. 파전이 없는 막걸리는 상상할 수 없습니다.&lt;/p&gt;
+                    &lt;a class="text_btn" href="/"&gt;더보기&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="text t6"&gt;
+                    &lt;h3 class="text__title"&gt;고량주&lt;/h3&gt;
+                    &lt;p class="text__desc"&gt;흔히 중식당에서 회식을 하면 볼수있는 주류로, 중국 술이기 때문에 중국음식들과 조합이 좋습니다, 유산슬, 깐풍기, 탕수육등등 생각나네요.&lt;/p&gt;
+                    &lt;a class="text_btn" href="/"&gt;더보기&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //textType --&gt;
+  
+    &lt;/main&gt;
+    &lt;!-- //mainType --&gt;
+  
+    &lt;footer id="footerType" class="type footer__wrap nexon section gray content__item"&gt;
+        &lt;h2 class="blind"&gt;푸터 영역&lt;/h2&gt;
+        &lt;div class="footer__inner container"&gt;
+            &lt;div class="footer__menu"&gt;
+                &lt;div&gt;
+                    &lt;h3&gt;사이트&lt;/h3&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;웹표준 사이트&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;반응형 사이트&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;패럴랙스 사이트&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;포트폴리오 사이트&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h3&gt;헤더 영역&lt;/h3&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;메뉴 유형01&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;메뉴 유형02&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h3&gt;슬라이드 영역&lt;/h3&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;슬라이드 유형01&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;슬라이드 유형02&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h3&gt;이미지 영역&lt;/h3&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;이미지 유형01&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;이미지 유형02&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;이미지/텍스트 유형01&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;이미지/텍스트 유형02&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;텍스트 유형01&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h3&gt;컨텐츠 영역&lt;/h3&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;카드 유형01&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;카드 유형02&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;카드 유형03&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h3&gt;푸터 영역&lt;/h3&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;푸터 메뉴 유형01&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;푸터 컨텍트 유형02&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;푸터 이메일 유형03&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="footer__right"&gt;
+                2022 LeeYounghwan. Portfolio is Power&lt;br&gt;
+                All rights reserved.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+    &lt;!-- //footerType --&gt;
+&lt;/body&gt;
+</code></pre>
+                        </div>
+                </details>               
+            </div>
+            <h3 class="t_tit2">JS 보기</h3>
+            <div class="t_result">
+                <details> 
+                    <summary>소스보기</summary>
+                    <div class="t_code">
+<pre><code class="language-js">window.addEventListener("scroll", ()=&gt;{
+    let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+  
+    document.querySelectorAll(".type").forEach((element, index)=&gt;{
+        if(scrollTop &gt;= element.offsetTop - 2){
+            document.querySelectorAll(".header__menu li").forEach(li =&gt; {
+                li.classList.remove("active");
+            });
+            document.querySelector(".header__menu li:nth-child(" + (index + 1) + ")").classList.add("active");
+        };
+    })
+})
+  
+  document.querySelectorAll(".header__menu li a").forEach(li =&gt; {
+        li.addEventListener("click", (e) =&gt; {
+            e.preventDefault();
+            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+  
+  
+  const menuBtn = document.querySelector(".header__icon");
+  const menu = document.querySelector(".header__menu");
+  menuBtn.addEventListener("mouseover", () =&gt; {
+    menu.classList.add("on");
+});
+  menu.addEventListener("mouseleave", () =&gt; {
+    menu.classList.remove("on");
+});
+</code></pre>
+                        </div>
+                </details>               
+            </div>
+<h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/site/site1/index.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/site/site1/index.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/site/site1/index.html" target="_blank">원본 사이트 보기</a>
+            </div>
+<hr>
+
+</div> 
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<style>
+    * {
+        margin: 0;
+    }
+
+    body {
+        background-color: #FFF3E0;
+    }
+
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+        /* 블록 구조를 가운데 정렬하는 방법 */
+        display: grid;
+        grid-template-areas:
+            /* grid는 이 부모 태그가 표만들때 처럼 모든걸 컨트롤 해준다 */
+            "header header"
+            /* 해당 부분에 이름을 전부 지정해줘야 한다 */
+            "nav nav""aside section""footer footer";
+        grid-template-columns: 30% 70%;
+        /* 너비 부분을 관리함 */
+        grid-template-rows: 100px 100px 780px 100px;
+        /* 높이 부분을 관리함 */
+    }
+
+    #header {
+        grid-area: header;
+        background-color: #FFE0B2;
+    }
+
+    #nav {
+        grid-area: nav;
+        background-color: #FFCC80;
+    }
+
+    #aside {
+        grid-area: aside;
+        background-color: #FFB74D;
+    }
+
+    #section {
+        grid-area: section;
+        background-color: #FFA726;
+    }
+
+    #footer {
+        grid-area: footer;
+        background-color: #FF9800;
+    }
+</style>

@@ -1,0 +1,233 @@
+.memory__wrap {
+    position: relative;
+}
+.memory__inner {
+    display: none;
+    width: 600px;
+    height: 615px;
+    border: 3px solid #08f;
+    background: #000;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    border-radius: 20px;
+    animation: flicker 1.5s infinite alternate;
+}
+.memory__inner.show {
+    display: block;
+    overflow: hidden;
+}
+.memory__header {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient( to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5));
+}
+.memory__header h2 {
+    font-size: 60px;
+    padding-top: 100px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+.memory__header .memory__box {}
+.memory__header .memory__box li {
+    text-align: center;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 25px;
+}
+.memory__header .start {
+    margin-top: 150px;
+    text-align: center;
+    font-size: 50px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #fff;
+}
+.memory__header .start:hover {
+    color: rgba(255, 255, 0, 0.5);
+}
+.memory__result, .memory__clear {
+    display: none;
+}
+.memory__clear.show, .memory__result.show {
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    z-index: 100;
+    background: linear-gradient( to bottom, rgba(255, 255, 0, 1), rgba(0, 0, 255, 1));
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+.clearScore {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: blue;
+}
+.resultScore {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: red;
+}
+.memory__result .result {
+    display: block;
+    text-align: center;
+    padding-top: 35px;
+    font-size: 50px;
+    color: red;
+    margin-bottom: 70px;
+}
+.memory__clear .clear {
+    display: block;
+    text-align: center;
+    padding-top: 35px;
+    font-size: 50px;
+    color: blue;
+    margin-bottom: 70px;
+}
+.memory__result .result__restart, .memory__clear .clear__restart {
+    text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
+    background: #fff;
+    color: #000;
+    padding: 5px 10px;
+    margin-top: 10px;
+    width: 150px;
+    margin: 0 auto;
+}
+.memory__result .result__restart:hover, .memory__clear .clear__restart:hover {
+    background: #000;
+    color: #fff;
+}
+.card__header {
+    display: flex;
+    justify-content: space-between;
+}
+.card__header .chance {
+    margin-right: 100px;
+}
+.time span {
+    color: #fff;
+}
+.memory__card {
+    padding: 40px;
+}
+.memory__card p {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.memory__card .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+.memory__card .cards li {
+    list-style: none;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.memory__card .cards li img {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.memory__card .cards li .view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #08f;
+    backface-visibility: hidden;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.5s;
+    /* user-select: none; */
+    pointer-events: none;
+}
+.memory__card .cards li .front {
+    transform: rotateY(0deg);
+}
+.memory__card .cards li.flip .front {
+    transform: rotateY(180deg);
+}
+.memory__card .cards li .back {
+    transform: rotateY(-180deg);
+}
+.memory__card .cards li.flip .back {
+    transform: rotateY(0deg);
+}
+.memory__card .cards li.shakeX {
+    animation: shakeX 1s 1;
+}
+.memory__card .cards li.shakeY {
+    animation: shakeY 1s 1;
+}
+@keyframes flicker {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #08f,
+        inset 0 0 2rem #08f, 0 0 4rem #08f, inset 0 0 4rem #08f;
+    }
+}
+
+@keyframes shakeX {
+    from,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translate3d(10px, 0, 0);
+    }
+}
+
+@keyframes shakeY {
+    from,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate3d(0, 10px, 0);
+    }
+}

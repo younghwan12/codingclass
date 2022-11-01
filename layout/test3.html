@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+    }
+    #swap {}
+    #header {
+        width: 100%;
+        height: 100px;
+        background-color: #800;
+        overflow: hidden;
+    }
+    #header .h1 {
+        width: 300px;
+        height: 100px;
+        background-color: #120;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+    #header .h2 {
+        width: 900px;
+        height: 100px;
+        background-color: #500;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+    #nav {
+        width: 100%;
+        height: 400px;
+        background-color: #110;
+        color: #fff;
+        text-align: center;
+        line-height: 400px;
+    }
+    #nav .container {
+        width: 1200px;
+        height: 400px;
+        background-color: #555;
+    }
+    #ad {
+        width: 100%;
+        height: 500px;
+        background-color: #120;
+        overflow: hidden;
+    }
+    #ad .adtop {
+        width: 1200px;
+        height: 250px;
+        background-color: #150;
+        float: left;
+        overflow: hidden;
+    }
+    #ad .top1 {
+        width: 200px;
+        height: 250px;
+        background-color: #200;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #ad .top2 {
+        width: 200px;
+        height: 250px;
+        background-color: #210;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #ad .top3 {
+        width: 200px;
+        height: 250px;
+        background-color: #220;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #ad .top4 {
+        width: 200px;
+        height: 250px;
+        background-color: #230;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #ad .top5 {
+        width: 200px;
+        height: 250px;
+        background-color: #240;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #ad .top6 {
+        width: 200px;
+        height: 250px;
+        background-color: #250;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #ad .adbot {
+        width: 1200px;
+        height: 250px;
+        background-color: #450;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #tap {
+        width: 100%;
+        height: 500px;
+        background-color: #130;
+        overflow: hidden;
+    }
+    #tap .tapl {
+        width: 740px;
+        height: 500px;
+        background-color: #444;
+        float: left;
+        color: #fff;
+        text-align: center;
+        line-height: 500px;
+    }
+    #tap .tapr {
+        width: 460px;
+        height: 500px;
+        background-color: #555;
+        float: left;
+        overflow: hidden;
+    }
+    #tap .tap1 {
+        width: 460px;
+        height: 265px;
+        float: left;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #tap .tap2 {
+        width: 460px;
+        height: 235px;
+        float: left;
+        background-color: #233;
+        color: #fff;
+        text-align: center;
+        line-height: 250px;
+    }
+    #footer {
+        width: 100%;
+        height: 100px;
+        background-color: #140;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1200px;
+        height: inherit;
+        background-color: rgb(255 , 0 , 0 , 0.3);
+    }
+</style>
+<body>
+    <div id="swap">
+        <div id="header">
+            <div class="container">
+                <div class="h1"></div>
+                <div class="h2"></div>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="container"></div>
+        </div>
+        <div id="ad">
+            <div class="container">
+                <div class="adtop">
+                    <div class="top1"></div>
+                    <div class="top2"></div>
+                    <div class="top3"></div>
+                    <div class="top4"></div>
+                    <div class="top5"></div>
+                    <div class="top6"></div>
+                </div>
+                <div class="adbot"></div>
+            </div>
+        </div>
+        <div id="tap">
+            <div class="container">
+                <div class="tapl"></div>
+                <div class="tapr">
+                    <div class="tap1"></div>
+                    <div class="tap2"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+
+    <script>
+        let name = ["로고", "메뉴", "이미지 슬라이드", "광고1", "광고2", "광고3","광고4","광고5","광고6","광고7", "공지사항1" , "공지사항2" , "공지사항3", "푸터"];
+
+        document.querySelector(".h1").innerHTML = name[0];
+        document.querySelector(".h2").innerHTML = name[1];
+        document.querySelector("#nav .container").innerHTML = name[2];
+        document.querySelector(".top1").innerHTML = name[3];
+        document.querySelector(".top2").innerHTML = name[4];
+        document.querySelector(".top3").innerHTML = name[5];
+        document.querySelector(".top4").innerHTML = name[6];
+        document.querySelector(".top5").innerHTML = name[7];
+        document.querySelector(".top6").innerHTML = name[8];
+        document.querySelector(".adbot").innerHTML = name[9];
+        document.querySelector(".tapl").innerHTML = name[10];
+        document.querySelector(".tap1").innerHTML = name[11];
+        document.querySelector(".tap2").innerHTML = name[12];
+        document.querySelector("#footer .container").innerHTML = name[13];
+    </script>
+</body>
+</html>

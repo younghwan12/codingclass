@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">마우스 효과</h2>
+            <p class="t_desc">마우스 이펙트 - 조명 효과</p>
+            <p class="t_box">오늘은 배경을 어둡게 만들고 마우스에 디자인을해서 마우스 영역이 조명이 들어가서 밝은 이미지가 나오는듯한 조명효과를 만들어보겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/javascript/effect/mouseEffect03.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/javascript/effect/mouseEffect03.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/javascript/effect/mouseEffect03.html" target="_blank">원본 사이트 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <p class="t_desc2">커서는 한개만 만들것이므로 하나 만들어줍니다.</p>
+            <div class="t_result">
+                <details>
+                    <summary>소스 보기</summary>
+                    <div class="t_code">
+<pre><code class="language-html">&lt;main id="main"&gt;
+    &lt;section id="mouseType"&gt;
+        &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
+        &lt;div class="mouse__wrap"&gt;
+            &lt;p&gt;There is no &lt;span&gt;masterpiece&lt;/span&gt; made by a lazy artist.&lt;/p&gt;
+            &lt;p&gt;게으른 예술가가 만든 &lt;span&gt;명작&lt;/span&gt;은 없다.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                </details>               
+            </div>
+<h3 class="t_tit2">CSS 작성</h3>
+<p class="t_desc2">
+    배경을 평소보다 좀더 어둡게 하고 마우스 커서에 이미지를 넣고 전체사이즈와 맞게 사이즈를 맞추고 고정시킨뒤 zindex 값을 -1을 넣어
+    보이지 않게 설정후 마우스를 돋보기 모양처럼 만들게 해서 그영역만 이미지가 보이게 합니다.
+</p>
+<div class="t_result">
+    <details>
+        <summary>소스 보기</summary>
+        <div class="t_code">
+<pre><code class="language-css">body::after {
+    background: rgba(8, 7, 32, 0.79);
+}
+/* mouseType */
+.mouse__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    cursor: none;
+}
+.mouse__wrap p {
+    font-size: 2vw;
+    line-height: 2;
+    font-weight: 300;
+}
+.mouse__wrap p:last-child {
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed red;
+    color: red;
+}
+@media (max-width: 800px){
+    .mouse__wrap p {
+        padding: 0 20px;
+        font-size: 30px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .mouse__wrap p:last-child {
+        font-size: 40px;
+        line-height: 1.5;
+        text-align: center;
+        word-break: keep-all;
+    }
+}
+.mouse__cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    background: #fff;
+    background-image: url(../assets/img/effect_bg18@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;  /* 배경 이미지의 위치가 뷰포트 내에서 고정되는지 또는 포함하는 블록과 함께 스크롤되는지 여부를 설정 */
+    border: 5px solid #fff;
+}
+</code></pre>
+            </div>
+    </details>               
+</div>
+            <h3 class="t_tit2">JS 작성</h3>
+            <p class="t_desc2">
+                gsap를 사용했습니다. 커서의 가로 좌표값과 세로 좌표값을 offsetWidht,Height로 구할수도 있지만 요즘 자주쓰는 getBoundingClientRect를 이용해서 구해보겠습니다.
+                clg를 사용해 확인하면 x,y,bottom...width값이 모두 나오는데, 우리가 필요한 값인 width와 height만 사용해서 circle.width를 구한뒤 각각 2를 나눠서
+                가운데로 오게 만들었습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">&lt;script src="../assets/js/gsap.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    const cursor = document.querySelector(".mouse__cursor");
+
+    // const circleW = cursor.offsetWidth;     //200
+    // const circleH = cursor.offsetHeight;
+    // const circle2 = cursor.clientWidth;     //190 : 보더값 제외
+
+    const circle = cursor.getBoundingClientRect();    //요즘 자주쓰는데 이렇게 전체적으로 나온다 clg로 확인 후 원하는 값을 찾아 계산.
+    // const DOMRect = {
+    //     x: 0,
+    //     y: 0,
+    //     bottom: 200,
+    //     height: 200,
+    //     left: 0,
+    //     right: 200,
+    //     top: 0,
+    //     width: 200
+    // }
+    window.addEventListener("mousemove", (e) => {
+        gsap.to(cursor, {
+            duration: 0.5, 
+            left: e.pageX - circle.width/2,         //위드값에 2를 나눠서 가운데로오게
+            top: e.pageY - circle.height/2,         //높이값에 2를 나눠서 가운데로오게한다
+        });
+    });
+&lt;/script&gt;
+</code></pre>
+</div>  
+                        
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

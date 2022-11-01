@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹 표준, 웹 호환성, 웹 접근성의 이해</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">CSS 애니메이션 연습하기</h2>
+            <p class="t_desc">글씨가 통통 튀는듯한 애니메이션을 만들어보겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="bouncing_text" src="https://codepen.io/younghwan12/embed/oNdwKZL?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/oNdwKZL">
+                    bouncing_text</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+            <h2 class="t_tit2">HTML</h2>
+            <p class="t_desc">제목 h1태그에 span태그를 각각 세개 넣어줍니다.</p>
+            <div class="t_code">
+<pre><code class="language-html">&lt;h1&gt;
+    &lt;span&gt;북&lt;/span&gt;
+    &lt;span&gt;극&lt;/span&gt;
+    &lt;span&gt;꼼&lt;/span&gt;
+&lt;/h1&gt;
+</code></pre>
+</div>
+<h2 class="t_tit2">CSS</h2>
+            <p class="t_desc">각 글자들의 딜레이를 줘서 순서를 다르게 하고, 바닥에 text-shadow로 그림자를 줍니다
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">html,body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, gray 25%, gold 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+        height: 100px;
+}
+h1 span {
+    font-family: '고딕';
+    font-size: 80px;
+    color: #fff;
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0 1px 0 #ccc,
+                0 2px 0 #ccc,
+                0 3px 0 #ccc,
+                0 4px 0 #ccc,
+                0 5px 0 #ccc,
+                0 6px 0 transparent,
+                0 7px 0 transparent,
+                0 8px 0 transparent,
+                0 9px 0 transparent,
+                0 10px 10px rgba(0,0,0,0.4);
+    animation : bounce 0.3s ease infinite alternate;
+}
+h1 span:nth-child(1){animation-delay:0.1s;}
+h1 span:nth-child(2){animation-delay:0.2s;}
+h1 span:nth-child(3){animation-delay:0.3s;}
+@keyframes bounce {
+    100% {
+    top : -20px;
+    text-shadow: 0 1px 0 #ccc,
+                0 2px 0 #ccc,
+                0 3px 0 #ccc,
+                0 4px 0 #ccc,
+                0 5px 0 #ccc,
+                0 6px 0 transparent,
+                0 7px 0 transparent,
+                0 8px 0 transparent,
+                0 9px 0 transparent,
+                0 50px 25px rgba(0,0,0,0.4);
+    }
+}
+</code></pre>
+                </div>
+
+                <p class="t_desc"><i>새로배운 코드</i></p>
+            <div class="t_code">
+<pre><code class="language-css">-webkit-font-smoothing: antialiased; // 텍스트에 안티앨리어싱을 넣어 부드럽게 만들어준다.
+</code></pre>
+</div>
+                <div class="t_link" style="display: flex;">
+                    <a href="https://codepen.io/younghwan12/pen/oNdwKZL" target="_blank">코드팬 보기</a>
+                </div>
+            </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- 웹 표준 준수 img에 alt태그에 사진이없을 때 사진을 대신하는 이름을 alt태그로 적는다 -->

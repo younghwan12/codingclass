@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드유형01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: "NexonLv1Gothic";
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            width: 100%;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+            
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* cardType */
+        .card_inner {
+            display: flex;
+            justify-content: space-between;           /*양쪽 정렬*/
+        }
+        .card {
+            width: 32%;
+            background: #f5f5f5;
+        }
+        .card__body {
+            padding: 24px;
+        }
+        .card__body .tit {
+            font-size: 24px;
+            margin-bottom: 10px;
+            /* 한줄효과 */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
+        }
+        .card__body .desc {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 300;
+            /* 4줄이상이면 ...으로 표시 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; 
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="cardType01" class="card__wrap nexon section">
+        <h2>축구 강의⚽</h2>
+        <p>축구에 관한 기초, 드리블, 슈팅 강의 리스트 입니다.</p>
+        <div class="card_inner container">
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg01_01.jpg" alt="축구 기초 강의">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">축구 기초 강의</h3>
+                    <p class="desc">축구는 열한명의 선수가 한 팀이되어서 하는 구기종목입니다. 볼라인 아웃, 반칙, 오프사이드, 등등 다양한 규칙이 있으며, 공격수 미드필더 수비수 골키퍼로 나뉩니다. 후보5명까지 있습니다.</p>
+                    <a class="btn" href="/">
+                        더 자세히 보기
+                    <span aria-hidden="true">
+                        <svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/>
+                        </svg>
+                    </span>
+                    </a>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg01_02.jpg" alt="드리블 기초 강의">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">드리블 기초 강의</h3>
+                    <p class="desc">드리블 할 때는 툭툭 발 바로 앞에 공이 있다고 생각을 하면서 합니다. 드리블 하면서 공을 보면서 하지 말고 시선을 정면으로 유지한채 연습하도록 합시다. 잘 때도 깨어 있을때도</p>
+                    <a class="btn" href="/">
+                        더 자세히 보기
+                        <span aria-hidden="true">
+                            <svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg01_03.jpg" alt="슈팅 기초 강의">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">슈팅 기초 강의</h3>
+                    <p class="desc">슈팅 할 때는 일단 어디로 찰지 한번 확인 후에 발등으로 찰지 인사이드, 인스텝으로 찰지 고민후에 공을 보면서 차면 됩니다. 프리킥은 많이 연습량이 살길입니다.너도.. 찰 수 있어....</p>
+                    <a class="btn" href="/">
+                        더 자세히 보기
+                        <span aria-hidden="true">
+                            <svg width="66" height="8" viewBox="0 0 66 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M65.3535 4.34956C65.5465 4.15211 65.543 3.83555 65.3455 3.6425L62.128 0.496467C61.9305 0.303411 61.614 0.306968 61.4209 0.504411C61.2279 0.701855 61.2314 1.01842 61.4289 1.21147L64.2889 4.00794L61.4924 6.86797C61.2994 7.06541 61.3029 7.38198 61.5004 7.57503C61.6978 7.76809 62.0144 7.76453 62.2074 7.56709L65.3535 4.34956ZM1.00562 5.21902L65.0016 4.49997L64.9903 3.50003L0.994382 4.21909L1.00562 5.21902Z" fill="black"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

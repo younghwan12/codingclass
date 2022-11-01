@@ -1,0 +1,50 @@
+.sliderType {
+    overflow: hidden;
+}
+
+.slider__inner {
+    display: flex;
+}
+.slider__inner img {
+    width: 2000px;
+}
+.slider {
+    position: relative;
+}
+.box {
+    position: absolute;
+    left: 200px;
+    bottom: 15%;
+    width: 420px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: left;
+    padding: 30px;
+}
+.box h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.box p {
+    font-size: 20px;
+}
+.prev {
+    background: url(../jpg4/buttonLeft.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    width: 60px;
+    height: 106px;
+    cursor: pointer;
+}
+.next {
+    background: url(../jpg4/buttonRight.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 60px;
+    height: 106px;
+    cursor: pointer;
+}

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">패럴랙스 효과</h2>
+            <p class="t_desc">패럴랙스 이펙트 - 텍스트 효과</p>
+            <p class="t_box">스크롤값에 따라서 텍스트가 하나 하나 씩 딜레이를 줘서 나타나게 만들어보겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/javascript/effect/parallaxEffect06.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/javascript/effect/parallaxEffect06.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/javascript/effect/parallaxEffect06.html" target="_blank">원본 사이트 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <p class="t_desc2">각각의 섹션을 만들고 보기 편하게 하기 위해서 스크롤 탑값을 보여주는 태그를 만들어줍니다.</p>
+            <div class="t_result">
+                <details>
+                    <summary>소스 보기</summary>
+                    <div class="t_code">
+<pre><code class="language-html">&lt;main id="parallax__cont"&gt;
+    &lt;div id="contents"&gt;
+        &lt;section id="section1" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;01&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section1&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;산다는것 그것은 치열한 전투이다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section1 --&gt;
+
+        &lt;section id="section2" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;02&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section2&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;하루에 3시간을 걸으면 7년 후에 지구를 한바퀴 돌 수 있다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section2 --&gt;
+
+        &lt;section id="section3" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;03&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section3&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;내일은 내일의 태양이 뜬다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section3 --&gt;
+
+        &lt;section id="section4" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;04&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section4&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;배고픈 자 밥솥을 열어라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section4 --&gt;
+
+        &lt;section id="section5" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;05&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section5&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;그대 자신의 영혼을 탐구하라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section5 --&gt;
+
+        &lt;section id="section6" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;06&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section6&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;돈이 없는 것은 죄다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section6 --&gt;
+
+        &lt;section id="section7" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;07&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section7&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;무전 유죄, 유전 무죄&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section7 --&gt;
+
+        &lt;section id="section8" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;08&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section8&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;내 주머니의 푼돈이 남 주머니에 있는 거금보다 낫다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section8 --&gt;
+
+        &lt;section id="section9" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;09&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section9&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc split"&gt;최고에 도달하려면 최저에서 시작하라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section9 --&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                </details>               
+            </div>
+<h3 class="t_tit2">CSS 작성</h3>
+<p class="t_desc2">CSS를 수작업으로 작성할시 매우 많아지기때문에 스크립트를 사용했습니다.</p>
+<div class="t_result">
+    <details>
+        <summary>결과</summary>
+        <div class="t_code">
+<pre><code class="language-css">/* parallax__nav */
+#parallax__nav {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    border-radius: 50px;
+    transition: top 0.4s ease;
+}
+#parallax__nav li {
+    display: inline;
+    margin: 0 5px;
+}
+#parallax__nav li a {
+    display: inline-block;
+    height: 30px;
+    padding: 5px 20px;
+    text-align: center;
+    line-height: 30px;
+}
+#parallax__nav li.active a {
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    box-sizing: content-box;
+}
+#parallax__cont {
+    max-width: 1600px;
+    width: 98%;
+    margin: 0 auto;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+}
+.content__item {
+    width: 1000px;
+    max-width: 70vw;
+    margin: 30vw auto;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    text-align: left;
+    margin-right: 0;
+    position: relative;
+    padding-top: 8vw;
+}
+.content__item:nth-child(even) {
+    margin-left: 0;
+    text-align: right;
+}
+.content__item__num {
+    font-size: 35vw;
+    font-weight: 100;
+    font-family: 'Lato';
+    position: absolute;
+    left: -5vw;
+    top: -13vw;
+    opacity: 0.07;
+    z-index: -2;
+}
+.content__item:nth-child(even) .content__item__num {
+    left: auto;
+    right: -5vw;
+}
+.content__item__title {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.content__item__imgWrap {
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+.content__item__img {
+    position: absolute;
+    background: url(../assets/img/effect_bg19@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    filter: saturate(0%);
+    /* transition: all 1s; */
+}
+.content__item:nth-child(1) .content__item__img {
+    background-image: url(../assets/img/effect_bg18@2x.jpg);
+}
+.content__item:nth-child(2) .content__item__img {
+    background-image: url(../assets/img/effect_bg19@2x.jpg);
+}
+.content__item:nth-child(3) .content__item__img {
+    background-image: url(../assets/img/effect_bg20@2x.jpg);
+}
+.content__item:nth-child(4) .content__item__img {
+    background-image: url(../assets/img/effect_bg17@2x.jpg);
+}
+.content__item:nth-child(5) .content__item__img {
+    background-image: url(../assets/img/effect_bg16@2x.jpg);
+}
+.content__item:nth-child(6) .content__item__img {
+    background-image: url(../assets/img/effect_bg15@2x.jpg);
+}
+.content__item:nth-child(7) .content__item__img {
+    background-image: url(../assets/img/effect_bg14@2x.jpg);
+}
+.content__item:nth-child(8) .content__item__img {
+    background-image: url(../assets/img/effect_bg13@2x.jpg);
+}
+.content__item:nth-child(9) .content__item__img {
+    background-image: url(../assets/img/effect_bg12@2x.jpg);
+}
+.content__item__desc {
+    font-size: 4vw;
+    line-height: 1.4;
+    margin-top: -4vw;
+    margin-left: -4vw;
+    word-break: keep-all;
+}
+.content__item:nth-child(even) .content__item__desc {
+    margin-left: auto;
+    margin-right: -4vw;
+}
+#parallax__info {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+#parallax__info li,
+.scroll {
+    line-height: 1.4;
+}
+@media (max-width: 800px) {
+    #parallax__cont {
+        margin-top: 70vw;
+    }
+    #parallax__nav {
+        padding: 10px;
+        right: auto;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        background-color: rgba(0,0,0,0.8);
+    }
+    #parallax__nav li {
+        display: block;
+        margin: 5px;
+    }
+    #parallax__nav li a {
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        height: auto;
+        line-height: 1;
+    }
+    #parallax__nav li.active a {
+        border-radius: 5px;
+    }
+}
+
+.split span {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.75,-0.32, 0.07, 1.29);
+    display: inline-block;
+    min-width: 1vw;
+}
+.split span.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* option */
+/* .split span {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.75,-0.32, 0.07, 1.29);
+    display: inline-block;
+    min-width: 1vw;
+}
+.split.show span {
+    opacity: 1;
+    transform: translateY(0);
+}
+.split span:nth-child(1)  {transition-delay: 100ms;}
+.split span:nth-child(2)  {transition-delay: 150ms;}
+.split span:nth-child(3)  {transition-delay: 200ms;}
+.split span:nth-child(4)  {transition-delay: 150ms;}
+.split span:nth-child(5)  {transition-delay: 200ms;}
+.split span:nth-child(6)  {transition-delay: 250ms;}
+.split span:nth-child(7)  {transition-delay: 300ms;}
+.split span:nth-child(8)  {transition-delay: 350ms;}
+.split span:nth-child(9)  {transition-delay: 400ms;}
+.split span:nth-child(10) {transition-delay: 450ms;}
+.split span:nth-child(11) {transition-delay: 500ms;}
+.split span:nth-child(12) {transition-delay: 550ms;}
+.split span:nth-child(13) {transition-delay: 600ms;}
+.split span:nth-child(14) {transition-delay: 650ms;}
+.split span:nth-child(15) {transition-delay: 700ms;}
+.split span:nth-child(16) {transition-delay: 750ms;}
+.split span:nth-child(17) {transition-delay: 800ms;}
+.split span:nth-child(18) {transition-delay: 850ms;}
+.split span:nth-child(19) {transition-delay: 900ms;}
+.split span:nth-child(20) {transition-delay: 950ms;}
+.split span:nth-child(21) {transition-delay: 100ms;}
+.split span:nth-child(22) {transition-delay: 1050ms;}
+.split span:nth-child(23) {transition-delay: 1100ms;}
+.split span:nth-child(24) {transition-delay: 1150ms;}
+.split span:nth-child(25) {transition-delay: 1200ms;}
+.split span:nth-child(26) {transition-delay: 1250ms;}
+.split span:nth-child(27) {transition-delay: 1300ms;}
+.split span:nth-child(28) {transition-delay: 1350ms;}
+.split span:nth-child(29) {transition-delay: 1400ms;}
+.split span:nth-child(30) {transition-delay: 1450ms;}
+.split span:nth-child(31) {transition-delay: 1500ms;}
+.split span:nth-child(32) {transition-delay: 1550ms;}
+.split span:nth-child(33) {transition-delay: 1600ms;} */
+</code></pre>
+            </div>
+    </details>               
+</div>
+            <h3 class="t_tit2">JS 작성</h3>
+            <p class="t_desc2">
+                일단 글씨를 변수로 선언해주고 split과 join을 이용해 글씨를 하나하나 쪼개서 span태그로 묶어줍니다. 단 이렇게 만들시 웹 접근성이 좋지 않아지므로 aria-hidden을 줍니다.
+                평소에 글씨들을 숨겨놓고, 위치값에 따라 스타일을 넣어서 순차적으로 딜레이를 걸어 글씨들이 나타나도록 만들어줍니다. 스크롤은 재귀함수를 이용해줍니다.
+                세부 설명들은 주석을 확인하시면 됩니다.^^
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">//글씨 하나씩 쪼개기
+    let text = document.querySelectorAll(".content__item__desc");
+    // let splitText = text.innerText;
+    // let splitWrap = splitText.split('').join('&lt;/span&gt;&lt;span&gt;')
+    // text.innerHTML = splitWrap = "&lt;span&gt;" + splitWrap + "&lt;/span&gt;"
+
+    // 글씨 쪼개기(다중이) 
+
+    document.querySelectorAll(".split").forEach(text =&gt; {
+        let splitText = text.innerText;
+        let splitWrap = splitText.split('').join('&lt;/span&gt;&lt;span aria-hidden = "true"&gt;');    //접근성 때문에 aria-hidden을 준다
+        splitWrap = "&lt;span aria-hidden = 'true'&gt;" + splitWrap + "&lt;/span&gt;";
+        text.innerHTML = splitWrap;
+        text.setAttribute("aria-label", splitText);           // splitText에 aria-label로 값을 넣는다.
+    });
+
+    function scroll(){
+        let ScrollTop = window.scrollY;
+        document.querySelector("#parallax__info .scroll").innerText = Math.round(ScrollTop);
+
+        // CSS에 클래스 추가(노가다)
+        // document.querySelectorAll(".content__item").forEach(item =&gt; {
+        //     if(ScrollTop &gt;= item.offsetTop) {
+        //         item.querySelector(".split").classList.add("show");
+        //     }
+        // })
+
+        document.querySelectorAll(".content__item").forEach(item =&gt; {
+            if(ScrollTop &gt;= item.offsetTop){
+                item.querySelectorAll(".split span").forEach((span, index) =&gt; {
+                    span.classList.add("show");
+
+                    span.style.transitionDelay = index + "00ms";
+                });
+            }
+        })
+
+        requestAnimationFrame(scroll);
+
+        // 첫 번째 span --&gt; 0.01s
+        // 두 번째 span --&gt; 0.02s
+        // 세 번째 span --&gt; 0.03s
+    }
+    scroll();
+
+
+    // text.forEach((el) =&gt; {
+    //     let splitText = el.innerText;
+    //     let splitWrap = splitText.split('').join('&lt;/span&gt;&lt;span&gt;');
+    //     el.innerHTML = splitWrap = "&lt;span&gt;" + splitWrap + "&lt;/span&gt;";
+    // });
+</code></pre>
+</div>                          
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

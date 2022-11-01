@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹 표준, 웹 호환성, 웹 접근성의 이해</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">CSS 이용해서 강아지 만들기</h2>
+            <p class="t_desc">오늘은 css의 에니메이션 효과를 이용해서 강아지를 만들어보겠습니다</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="CSS Dog" src="https://codepen.io/younghwan12/embed/GRxPMyg?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/GRxPMyg">
+                    CSS Dog</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+            <h2 class="t_tit2">HTML(Pug)</h2>
+            <p class="t_desc">HTML에서 Pug를 이용해서 만들었습니다. Pug코드와 컴파일한 HTML코드는 다음과 같습니다.</p>
+            <div class="t_code">
+<pre><code class="language-html">&lt;------ Compile HTML ------&gt;
+&lt;div class="dog"&gt;
+&lt;div class="dog-body"&gt;
+    &lt;div class="dog-tail"&gt;
+    &lt;div class="dog-tail"&gt;
+        &lt;div class="dog-tail"&gt;
+        &lt;div class="dog-tail"&gt;
+            &lt;div class="dog-tail"&gt;
+            &lt;div class="dog-tail"&gt;
+                &lt;div class="dog-tail"&gt;
+                &lt;div class="dog-tail"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="dog-torso"&gt;&lt;/div&gt;
+&lt;div class="dog-head"&gt;
+    &lt;div class="dog-ears"&gt;
+    &lt;div class="dog-ear"&gt;&lt;/div&gt;
+    &lt;div class="dog-ear"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="dog-eyes"&gt;
+    &lt;div class="dog-eye"&gt;&lt;/div&gt;
+    &lt;div class="dog-eye"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="dog-muzzle"&gt;
+    &lt;div class="dog-tongue"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;------ Pug ------&gt;
+.dog
+.dog-body
+    .dog-tail
+        .dog-tail
+            .dog-tail
+                .dog-tail
+                    .dog-tail
+                        .dog-tail
+                            .dog-tail
+                                .dog-tail
+.dog-torso
+.dog-head
+    .dog-ears
+        .dog-ear
+        .dog-ear
+    .dog-eyes
+        .dog-eye
+        .dog-eye
+    .dog-muzzle
+        .dog-tongue  
+</code></pre>
+</div>
+<h2 class="t_tit2">CSS(SCSS)</h2>
+            <p class="t_desc">CSS에서 SCSS를 이용해서 만들었습니다. SCSS코드를 컴파일한 CSS코드는 다음과 같습니다.<br>
+            SCSS코드가 긴관계로 코드는 코드팬에서 확인하시면 될거같습니다.</p>
+            <div class="t_code">
+<pre><code class="language-css">&lt;------ Compile SCSS ------&gt;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    html, body {
+    background: #666;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    
+    *, *:before, *:after {
+    box-sizing: border-box;
+    position: relative;
+    }
+    
+    .dog {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    }
+    .dog:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.04);
+    transform: translatey(-30%) scale(1.5);
+    }
+    
+    * {
+    position: absolute;
+    }
+    
+    .dog-body, .dog-head, .dog-torso {
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+    
+    .dog-body {
+    top: -50%;
+    box-shadow: inset 0 -15px 0 0 #EAEBEC;
+    animation: dog-body 200ms ease-in-out infinite alternate;
+    }
+    .dog-body:before {
+    content: '';
+    position: absolute;
+    bottom: 90%;
+    right: 50%;
+    width: 90%;
+    height: 90%;
+    background: rgba(255, 255, 255, 0.4);
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 10%;
+    border-top-right-radius: 10%;
+    transform-origin: right bottom;
+    animation: dog-tail-blur 200ms 33.3333333333ms ease-in-out infinite alternate both;
+    }
+    @keyframes dog-tail-blur {
+    0% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    }
+    @keyframes dog-body {
+    from {
+        transform: translatex(-10%);
+    }
+    to {
+        transform: translatex(10%);
+    }
+    }
+    
+    .dog-head {
+    border-radius: 50%;
+    animation: dog-head 1800ms cubic-bezier(0.11, 0.79, 0, 0.99) infinite;
+    }
+    @keyframes dog-head {
+    0% {
+        transform: rotate(45deg);
+    }
+    33% {
+        transform: rotate(-45deg);
+    }
+    66% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+    }
+    
+    .dog-torso {
+    top: -20%;
+    background: white;
+    box-shadow: inset 0 -15px 0 0 #EAEBEC;
+    animation: dog-torso 200ms ease-in-out infinite alternate-reverse;
+    }
+    @keyframes dog-torso {
+    0% {
+        transform: translatex(-5%);
+    }
+    100% {
+        transform: translatex(5%);
+    }
+    }
+    
+    .dog-eyes {
+    width: 60%;
+    top: 55%;
+    left: 20%;
+    z-index: 1;
+    }
+    .dog-eyes:before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: brown;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 0;
+    border: 4px solid white;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-top-width: 0;
+    transform: rotate(-45deg);
+    }
+    
+    .dog-eye {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    z-index: 1;
+    }
+    .dog-eye:first-child {
+    left: 0;
+    }
+    .dog-eye:last-child {
+    right: 0;
+    }
+    
+    .dog-muzzle {
+    width: 60%;
+    left: 20%;
+    height: 50%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    bottom: -15%;
+    background: white;
+    }
+    .dog-muzzle:before, .dog-muzzle:after {
+    content: '';
+    display: block;
+    position: absolute;
+    }
+    .dog-muzzle:before {
+    width: 6px;
+    height: 20px;
+    bottom: 0;
+    background: #EAEBEC;
+    left: calc(50% - 3px);
+    }
+    .dog-muzzle:after {
+    background: brown;
+    width: 20px;
+    height: 15px;
+    bottom: 12px;
+    left: calc(50% - 10px);
+    border-bottom-left-radius: 60% 60%;
+    border-bottom-right-radius: 60% 60%;
+    border-top-left-radius: 50% 40%;
+    border-top-right-radius: 50% 40%;
+    }
+    
+    .dog-ears {
+    width: 40%;
+    top: 25%;
+    left: 30%;
+    }
+    
+    .dog-ear {
+    bottom: -10px;
+    height: 50px;
+    width: 50px;
+    background: #EAEBEC;
+    }
+    .dog-ear:first-child {
+    right: 100%;
+    border-bottom-left-radius: 80%;
+    border-top-right-radius: 80%;
+    box-shadow: inset -15px 15px 0 1px white;
+    transform: rotate(10deg);
+    }
+    .dog-ear:last-child {
+    left: 100%;
+    border-bottom-right-radius: 80%;
+    border-top-left-radius: 80%;
+    box-shadow: inset 15px 15px 0 0px white;
+    transform: rotate(-10deg);
+    }
+    
+    .dog-tongue {
+    width: 40%;
+    height: 150%;
+    left: calc(50% - 20px);
+    z-index: -1;
+    transform-origin: center top;
+    }
+    .dog-tongue:before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: #fd3163;
+    animation: dog-tongue-inner 100ms ease-in-out infinite alternate;
+    }
+    @keyframes dog-tongue-inner {
+    from {
+        transform: translatey(5%);
+    }
+    to {
+        transform: translatey(22%);
+    }
+    }
+    
+    .dog-tail {
+    width: 22px;
+    height: 24.2px;
+    background: white;
+    bottom: 40%;
+    left: calc(50% - 11px);
+    border-radius: 11px;
+    transform-origin: center bottom;
+    }
+    .dog-tail .dog-tail {
+    animation: dog-tail-segment 200ms ease-in-out infinite alternate;
+    }
+    @keyframes dog-tail-segment {
+    0% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+    }
+    
+    .dog-body > .dog-tail {
+    bottom: 90%;
+    }
+</code></pre>
+                </div>
+                <div class="t_link" style="display: flex;">
+                    <a href="https://codepen.io/younghwan12/pen/GRxPMyg" target="_blank">코드팬 보기</a>
+                </div>
+            </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- 웹 표준 준수 img에 alt태그에 사진이없을 때 사진을 대신하는 이름을 alt태그로 적는다 -->

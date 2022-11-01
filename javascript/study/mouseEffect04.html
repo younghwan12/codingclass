@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">마우스 효과</h2>
+            <p class="t_desc">마우스 이펙트 - 이미지 효과</p>
+            <p class="t_box">가운데 이미지를 하나 더 넣어서 마우스 움직일때 가운데 이미지만 조금 움직여 이질감(?)이 느껴지는 효과를 넣어보겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/javascript/effect/mouseEffect04.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/javascript/effect/mouseEffect04.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/javascript/effect/mouseEffect04.html" target="_blank">원본 사이트 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <p class="t_desc2">커서 한개와, 가운데 이미지를 넣을것이므로 figure태그를 만들어줍니다.</p>
+            <div class="t_result">
+                <details>
+                    <summary>소스 보기</summary>
+                    <div class="t_code">
+<pre><code class="language-html">&lt;main id="main"&gt;
+    &lt;section id="mouseType"&gt;
+        &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
+        &lt;div class="mouse__wrap"&gt;
+            &lt;figure&gt;
+                &lt;img src="../assets/img/effect_bg14.jpg" alt="이미지"&gt;
+                &lt;figcaption&gt;
+                    &lt;p&gt;The present and the future are somehow connected.&lt;/p&gt;
+                    &lt;p&gt;현재와 미래는 어떻게든 연결되어 있다.&lt;/p&gt;
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                </details>               
+            </div>
+<h3 class="t_tit2">CSS 작성</h3>
+<p class="t_desc2">
+    이미지를 정가운데에 만들어줍니다.
+</p>
+<div class="t_result">
+    <details>
+        <summary>소스 보기</summary>
+        <div class="t_code">
+<pre><code class="language-css">/* mouseType */
+.mouse__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+}
+.mouse__wrap figure {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    cursor: none;
+}
+.mouse__wrap figure:hover {
+    transform: scale(1.025);
+}
+.mouse__wrap figure img {
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+}
+.mouse__wrap figure figcaption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+    white-space: nowrap;
+    line-height: 1.4;
+    font-weight: 300;
+}
+.mouse__cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+}
+.mouse__info {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+}
+</code></pre>
+            </div>
+    </details>               
+</div>
+            <h3 class="t_tit2">JS 작성</h3>
+            <p class="t_desc2">
+                원을 마우스커서에 따라다니게 만들고 커서의 기준을 화면의 정가운데로 잡아줍니다. js를 이용해 만들어주니 부드러움이 덜 한거같아서 gsap로 작업하였습니다.
+                자세한 설명은 주석표시를 확인해주시기 바랍니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">&lt;script src="../assets/js/gsap.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e)=>{
+        //커서
+        gsap.to(cursor, {
+            duration: .2,
+            left: e.pageX - cursorRect.width/2,
+            top: e.pageY - cursorRect.height/2,
+        });
+
+        // 마우스 좌표 값
+        let mousePageX = e.pageX;
+        let mousePageY = e.pageY;
+
+        // 전체 가로값 구하기
+        // window.innerWidth            //1920  브라우저 크기가 줄어들면 줄어든다. : 브라우저 크기
+        // window.outerWidth            //1920 : 브라우저 크기(스크롤바 포함)
+        // window.window.screen.width    //1920 브라우저 크기가 줄어들어도 감소X : 화면 크기
+
+        // 마우스 좌표 값 가운데로 초기화
+
+        // 전체 길이/2 - 마우스 좌표값 == 0
+        let centerPageX = window.innerWidth/2 - mousePageX;         //좌표값 X축 기준을 0으로 만들기 위해서 (전체길이/2 - 마우스좌표값) == 0 을 기준으로 만들었습니다.
+        let centerPageY = window.innerHeight/2 - mousePageY;
+
+        // 이미지 움직이기
+        const imgMove = document.querySelector(".mouse__wrap figure img");
+        // imgMove.style.transform = "translate("+ centerPageX/20 +"px, "+ centerPageY/20 +"px)";        //가운데 0,0를 기준으로 이미지가 마우스값만큼 움직이도록 설정
+
+        // js사용하면 부드러움이 부족해서 gsap 사용!!
+        gsap.to(imgMove, {
+            duration: 0.3,
+            x: centerPageX/20,
+            y: centerPageY/20
+        })
+
+        // 출력
+        document.querySelector(".mousePageX").textContent = mousePageX;
+        document.querySelector(".mousePageY").textContent = mousePageY;
+        document.querySelector(".centerPageX").textContent = centerPageX;
+        document.querySelector(".centerPageY").textContent = centerPageY;
+    });
+&lt;/script&gt;
+</code></pre>
+</div>  
+                        
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

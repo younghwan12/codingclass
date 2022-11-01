@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 만들기</h2>
+            <p class="t_desc">
+                텍스트 유형01
+            </p>
+            <hr>                
+            <h3 class="t_tit2">Figma</h3>
+            <p class="t_desc2">일단 피그마를 이용해서 레이아웃의 틀을 잡아줍니다.</p>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIujxiKogj1TySALcZgYT9Y%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D1358%253A1675" allowfullscreen></iframe>
+            </div>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <div class="t_code">
+<pre><code class="language-html">&lt;section id="textType01" class="text__wrap nexon section"&gt;
+    &lt;p class="text__type"&gt;텍스트 유형01&lt;/p&gt;
+    &lt;h2&gt;노래 플레이리스트 모음&lt;/h2&gt;
+    &lt;div class="text__inner container"&gt;
+        &lt;div class="text__top"&gt;
+            &lt;article class="text"&gt;
+                &lt;figure class="icon__box"&gt;
+                    &lt;img src="img/icon01.png" alt="icon"&gt;
+                &lt;/figure&gt;
+                &lt;h3 class="h3"&gt;카페에서 듣기좋은 리스트&lt;/h3&gt;
+                &lt;p class="desc"&gt;카페에서 듣기좋은 플레이 리스트입니다&lt;br&gt;카페에서 듣기좋은 플레이 리스트입니다&lt;br&gt;카페에서 듣기좋은 플레이 리스트입니다&lt;/p&gt;
+                &lt;a class="text__btn" href="/" title="더보기"&gt;더보기&lt;/a&gt;
+            &lt;/article&gt;
+            &lt;article class="text"&gt;
+                &lt;figure class="icon__box" style="background-color: #3e2020;"&gt;
+                    &lt;img src="img/icon02.png" alt="icon"&gt;
+                &lt;/figure&gt;
+                &lt;h3 class="h3"&gt;비오는날 듣기좋은 리스트&lt;/h3&gt;
+                &lt;p class="desc"&gt;비오는날 듣기좋은 플레이 리스트입니다&lt;br&gt;비오는날 듣기좋은 플레이 리스트입니다&lt;br&gt;비오는날 듣기좋은 플레이 리스트입니다&lt;/p&gt;
+                &lt;a class="text__btn" href="/" title="더보기"&gt;더보기&lt;/a&gt;
+            &lt;/article&gt;
+            &lt;article class="text"&gt;
+                &lt;figure class="icon__box" style="background-color: #fff282;"&gt;
+                    &lt;img src="img/icon03.png" alt="icon"&gt;
+                &lt;/figure&gt;
+                &lt;h3 class="h3"&gt;시간가는줄 모르는 플레이리스트&lt;/h3&gt;
+                &lt;p class="desc"&gt;듣느라 시간가는줄 모르는 플레이리스트요&lt;br&gt;듣느라 시간가는줄 모르는 플레이리스트요&lt;br&gt;듣느라 시간가는줄 모르는 플레이리스트요&lt;/p&gt;
+                &lt;a class="text__btn" href="/" title="더보기"&gt;더보기&lt;/a&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+        &lt;div class="text__bottom"&gt;
+            &lt;article class="text"&gt;
+                &lt;figure class="icon__box" style="background-color: #64a092;"&gt;
+                    &lt;img src="img/icon04.png" alt="icon"&gt;
+                &lt;/figure&gt;
+                &lt;h3 class="h3"&gt;X톡 하면서 듣기좋은 리스트&lt;/h3&gt;
+                &lt;p class="desc"&gt;X톡 하면서 듣기좋은 플레이 리스트입니다&lt;br&gt;X톡 하면서 듣기좋은 플레이 리스트입니다&lt;br&gt;X톡 하면서 듣기좋은 플레이 리스트입니다&lt;/p&gt;
+                &lt;a class="text__btn" href="/" title="더보기"&gt;더보기&lt;/a&gt;
+            &lt;/article&gt;
+            &lt;article class="text"&gt;
+                &lt;figure class="icon__box" style="background-color: #ff8282;"&gt;
+                    &lt;img src="img/icon05.png" alt="icon"&gt;
+                &lt;/figure&gt;
+                &lt;h3 class="h3"&gt;게임하면서 듣기좋은 리스트&lt;/h3&gt;
+                &lt;p class="desc"&gt;게임하면서 듣기 좋은 플레이 리스트입니다&lt;br&gt;게임하면서 듣기 좋은 플레이 리스트입니다&lt;br&gt;게임하면서 듣기 좋은 플레이 리스트입니다&lt;/p&gt;
+                &lt;a class="text__btn" href="/" title="더보기"&gt;더보기&lt;/a&gt;
+            &lt;/article&gt;
+            &lt;article class="text"&gt;
+                &lt;figure class="icon__box" style="background-color: #9bff82;"&gt;
+                    &lt;img src="img/icon06.png" alt="icon"&gt;
+                &lt;/figure&gt;
+                &lt;h3 class="h3"&gt;이별후 듣는 플레이리스트&lt;/h3&gt;
+                &lt;p class="desc"&gt;들으면 눈물나는 플레이리스트 입니다&lt;br&gt;들으면 눈물나는 플레이리스트 입니다&lt;br&gt;들으면 눈물나는 플레이리스트 입니다&lt;/p&gt;
+                &lt;a class="text__btn" href="/" title="더보기"&gt;더보기&lt;/a&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;            
+    &lt;/div&gt;
+&lt;/section&gt;
+</div>
+</code></pre>
+<h3 class="t_tit2">CSS 작성</h3>
+            <div class="t_code">
+<pre><code class="language-css">/* fonts */
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+.nexon {
+    font-family: "NexonLv1Gothic";
+    font-weight: 400;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+/* common */
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;            
+}
+.section {
+    padding: 120px 0;
+}
+.section > h2 {
+    font-size: 50px;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 87px;
+}
+.section > p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* textType */
+.text__inner {
+}
+.text__top {
+    display: flex;
+    margin-bottom: 20px;
+}
+.text__bottom {
+    display: flex;
+}
+.text {
+    width: 33%;
+    position: relative;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.text__inner .text:hover {
+    background-color: #f5f5f5;
+}
+.text .icon {
+    height: 60px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.text img {
+    height: 24px;
+    position: absolute;
+    left: 38px;
+    top: 38px;
+}
+.icon__box {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.text .h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+.text .desc {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 1.4;
+    font-weight: 300;
+    margin-bottom: 19px;
+}
+.text .text__btn {
+    font-size: 16px;
+    text-decoration: underline;
+}
+</code></pre>
+<h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/site/textType/textType01.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/site/textType/textType01.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/site/textType/textType01.html" target="_blank">원본 사이트 보기</a>
+            </div>
+<hr>
+
+</div> 
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

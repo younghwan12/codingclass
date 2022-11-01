@@ -1,0 +1,155 @@
+.header__inner {
+    margin-top: 120px;
+    display: flex;
+}
+.left {
+    width: 20%;
+}
+.gray {
+    background-color: #ccc;
+}
+.left figure {
+}
+.left figure img {
+    width: 170px;
+    margin-bottom: 60px;
+}
+.nav {
+}
+.nav li {
+    margin-bottom: 30px;
+}
+.Sactive {
+    margin-top: 10px;
+}
+.Sactive > p {
+    padding: 10px;
+    width: 80%;
+    margin-left: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.nav a {
+    font-size: 25px;
+    font-weight: 500;
+    font-style: bold;
+}
+.right {
+    width: 80%;
+}
+.top {
+    width: 100%;
+}
+.right .top {
+    margin-bottom: 20px;
+}
+.image__inner {
+}
+.image__inner ul {
+    text-align: center;
+    margin: 40px 0 30px 0;
+}
+.image__inner ul li {
+    color: #ccc;
+    display: inline;
+}
+.image__inner ul li.active a {
+    color: #000;
+}
+.image__inner a {
+    color: #ccc;
+    font-size: 30px;
+}
+.image__inner figure img {
+    height: 140px;
+}
+.image__inner figure {
+    width: 16%;
+    justify-content: space-between;
+}
+.inner__bottom {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.inner__bottom p {
+    margin-top: 5px;
+    text-align: center;
+    font-style: bold;
+    font-weight: 600;
+}
+#cardType {
+    background-color: #ccc;
+}
+.card__inner {
+    margin-top: 30px;
+    background-color: #ccc;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+.card {
+    height: 385px;
+    width: 32%;
+    background-color: #fff;
+    position: relative;
+}
+.card p {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+.card img {
+    position: absolute;
+    left: 70px;
+    top: 90px;
+    width: 150px;
+}
+.card .fig1 {
+    position: absolute;
+    left: 15px;
+    bottom: 105px;
+}
+.card .fig2 {
+    position: absolute;
+    left: 15px;
+    bottom: 70px;
+}
+.card .fig3 {
+    position: absolute;
+    left: 15px;
+    bottom: 35px;
+}
+
+.footer__inner {
+    display: flex;
+    background-color: #edf2f8;
+    margin-top: 40px;
+    height: 136px;
+    padding: 15px;
+}
+.f_left {
+    width: 20%;
+}
+.f_left img {
+    width: 150px;
+    height: 150px;
+}
+.f_left h4 {
+    font-size: 40px;
+}
+.f_mid {
+    width: 60%;
+}
+.f_mid p {
+    margin-top: 10px;
+}
+.f_right {
+    width: 20%;
+}
+.f_right img {
+    margin-top: 40px;
+    width: 230px;
+    height: 50px;
+}

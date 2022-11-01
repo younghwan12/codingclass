@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 만들기</h2>
+            <p class="t_desc">
+                이미지 유형03
+            </p>
+            <p class="t_box">이미지 유형03은 왼쪽 큰 이미지 한개와 오른쪽 4개의 이미지의 레이아웃 틀을 가지고있으며, 마우스를 이미지에 오버했을때 박스와 아이콘들이 올라오게 만들었습니다.</p>
+            <hr>                
+            <h3 class="t_tit2">Figma</h3>
+            <p class="t_desc2">일단 피그마를 이용해서 레이아웃의 틀을 잡아줍니다.</p>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIujxiKogj1TySALcZgYT9Y%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D1213%253A198" allowfullscreen></iframe>
+            </div>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <div class="t_code">
+<pre><code class="language-html">&lt;section id="imageType02" class="image__wrap gowun section"&gt;
+    &lt;h2&gt;자동차 리스트&lt;/h2&gt;
+    &lt;p&gt;
+        제 미래의 차고에 있는 슈퍼카 리스트..&lt;br&gt;
+        여러분들께 지금 소개시켜드립니다. 안전벨트 꽉매고 쫒아오세요.
+    &lt;/p&gt;
+    &lt;div class="image__inner container-fluid"&gt;
+        &lt;article class="image"&gt;
+            &lt;!-- &lt;figure class="image__box"&gt;
+                &lt;img src="img/imageType03_01.jpg" alt="세이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt;                 --&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;테슬라&lt;/h3&gt;
+                &lt;p&gt;미국의 전기자동차 제조업체이다. 본사는 미국 텍사스 오스틴에 두고 있다. 설립자인 일론 머스크가 테크노킹[3]을 맡고 있다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="img/imageType03_02.jpg" alt="벤츠"&gt;
+            &lt;/figure&gt;                
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;BENZ&lt;/h3&gt;
+                &lt;p&gt;독일 메르세데스-벤츠 그룹 산하의 프리미엄 자동차 제조사&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="img/imageType03_03.jpg" alt="세이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt;                
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;LAMBORGHINI&lt;/h3&gt;
+                &lt;p&gt;1963년에 페루치오 람보르기니에 의해 설립된 이탈리아의&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="img/imageType03_04.jpg" alt="세이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt;                
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;FERRARI&lt;/h3&gt;
+                &lt;p&gt;1947년 스쿠데리아 페라리[6]에 기초하여 설립된 이탈리아의&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="img/imageType03_05.jpg" alt="세이크 로트폴라 모스크"&gt;
+            &lt;/figure&gt;                
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;BMW&lt;/h3&gt;
+                &lt;p&gt;독일의 프리미엄 자동차 및 오토바이 구독 서비스 제조사.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="link"&gt;&lt;span class="ir"&gt;페이지이동&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</div>
+</code></pre>
+<h3 class="t_tit2">CSS 작성</h3>
+<p class="t_desc">
+    틀은 그리드기법으로 틀을 짜고 만들었습니다. 이미지에 마우스 hover 효과를 넣어서 마우스를 위에 올리면 박스가 올라와서 보이고 평소에는 overflow hidden을 사용해 보이지 않게 설정했습니다.
+    아이콘은 네이버에서 사용하는 방법으로 png파일에 틀에맞게 한번에 맞춰두고 x축을 50px씩 밀어넣으면서 다른 아이콘이 나오게 만들었습니다.
+</p>
+            <div class="t_code">
+<pre><code class="language-css">/* fonts */
+@import url('https://webfontworld.github.io/yangheeryu/GowunBatang.css');
+
+.gowun {
+    font-family: 'GowunBatang';
+    font-weight: 400;
+}
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -9999px;
+}
+/* common */
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-width: 1160px;
+    
+}
+.container_fluid {
+    width: 100%;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+.section {
+    padding: 120px 0;
+}
+.section > h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section > p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.image__inner {
+    display: grid;
+    grid-template-areas:
+        "box1 box1 box2 box3"
+        "box1 box1 box4 box5";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 0 120px;
+}
+.image {
+    position: relative;
+    overflow: hidden;
+}
+.image__inner .image {
+    
+}
+.image__inner .image:nth-child(1) {
+    grid-area: box1;
+    background: url(img/imageType03_01.jpg);
+    background-size: cover;
+}
+.image__inner .image:nth-child(2) {
+    grid-area: box2;
+}
+.image__inner .image:nth-child(3) {
+    grid-area: box3;
+}
+.image__inner .image:nth-child(4) {
+    grid-area: box4;
+}
+.image__inner .image:nth-child(5) {
+    grid-area: box5;
+}
+.image__desc {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(225, 225, 225, 0.207);
+    padding: 16px;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+}
+.image:hover .image__desc {
+    bottom: 0;
+}
+.image__desc h3 {
+    color: #fff;
+    font-size: 20px;
+}
+.image__desc p {
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.image__sns {
+    position: absolute;
+    right: -100px;
+    top: 10px;
+    transition: all 0.4s ease;
+}
+.image__sns a {
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 5px;
+    background: url(img/image_bg03_icon.svg) no-repeat;
+}
+.image__sns a:nth-child(1) {}
+.image__sns a:nth-child(2) {
+    background-position: -50px 0;
+}
+.image__sns a:nth-child(3) {
+    background-position: -100px 0;
+}
+.image__sns a:nth-child(4) {
+    background-position: -150px 0;
+}
+.image__sns a:nth-child(5) {
+    background-position: -200px 0;
+}
+.image:hover .image__sns {
+    right: 10px;
+}
+</code></pre>
+<h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/site/imageType/imageType03.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/site/imageType/imageType03.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/site/imageType/imageType03.html" target="_blank">원본 사이트 보기</a>
+            </div>
+<hr>
+
+</div> 
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

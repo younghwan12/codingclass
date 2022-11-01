@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형03</title>
+    <style>
+        /* fonts */
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmark {
+            font-family: "GmarketSans";
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;     
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            width: 100%;
+        }
+        /* common */
+        .container {
+            padding: 100px;
+            margin: 0 auto;
+            min-width: 1160px;
+            overflow: hidden;            
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+        }
+        /* imageType */
+        .image:hover .image__desc {
+            bottom: 0;
+        }
+        .image:hover .image__box img {
+            transform: scale(1.03);
+        }
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .img__left {
+            position: relative;
+        }
+        .img__left .tit1 {
+            color: #fff;
+            position: absolute;
+            left: 20px;
+            bottom: 70px;
+            font-size: 30px;
+        }
+        .img__left .desc1 {
+            color: #fff;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .image {
+            overflow: hidden;
+        }
+
+        .image.img1 {
+            background: url(img/imageType03_01.jpg);
+            width: 850px;
+            height: 500px;
+            margin-right: 20px;
+        }
+        .image .tit {
+            color: #fff;
+        }
+        .image .desc {
+            color: #fff;
+        }
+        .image.img2 {
+            background: url(img/imageType03_02.jpg);
+            width: 415px;
+            height: 239px;
+            margin: 0 20px 20px 0;
+        }
+        .image.img3 {
+            background: url(img/imageType03_03.jpg);
+            width: 415px;
+            height: 239px;
+            margin: 0 20px 20px 0;
+        }
+        .image.img4 {
+            background: url(img/imageType03_04.jpg);
+            width: 415px;
+            height: 239px;
+            margin: 0 20px 20px 0;
+        }
+        .image.img5 {
+            background: url(img/imageType03_05.jpg);
+            width: 415px;
+            height: 239px;
+            margin: 0 20px 20px 0;
+        }
+        .image .tit {
+            color: #fff;
+        }
+        .image .desc {
+            color: #fff;
+        }
+        .img__right {
+            display: flex;
+        }
+        .img__bot {
+            position: relative;
+        }
+        .img__bot .tit4 {
+            color: #fff;
+            position: absolute;
+            font-size: 20px;
+            left: 20px;
+            top: 160px;
+            font-size: 30px;
+        }
+        .img__bot .desc4 {
+            color: #fff;
+            position: absolute;
+            font-size: 20px;
+            left: 20px;
+            top: 200px;
+            font-size: 20px;
+        }
+        .img__bot .tit5 {
+            color: #fff;
+            position: absolute;
+            font-size: 20px;
+            left: 20px;
+            top: 420px;
+            font-size: 30px;
+        }
+        .img__bot .desc5 {
+            color: #fff;
+            position: absolute;
+            font-size: 20px;
+            left: 20px;
+            top: 460px;
+            font-size: 20px;
+        }
+        .img__top {
+            position: relative;
+        }
+        .img__top .tit2 {
+            color: #fff;
+            position: absolute;
+            font-size: 30px;
+            left: 20px;
+            top: 160px;
+            font-size: 30px;
+        }
+        .img__top .desc2 {
+            color: #fff;
+            position: absolute;
+            font-size: 20px;
+            left: 20px;
+            top: 200px;
+        }
+
+        .img__top .tit3 {
+            color: #fff;
+            position: absolute;
+            font-size: 30px;
+            left: 20px;
+            top: 420px;
+            font-size: 30px;
+        }
+        .img__top .desc3 {
+            color: #fff;
+            position: absolute;
+            font-size: 20px;
+            left: 20px;
+            top: 460px;
+            font-size: 20px;
+        }
+        .image__desc {
+            color: #fff;
+            position: absolute;
+            left: 0;
+            bottom: -80px;
+            width: 850px;
+            height: 100px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+            background: rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <section id="imageType03" class="image__wrap gmark section">
+        <h2>자동차 브랜드 입니다</h2>
+        <p>지금부터 자동차 브랜드를 여러분들께 소개 시켜 드리겠습니다.</p>
+        <div class="image__inner container">
+            <div class="img__left">
+                <article class="image img1">
+                        <h3 class="tit1">벤츠</h3>
+                        <p class="desc1">벤츠에 대한 설명입니다.</p>
+                        <div class="image__desc">
+                            <img class="icon1" src="img/" alt="">
+                        </div>
+                </article>
+            </div>
+            <div class="img__right">
+                <div class="img__top">
+                    <article class="image img2">
+                        <h3 class="tit2">테슬라</h3>
+                        <p class="desc2">테슬라에 대한 설명입니다.</p>
+                        <div class="image__desc">
+                            <img class="icon1" src="img/" alt="">
+                        </div>
+                    </article>
+                    <article class="image img3">
+                        <h3 class="tit3">포르쉐</h3>
+                        <p class="desc3">포르쉐에 대한 설명입니다.</p>
+                        <div class="image__desc">
+                            <img class="icon1" src="img/" alt="">
+                        </div>
+                    </article>
+                </div>
+                <div class="img__bot">
+                    <article class="image img4">
+                        <h3 class="tit4">람보르기니</h3>
+                        <p class="desc4">람보르기니에 대한 설명입니다.</p>
+                        <div class="image__desc">
+                            <img class="icon1" src="img/" alt="">
+                        </div>
+                    </article>
+                    <article class="image img5">
+                        <h3 class="tit5">현대</h3>
+                        <p class="desc5">현대에 대한 설명입니다.</p>
+                        <div class="image__desc">
+                            <img class="icon1" src="img/" alt="">
+                        </div>
+                    </article>
+                </div> 
+            </div>
+    </section>
+
+</body>
+</html>

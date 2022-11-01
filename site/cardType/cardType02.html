@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형02</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmark {
+            font-family: "GmarketSans";
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .gray {
+            background-color: #f5f5f5;
+        }
+        /* ir 효과(이미지 대체 효과 == alt) 스크린 리더기에는 읽혀야하고 눈에 보일 필요는 없다. (매우 중요)*/
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            text-indent: -9999px;
+        }
+        /* cardType02 */
+        .card__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /*양쪽 정렬*/
+        }
+
+        .card__inner .card {
+            width: 24%;
+            position: relative;
+        }
+
+        .card__inner .card:first-child {
+            margin-bottom: 50px;
+        }
+        .card__inner .card img {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .card__inner .card .tit {
+            font-size: 28px;
+            margin-bottom: 10px;
+            /* 한줄효과 */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
+        }
+        .card__inner .card .desc {
+            font-size: 18;
+            font-weight: 300;
+            color: 666;
+            line-height: 1.4;
+            /* 세줄이상이면 ...으로 보이게 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+        .card__inner .card .more {
+            width: 24px;
+            height: 24px;
+            background-image: url(img/Arrow.svg);
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 230px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="cardType02" class="card__wrap gmark section gray">
+        <h2>배고픈 동물들</h2>
+        <p>
+            동물들은 항상 배가고픕니다. 다양한 동물들이 어떻게 살아가는지,사냥은<br>어떻게 하는지 알아보도록 합시다.
+        </p>
+        <div class="card__inner container">
+            <article class="card">
+                <img src="img/card_bg02_01.jpg" alt="동물">
+                <h3 class="tit">북극여우</h3>
+                <p class="desc">북극에 사는 여우입니다. 일반적인 여우와는 다르게 북극은 항상 겨울이기에 북극곰을 따라다니며 먹는다고 합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card_bg02_02.jpg" alt="동물">
+                <h3 class="tit">사자</h3>
+                <p class="desc">사자는 동물의 왕이라고 하죠, 고양이과 포유류이며, 의외로 사냥에 참여하지 않고, 사냥해온 고기를 탐..</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card_bg02_03.jpg" alt="동물">
+                <h3 class="tit">표범</h3>
+                <p class="desc">표범또한 고양이과 포유류입니다. 고기를 주식으로 섭취하며 고릴라들또한 위협하는 몇안되는 포식자..</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card_bg02_04.jpg" alt="동물">
+                <h3 class="tit">햄스터</h3>
+                <p class="desc">햄스터는 해바라기씨, 곡류, 야채, 과일, 곡물 플레이크, 펠릿 등 건조된 식재료가 혼합된것을 주로 먹..</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card_bg02_05.jpg" alt="동물">
+                <h3 class="tit">너구리</h3>
+                <p class="desc">너구리는 잡식성으로, 곤충, 설치류, 양서류, 조류, 어류, 파충류, 연체동물, 부육, 식물 가리지 않고..</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card_bg02_06.jpg" alt="동물">
+                <h3 class="tit">토끼</h3>
+                <p class="desc">물은 토끼가 살아서 가는데 가장 중요한 하나이다. 먹이 없이 몇 일간은 식분에 의지해 살 수 있다만..</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card_bg02_07.jpg" alt="동물">
+                <h3 class="tit">독수리</h3>
+                <p class="desc">독수리의 주된 먹이는 토끼와 다람쥐, 청설모와 같은 작은 포유류로, 이들의 비율이 전체 먹이의 대부..</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card_bg02_08.jpg" alt="동물">
+                <h3 class="tit">늑대</h3>
+                <p class="desc">늑대는 주로 대형 유제류를 먹이로 삼으나 이 먹이들이 부족한 경우에는 작은 동물, 가축, 썩은 고기, 쓰..</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>

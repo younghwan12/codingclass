@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 만들기</h2>
+            <p class="t_desc">
+                이미지 유형01
+            </p>
+            <hr>                
+            <h3 class="t_tit2">Figma</h3>
+            <p class="t_desc2">일단 피그마를 이용해서 레이아웃의 틀을 잡아줍니다.</p>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIujxiKogj1TySALcZgYT9Y%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D954%253A94" allowfullscreen></iframe>
+            </div>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <div class="t_code">
+<pre><code class="language-html">&lt;section id="imageType01" class="image__wrap nexon section"&gt;
+&lt;h2&gt;축구 강의⚽&lt;/h2&gt;
+&lt;p&gt;축구에 관한 기초, 드리블, 슈팅 강의 리스트 입니다.&lt;/p&gt;
+&lt;div class="image__inner container"&gt;
+    &lt;article class="image img1"&gt;
+        &lt;h3 class="image__title"&gt;축구 기초 강의&lt;/h3&gt;
+        &lt;p class="image__desc"&gt;축구는 열한명의 선수가 한 팀이되어서 하는 구기종목입니다. 볼라인 아웃, 반칙, 오프사이드, 등등 다양한 규칙이 있으며, 공격수 미드필더 수비수 골키퍼로 나뉩니다. 후보5명까지 있습니다.&lt;/p&gt;
+        &lt;a class="image__btn" href="/" title="자세히 보기"&gt;자세히 보기&lt;/a&gt;
+    &lt;/article&gt;
+    &lt;article class="image img2"&gt;
+        &lt;h3 class="image__title"&gt;축구 기초 강의&lt;/h3&gt;
+        &lt;p class="image__desc"&gt;축구는 열한명의 선수가 한 팀이되어서 하는 구기종목입니다. 볼라인 아웃, 반칙, 오프사이드, 등등 다양한 규칙이 있으며, 공격수 미드필더 수비수 골키퍼로 나뉩니다. 후보5명까지 있습니다.&lt;/p&gt;
+        &lt;a class="image__btn yellow" href="/" title="자세히 보기"&gt;자세히 보기&lt;/a&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+</div>
+</code></pre>
+<h3 class="t_tit2">CSS 작성</h3>
+            <div class="t_code">
+<pre><code class="language-css">/* fonts */
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+.nexon {
+    font-family: "NexonLv1Gothic";
+    font-weight: 400;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+img {
+    width: 100%;
+}
+/* common */
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-width: 1160px;
+    
+}
+.section {
+    padding: 120px 0;
+}
+.section > h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section > p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+    margin-bottom: 70px;
+}
+/* imageType */
+.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.image {
+    width: 49%;
+    height: 370px;
+    color: #fff;
+    padding: 200px 30px 30px 30px;
+    box-sizing: border-box;
+}
+.image.img1 {
+    background: url(img/jpg_bg_01_01.jpg) no-repeat center;
+}
+.image.img2 {
+    background: url(img/jpg_bg_01_02.jpg) no-repeat center;
+}
+.image__title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.image__desc {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+.image__btn {
+    font-size: 16px;
+    color: #fff;
+    background-color: #82c26b;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.image__btn.yellow {
+    background-color: #82c26a;
+}
+</code></pre>
+<h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/site/imageType/imageType01.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/site/imageType/imageType01.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/site/imageType/imageType01.html" target="_blank">원본 사이트 보기</a>
+            </div>
+<hr>
+
+</div> 
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

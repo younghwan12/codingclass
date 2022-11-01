@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹 표준, 웹 호환성, 웹 접근성의 이해</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">블록구조 / 인라인구조</h2>
+            <p class="t_desc">
+                오늘은 웹 사이트 제작에 있어 가장 기본이 되는 블록 구조와 인라인 구조에 대해서 알려드리겠습니다.
+            </p>
+            <hr>
+            <h3 class="t_tit2">블록구조</h3>
+            <p class="t_desc2">
+                블록 요소는 일단 기본적으로 줄 바꿈이 일어나는 형태로 영역의 너비가 상위 영역의 전체 너비만큼 만들어지는 형태입니다. 블록 요소에는 일부를 제외한 블록 요소를 포함하고, 인라인 요소까지 포함 가능합니다. 기본 설정이 블럭인 자주 사용하는 태그들은 다음과 같습니다.
+            </p>
+            <p class="t_box">div, p, h1~h6, ul, li, ol, table, form, section, footer...</p>
+            <p class="t_desc">그림으로 설명 드리겠습니다.</p>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/younghwan12/embed/wvmNGgB?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/wvmNGgB">
+                    Untitled</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+            <h3 class="t_tit2">인라인구조</h3>
+            <p class="t_desc2">
+                인라인 요소는 글자와 같이 옆으로 나열되는 형태로 줄 바꿈이 일어나지 않는 요소들입니다. 인라인은 안의 글자와 같은 내용 길이에 맞게 크기를 차지하는 성질이 있습니다. 기본 설정이 인라인인 자주 사용하는 태그들은 다음과 같습니다.
+            </p>
+            <p class="t_box">span, a, em, i, strong, b, del, ins, sub, sup, textarea...</p>
+            <p class="t_desc">같은 인라인요소를 포함하지만, 블록 요소는 포함 불가능합니다. 그리고 인라인요소는 box관련 속성이 적용이 안됩니다. ex) width, height, margin(top, bottom)(margin은 좌, 우만 적용이 된다) 등 적용 안됩니다. 참고로 padding 값은 적용이 됩니다.</p>
+            <p class="t_desc">그림으로 설명 드리겠습니다.</p>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="block" src="https://codepen.io/younghwan12/embed/WNzPwEw?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/WNzPwEw">
+                    block</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+
+            
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- 웹 표준 준수 img에 alt태그에 사진이없을 때 사진을 대신하는 이름을 alt태그로 적는다 -->

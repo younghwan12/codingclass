@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레이아웃03</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+    <!-- 구글 아이콘 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 이영환</span>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="sementic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li><a href="layout01.html">레이아웃01</a></li>
+                <li><a href="layout02.html">레이아웃02</a></li>
+                <li class="active"><a href="layout03.html">레이아웃03</a></li>
+                <li><a href="layout04.html">레이아웃04</a></li>
+                <li><a href="layout05.html">레이아웃05</a></li>
+            </ul>
+        </nav>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃03</h2>
+                <p class="t_desc">
+                    이번 레이아웃은 기본형틀에 가운데가 좌측 한칸 우측 세칸으로 나뉜 구조입니다.
+                </p>
+                <div class="t_iframe">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F1LcqGE8qnxjyVMJmThP3GU%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D41%253A39" allowfullscreen></iframe>
+                </div>
+
+                <h3 class="t_tit2">float을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    이번 레이아웃은 float으로 컨텐츠를 띄울 시 다음 내용을 빈자리가 채우러 올라오게 브라우저에서 오류가 생길수 있어서 clearfix를 선언해 버그를 해결하는 방법이다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    margin: 0;
+}
+body {
+    background-color: #E1F5FE;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    height: 100px;
+    background-color: #B3E5FC;
+}
+#nav {
+    height: 100px;
+    background-color: #81D4FA;
+}
+#main {
+
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #4FC3F7;
+    float: left;
+}
+#article1 {
+    width: 70%;
+    height: 260px;
+    background-color: #29B6F6;
+    float: left;
+}
+#article2 {
+    width: 70%;
+    height: 260px;
+    background-color: #03A9F4;
+    float: left;
+}
+#article3 {
+    width: 70%;
+    height: 260px;
+    background-color: #039BE5;
+    float: left;
+}
+
+#footer {
+    height: 100px;
+    background-color: #0288D1;
+}
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: block;
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+/* 미디어 쿼리 */
+@media (max-width : 1300px) {
+    #wrap {
+        width: 96%;
+    }
+    #article2 {
+        width: 35%;
+        height: 520px;
+    }
+    #article3 {
+        width: 35%;
+        height: 520px;
+    }
+}
+@media (max-width : 768px) {
+    #wrap {
+        width: 100%;
+    }
+    #article1 {
+        width: 70%;
+        height: 390px;
+    }
+    #article2 {
+        width: 70%;
+        height: 390px;
+    }
+    #article3 {
+        display: none;
+    }
+
+}
+@media (max-width : 480px) {
+    #aside {
+        width: 100%;
+        height: 100px;
+    }
+    #article1 {
+        width: 100%;
+        height: 430px;
+    }
+    #article2 {
+        width: 100%;
+        height: 150px;
+    }
+
+}
+                </div>
+                <h3 class="t_tit2">flex을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    구역을 div태그로 정한뒤 부모태그 #wrap에 display: flex;를 사용 후에 flex-wrap: wrap;를 이용해 부모 넓이보다 요소들의
+                    총 넓이가 크다면 나머지 요소들을 다음줄로 줄바꿔 나타내 표현하였습니다. 또한 플렉스 컨테이너 내의 아이템을 세로로 배치하기 위해서
+                    flex-direction: column;을 사용했습니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    margin: 0;
+}
+body {
+    background-color: #E1F5FE;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    height: 100px;
+    background-color: #B3E5FC;
+}
+#nav {
+    height: 100px;
+    background-color: #81D4FA;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 780px;
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #4FC3F7;
+
+}
+#article1 {
+    width: 70%;
+    height: 260px;
+    background-color: #29B6F6;
+
+}
+#article2-1 {
+    width: 100%;
+    height: 260px;
+    background-color: #03A9F4;
+}
+#article2-2 {
+    width: 100%;
+    height: 260px;
+    background-color: #039BE5;
+}
+#footer {
+    height: 100px;
+    background-color: #0288D1;
+}
+
+/* clearfix */
+
+/* 미디어 쿼리 */
+@media (max-width : 1300px) {
+    #wrap {
+        width: 96%;
+    }
+    #article2 {
+        display: flex;
+    }
+    #article2-1 {
+        width: 50%;
+        height: 520px;
+    }
+    #article2-2 {
+        width: 50%;
+        height: 520px;
+    }
+    
+}
+@media (max-width : 768px) {
+    #wrap {
+        width: 100%;
+    }
+    #article1 {
+        width: 100%;
+        height: 390px;
+    }
+    #article2-1 {
+        width: 100%;
+        height: 390px;
+    }
+    #article2-2 {
+        display: none;
+    }
+}
+@media (max-width : 480px) {
+    #aside {
+        width: 100%;
+        height: 200px;
+    }
+    #article1 {
+        height: 430px;
+    }
+    #article2-1 {
+        height: 150px;
+    }
+}
+</code></pre>
+                </div>
+                <h3 class="t_tit2">grid을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    구역을 div태그로 정한뒤 부모태그 #wrap에 display: grid;를 사용 후에
+                    grid-template-areas를 이용해 구역을 잡아주고 grid-template-columns를 이용해 열의 비율을 맞추었으며 grid-template-rows로 행의 크기를 맞추어 제작했습니다.
+                    또한 모바일 크기마다 구조가 계속 바뀌어 미디어쿼리에 크기마다 grid-template-areas를 사용해 구역을 재조정 하였습니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    margin: 0;
+}
+body {
+    background-color: #E1F5FE;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    height: 100px;
+    background-color: #B3E5FC;
+}
+#nav {
+    height: 100px;
+    background-color: #81D4FA;
+}
+#main {
+    display: grid;
+    grid-template-areas: 
+        "aside article1 article1"
+        "aside article2 article2"
+        "aside article3 article3";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 260px 260px 260px;
+    
+}
+#aside {
+    background-color: #4FC3F7;
+    grid-area: aside;
+}
+#article1 {
+    background-color: #29B6F6;
+    grid-area: article1;
+}
+#article2 {
+    background-color: #03A9F4;
+    grid-area: article2;
+}
+#article3 {
+    background-color: #039BE5;
+    grid-area: article3;
+}
+#footer {
+    height: 100px;
+    background-color: #0288D1;
+}
+
+/* clearfix */
+
+/* 미디어 쿼리 */
+@media (max-width : 1300px) {
+    #wrap {
+        width: 96%;
+    }
+    #main {
+        display: grid;
+        grid-template-areas: 
+            "aside article1 article1"
+            "aside article2 article3"
+            "aside article2 article3";
+        grid-template-columns: 30% 35% 35%;
+        grid-template-rows: 260px 520px;
+    }
+}
+@media (max-width : 768px) {
+    #wrap {
+        width: 100%;
+    }
+    #main {
+        display: grid;
+        grid-template-areas: 
+            "aside article1"
+            "aside article2"
+            "aside article2 article3";
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 390px 390px;
+    }
+    #article3 {
+        display: none;
+    }
+}
+@media (max-width : 480px) {
+    #main {
+        display: grid;
+        grid-template-areas: 
+            "aside"
+            "article1"
+            "article2";
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 430px 150px;
+    }
+}
+
+</code></pre>
+                </div>
+
+
+                <h3 class="t_tit2">결과</h3>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/younghwan12/embed/MWVvMOw?theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/younghwan12/pen/MWVvMOw">
+                        Untitled</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //header -->
+
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

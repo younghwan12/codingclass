@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형02</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmark {
+            font-family: "GmarketSans";
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;            
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: normal;
+            text-align: center;
+            margin-bottom: 87px;
+        }
+        .section > p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #000;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        /* textType */
+        .text__inner {
+            display: flex;
+        }
+        .text {
+            width: 32%;
+        }
+        .text .desc1 {
+            width: 147px;
+            height: 20px;
+            border-radius: 30px;
+            background-color: #FF3344;
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .text .tit {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 27px;
+        }
+        .text .desc2 {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .text .tit2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .text .desc3 {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 97px;
+        }
+        .text_left {
+            width: 100%;
+        }
+        .text .icon__box {
+            width: 60px;
+            height: 60px;
+            background-color: #7a7878;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .text img {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+        }  
+        .text_right {
+            width: 100%;
+        }      
+    </style>
+</head>
+<body>
+    <section id="textType02" class="text__wrap gmark section">
+        <div class="text__inner container">
+            <article class="text">
+                <p class="desc1">playList</p>
+                <h2 class="tit">플레이리스트<br>들어보기</h2>
+                <p class="desc2">다양한 유형의 플레이리스트를<br>여러분들께 소개합니다<br>지금 감상하시죠</p>
+            </article>
+            <article class="text">
+                <div class="text_left">
+                    <figure class="icon__box" style="background-color: #7a7878;">
+                        <img src="img/type02_icon01.png" alt="icon">
+                    </figure>
+                    <h3 class="tit2">비오는날 듣기좋은 리스트</h3>
+                    <p class="desc3">비오는날 듣기좋은 플레이 리스트입니다<br>비오는날 듣기좋은 플레이 리스트입니다<br>비오는날 듣기좋은 플레이 리스트입니다</p>
+                    <figure class="icon__box" style="background-color: #ff8282;">
+                        <img src="img/type02_icon02.png" alt="icon">
+                    </figure>
+                    <h3 class="tit2">여행에서 듣기좋은 리스트</h3>
+                    <p class="desc3">여행에서 듣기좋은 플레이 리스트입니다<br>여행에서 듣기좋은 플레이 리스트입니다<br>여행에서 듣기좋은 플레이 리스트입니다</p>
+                </div>
+            </article>
+            <article class="text">
+                <div class="text_right">
+                    <figure class="icon__box" style="background-color: #fe0000;">
+                        <img src="img/type02_icon03.png" alt="icon">
+                    </figure>
+                    <h3 class="tit2">클럽에서 자주듣는 리스트</h3>
+                    <p class="desc3">클럽에서 자주 듣는 플레이 리스트입니다<br>클럽에서 자주 듣는 플레이 리스트입니다<br>클럽에서 자주 듣는 플레이 리스트입니다</p>
+                    <figure class="icon__box" style="background-color: #3e2020;">
+                        <img src="img/type02_icon04.png" alt="icon">
+                    </figure>
+                    <h3 class="tit2">낮잠잘때 듣기좋은 리스트</h3>
+                    <p class="desc3">낮잠잘때 듣기 좋은 플레이 리스트입니다<br>낮잠잘때 듣기 좋은 플레이 리스트입니다<br>낮잠잘때 듣기 좋은 플레이 리스트입니다</p>
+                </div>
+            </article>
+        </div>        
+    </section>
+</body>
+</html>

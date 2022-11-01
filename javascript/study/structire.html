@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹 표준, 웹 호환성, 웹 접근성의 이해</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">구조 관련 요소</h2>
+            <hr>
+            <div class="t_tit2">01. &lt;header&gt;, &lt;section&gt;, &lt;footer&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;aside&gt;</div>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>요소 유형</th>
+                        <th>태그명</th>
+                        <th>태그의 의미 및 특징</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="12" class="ce">블록 레벨 요소</td>
+                        <td rowspan="2" class="ce">&lt;header&gt;<br>&lt;/header&gt;</td>
+                        <td>1. HTML 문서의 헤더 영역을 의미하는 태그로 제목이나 내비게이션, 검색 등의 내용들을 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &lt;header&gt;, &lt;footer&gt; 태그는 포함할 수 없습니다.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="ce">&lt;section&gt;<br>&lt;/section&gt;</td>
+                        <td>1. HTML 문서에서 맥락이 같은 요소들을 주제별로 그룹화해주는 태그이며 섹션 주제에 대한 제목 요소(&lt;h2&gt;~&lt;h6&gt;)를 포함하는 것이 좋습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="ce">&lt;footer&gt;<br>&lt;/footer&gt;</td>
+                        <td>1. HTML 문서의 푸터 영역을 의미하는 태그로 섹션 작성자나 저작권에 대한 정보, 관련된 문서의 링크를 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를  포함할 수 있지만 &lt;header&gt;, &lt;footer&gt; 태그는 포함할 수 없습니다.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="ce">&lt;nav&gt;&lt;/nav&gt;</td>
+                        <td>1. HTML 문서의 메인 메뉴나 목차 등을 정의해 주는 태그입니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="ce">&lt;article&gt;<br>&lt;/article&gt;</td>
+                        <td>1. HTML 문서 내에서 독립적으로 배포 또는 재사용이 가능한 게시물, 뉴스 기사, 블로그 포스팅 등을 의미하는 태그이며 제목 요소(&lt;h2&gt;~&lt;h6&gt;)를 포함하는 것이 좋습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="ce">&lt;aside&gt;<br>&lt;/aside&gt;</td>
+                        <td>1. 메인 콘텐츠와 직접적으로 관련이 없는 영역을 의미하는 태그이며 HTML 문서의 오른쪽이나 왼쪽의 사이드 메뉴나 광고 등의 영역으로 사용됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2">figma로 구조 짜기</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F1LcqGE8qnxjyVMJmThP3GU%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D1667%253A3" allowfullscreen></iframe>
+            </div>
+            <h3 class="t_tit2">HTML</h3>
+            <div class="t_code">
+<pre><code class="html">// 예시입니다.
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;구조 요소&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;&lt;a href=""&gt;반응형웹&lt;/a&gt;&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;MENU01&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;MENU02&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;MENU03&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;MENU04&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;MENU05&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;div id="container"&gt;
+        &lt;section&gt;
+            &lt;h2&gt;콘텐츠 그룹01&lt;/h2&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;콘텐츠 그룹02&lt;/h2&gt;
+        &lt;/section&gt;
+        &lt;article&gt;
+            &lt;h2&gt;주요 기사&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;aside&gt;광고&lt;/aside&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;
+        &lt;adress&gt;경기도 안산시     031)123-4567     eodnjs9605@gmail.com&lt;/adress&gt;
+        &lt;p&gt;COPYRIGHT ⓒ All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <h3 class="t_tit2">결과 보기</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/javascript/study/htmltest.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/javascript/study/htmltest.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/javascript/study/htmltest.html" target="_blank">원본 사이트 보기</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- 웹 표준 준수 img에 alt태그에 사진이없을 때 사진을 대신하는 이름을 alt태그로 적는다 -->

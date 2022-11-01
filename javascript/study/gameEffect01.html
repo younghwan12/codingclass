@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">게임 효과</h2>
+            <p class="t_desc">게임 이펙트 - 음악플레이어</p>
+            <p class="t_box">오늘은 audio태그를 이용해서 음악플레이어를 만들어보겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/javascript/effect/gameEffect01.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/javascript/effect/gameEffect01.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/javascript/effect/gameEffect01.html" target="_blank">원본 사이트 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <p class="t_desc2">전체 틀을 헤더와 메인 푸터로 잡아주고 음악플레이어틀을 잡아줍니다.</p>
+            <div class="t_result">
+                <details>
+                    <summary>소스 보기</summary>
+                    <div class="t_code">
+<pre><code class="language-html">&lt;header id="header"&gt;
+    &lt;h1&gt;Game shop&lt;/h1&gt;
+    &lt;div class="time"&gt;&lt;/div&gt;
+&lt;/header&gt;
+&lt;!-- //header --&gt;
+
+&lt;div class="cursor"&gt;
+    &lt;img src="../assets/img/cursor.png" alt="커서"&gt;
+&lt;/div&gt;
+
+&lt;main id="main"&gt;
+    &lt;div class="icon_box"&gt;
+        &lt;div class="icon1"&gt;
+            &lt;img src="../assets/img/icon1.png" alt="아이콘"&gt;
+            &lt;span&gt;음악듣기&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="icon2"&gt;
+            &lt;img src="../assets/img/icon2.png" alt="아이콘"&gt;
+            &lt;span&gt;음악듣기&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="icon3"&gt;
+            &lt;img src="../assets/img/icon3.png" alt="아이콘"&gt;
+            &lt;span&gt;음악듣기&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="icon4"&gt;
+            &lt;img src="../assets/img/icon4.png" alt="아이콘"&gt;
+            &lt;span&gt;음악듣기&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="icon5"&gt;
+            &lt;img src="../assets/img/icon5.png" alt="아이콘"&gt;
+            &lt;span&gt;음악듣기&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="icon6"&gt;
+            &lt;img src="../assets/img/icon6.png" alt="아이콘"&gt;
+            &lt;span&gt;음악듣기&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;
+
+&lt;!-- 뮤직 플레이어 --&gt;
+&lt;div class="music__wrap"&gt;
+    &lt;div class="music__inner"&gt;
+        &lt;div class="music__header"&gt;
+            &lt;div&gt;***&lt;/div&gt;
+            &lt;h2&gt;Music player&lt;/h2&gt;
+            &lt;div&gt;***&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="music__contents"&gt;
+            &lt;img class="volume_icon" src="../assets/img/volume.svg" alt="볼륨" /&gt;
+            &lt;img class="volumeOff_icon" src="../assets/img/volumeoff.svg" alt="볼륨" /&gt;
+            &lt;div class="volume_bar"&gt;
+                &lt;input type="range" id="volume-control" min="0" max="10" /&gt;
+            &lt;/div&gt;
+            &lt;div class="music__view"&gt;
+                &lt;div class="img"&gt;
+                    &lt;img src="../assets/img/img01.png" alt=""&gt;
+                &lt;/div&gt;                    
+                &lt;div class="title"&gt;                        
+                    &lt;h3&gt;Cottonmouth -&lt;/h3&gt;
+                    &lt;p&gt;YouTube Music&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="music__control"&gt;
+                &lt;div class="progress"&gt;
+                    &lt;div class="bar"&gt;
+                        &lt;audio id="main-audio" src="../assets/audio/music_audio01.mp3"&gt;&lt;/audio&gt;
+                    &lt;/div&gt;
+                    &lt;div class="timer"&gt;
+                        &lt;span class="current"&gt;0:00&lt;/span&gt;
+                        &lt;span class="duration"&gt;4:00&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="control"&gt;
+                    &lt;i title="전체 반복" class="repeat" id="control-repeat"&gt;&lt;/i&gt;
+                    &lt;!-- &lt;i title="한곡 반복" class="repeat_one"&gt;&lt;/i&gt; --&gt;
+                    &lt;!-- &lt;i title="랜덤 반복" class="shuffle"&gt;&lt;/i&gt; --&gt;
+                    &lt;i title="이전곡 재생" class="prev" id="control-prev"&gt;&lt;/i&gt;
+                    &lt;i title="재생" class="play" id="control-play"&gt;&lt;/i&gt;
+                    &lt;!-- &lt;i title="정지" class="stop"&gt;&lt;/i&gt; --&gt;
+                    &lt;i title="다음곡 재생" class="next" id="control-next"&gt;&lt;/i&gt;
+                    &lt;i title="재생 목록" class="list" id="control-list"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="music__footer"&gt;
+            &lt;div class="music__list"&gt;
+                &lt;h3&gt;&lt;span class="list"&gt;&lt;/span&gt;뮤직 리스트&lt;span class="close_btn"&gt;&lt;/span&gt;&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;!-- &lt;li&gt;
+                        &lt;strong&gt;제목&lt;/strong&gt;
+                        &lt;em&gt;아티스트&lt;/em&gt;
+                        &lt;span&gt;재생시간&lt;/span&gt;
+                    &lt;/li&gt;                         --&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- //뮤직 플레이어 --&gt;
+</code></pre>
+                        </div>
+                </details>               
+            </div>
+<h3 class="t_tit2">CSS 작성</h3>
+<p class="t_desc2">헤더와 푸터, 소스보기 CSS</p>
+<div class="t_result">
+    <details>
+        <summary>소스 보기</summary>
+        <div class="t_code">
+<pre><code class="language-css">@import url("https://webfontworld.github.io/sandbox/SBAggro.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SBAggro";
+    cursor: none !important;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+/* scroll */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(9, 77, 159, 0.4);
+}
+::-webkit-scrollbar-thumb {
+    background: #094d9f;
+    border-radius: 20px;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 35px;
+    background-color: #094d9f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+#header h1 {
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 0;
+}
+#header .time {
+    color: #fff;
+    transform: translateY(1px);
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.icon_box img {
+    width: 100%;
+}
+.icon_box span {
+    text-align: center;
+    display: block;
+    background: #000;
+    border-radius: 5px;
+    color: yellow;
+    font-size: 14px;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.icon1 {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 60px;
+}
+.icon2 {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    width: 60px;
+}
+.icon3 {
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    width: 60px;
+}
+.icon4 {
+    position: absolute;
+    left: 100px;
+    top: 400px;
+    width: 60px;
+}
+.icon5 {
+    position: absolute;
+    left: 100px;
+    top: 500px;
+    width: 60px;
+}
+.icon6 {
+    position: absolute;
+    left: 100px;
+    top: 600px;
+    width: 60px;
+}
+
+/* 커서 */
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+.cursor img {
+    width: 15px;
+}
+
+/* window */
+.mac #footer {
+    background: #09989f;
+}
+.window #footer {
+    background: #094d9f;
+}
+
+/* modal__wrap */
+.modal__btn {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.modal__btn:hover {
+    background-color: #fff;
+    color: #3b3d63;
+}
+.modal__btn label:hover {
+    cursor: pointer;
+}
+.modal__cont {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+}
+.modal__box {
+    width: 70%;
+    height: 80vh;
+    border-radius: 0.6rem;
+    box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
+    transform: scale(0);
+}
+.modal__box .title {
+    padding-inline: 1rem;
+    background-color: #1b1c2e;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 50px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.modal__box .title .dot {
+    width: 15px;
+    height: 15px;
+    background-color: #3b3d63;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 2rem;
+}
+.modal__box .title .dot::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #3b3d63;
+    border-radius: 50%;
+}
+.modal__box .title .dot::after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #3b3d63;
+    border-radius: 50%;
+}
+.modal__box .title .plus {
+    background: #282936;
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+    color: #7a7d9d;
+}
+.modal__box .title .tabs {
+    display: flex;
+    margin-left: 50px;
+}
+.modal__box .title .tabs > div {
+    color: #7a7d9d;
+    background-color: #282936;
+    padding: 0.35rem 0.8rem 0.25rem 0.8rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.modal__box .title .tabs > div.active {
+    background-color: #1f224a;
+}
+.modal__box .title .tabs > div em {
+    font-style: normal;
+}
+.modal__box .title .tabs > div .favicon {
+    margin-right: 0.4rem;
+    margin-top: 0.2rem;
+}
+.modal__box .title .tabs > div .close {
+    margin-left: 4rem;
+}
+.modal__box .cont {
+    background-color: #282936;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.modal__box .cont > div {
+    display: none;
+    height: 100%;
+}
+.modal__box .cont > div.active {
+    display: block;
+    height: 100%;
+}
+.modal__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #1f224a;
+    padding: 1rem 1rem 0.8rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 7px -5px rgba(25, 26, 26, 0.698);
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0;
+}
+.modal__close:hover {
+    background-color: #33377d;
+}
+.modal__close svg {
+    color: #fff;
+}
+
+/* 모달 애니메이션 */
+.modal__cont.show {
+    /* 전체 배경 */
+    animation: foldOut 1s ease forwards;
+}
+.modal__cont.show .modal__box {
+    /* 스크립트 박스 */
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+.modal__cont.show .modal__close {
+    /* 닫기 버튼 */
+    animation: opacityOut 0.5s 1.5s ease forwards;
+}
+
+.modal__cont.show.hide {
+    animation: foldIn 0.3s 0.5s ease backwards;
+}
+.modal__cont.show.hide .modal__box {
+    animation: zoomIn 0.5s ease forwards;
+}
+.modal__cont.show.hide .modal__close {
+    animation: opacityIn 0.8s ease forwards;
+}
+
+@keyframes foldOut {
+    0% {
+        transform: scaleX(0) scaleY(0.001);
+    }
+    50% {
+        transform: scaleX(1) scaleY(0.001);
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+@keyframes foldIn {
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: scaleX(1) scaleY(0.001);
+    }
+    100% {
+        transform: scaleX(0) scaleY(0.001);
+    }
+}
+@keyframes zoomOut {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes opacityOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes opacityIn {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .modal__box .title {
+        overflow: hidden;
+    }
+    .modal__box .title .dot {
+        display: none;
+    }
+    .modal__box .title .tabs {
+        margin-left: 0;
+    }
+    .modal__box .title .tabs > div .close {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    #header {
+        width: 100%;
+        text-align: center;
+    }
+    #header h1 {
+        line-height: 1.4;
+    }
+    .modal__box {
+        width: 96%;
+    }
+}    
+</code></pre>
+            </div>
+    </details>               
+</div>
+<p class="t_desc2">뮤직플레이어 CSS</p>
+<div class="t_result">
+    <details>
+        <summary>소스 보기</summary>
+        <div class="t_code">
+<pre><code class="language-css">@import url("https://webfontworld.github.io/earlyfont/EF_Macho.css");
+.music__wrap {
+}
+.music__inner {
+    width: 450px;
+    background: #000;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    padding: 10px;
+    padding-top: 0;
+}
+.music__header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.music__header h2 {
+    font-size: 14px;
+}
+.music__contents {
+    background: #c4c4c4;
+    width: 100%;
+}
+.music__contents .volume_icon {
+    position: absolute;
+    top: 39px;
+    right: 130px;
+}
+.music__contents .volumeOff_icon {
+    display: none;
+    position: absolute;
+    top: 39px;
+    right: 130px;
+}
+.music__contents .volume_icon.hide {
+    display: none;
+    position: absolute;
+    top: 39px;
+    right: 130px;
+}
+.music__contents .volumeOff_icon.show {
+    display: block;
+    position: absolute;
+    top: 39px;
+    right: 130px;
+}
+.music__contents .volume_bar {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+}
+.music__view {
+    display: flex;
+    padding: 20px;
+}
+.music__view .img {
+    width: 30%;
+}
+
+.music__view .img img {
+    width: 100%;
+}
+.music__view .volume {
+    margin-top: 5px;
+    width: 80%;
+    height: 6px;
+    background: #000;
+    border-radius: 5px;
+}
+.music__view .title {
+    width: 69%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.music__view .title h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.music__view .title p {
+    color: #094d9f;
+}
+.music__control {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    padding-top: 0;
+}
+.music__control .control i:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    /* transition: all 0.6s; */
+}
+.music__control .progress {
+    width: 100%;
+    height: 6px;
+    background: #000;
+    border-radius: 5px;
+}
+.music__control .progress .bar {
+    width: 0;
+    height: inherit;
+    background: #7fff58;
+    border-radius: 5px;
+}
+.music__control .progress .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+.music__control .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.music__control .control .repeat {
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -288px 0;
+    transform: scale(0.8);
+}
+.music__control .control .repeat-one {
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -336px 0;
+    transform: scale(0.8);
+}
+.music__control .control .shuffle {
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -240px 0;
+    transform: scale(0.8);
+}
+.music__control .control .prev {
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -96px 0;
+    transform: scale(0.8);
+}
+.music__control .control .play {
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: 0 0;
+    transform: scale(0.8);
+}
+.music__control .control .stop {
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -48px 0;
+    transform: scale(0.8);
+}
+.music__control .control .next {
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -144px 0;
+    transform: scale(0.8);
+}
+.music__control .control .list {
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -192px 0;
+    transform: scale(0.8);
+}
+.music__footer {
+    background: #c4c4c4;
+}
+.music__list {
+    display: none;
+    padding: 20px;
+}
+.music__list.show {
+    display: block;
+}
+.music__list ul {
+    max-height: 200px;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+.music__list h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #000;
+}
+.music__list h3 .list {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -192px 0;
+    transform: scale(0.8);
+    margin-right: 5px;
+    vertical-align: -14px;
+}
+.music__list h3 .close_btn {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../img/music_icon.svg);
+    background-position: -384px 0;
+    transform: scale(0.8);
+    float: right;
+    vertical-align: -14px;
+}
+.music__list h3 .close_btn:hover {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.6s;
+}
+.music__list li {
+    border-bottom: 1px solid #000;
+    list-style: none;
+    position: relative;
+    padding: 7px 0 5px;
+}
+.music__list li.playing {
+    color: #094d9f;
+}
+.music__list li strong {
+    display: block;
+    font-size: 16px;
+}
+.music__list li em {
+    font-style: normal;
+}
+
+.music__list li span {
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+
+/* 볼륨 조절 버튼 */
+input[type=range] {
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 2em;
+    width:80%;
+    -webkit-appearance: none;
+    background: transparent;
+}
+/* input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type="range"]:focus {
+    outline: none;
+} */
+input[type="range"]::-ms-track {
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: .5em;
+    height: 1em;
+    margin-top: 2.5px;
+    background-color: rgb(9, 77, 159, 0.5);
+    border: 2px solid #094d9f;
+}
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: .5em;
+    height: 1em;
+    margin-top: 2.5px;
+    background-color: rgb(9, 77, 159, 0.5);
+    border: 2px solid #094d9f;
+}
+input[type="range"]::-ms-thumb {
+    -webkit-appearance: none;
+    width: .5em;
+    height: 1em;
+    margin-top: 2.5px;
+    background-color: rgb(9, 77, 159, 0.5);
+    border: 2px solid #094d9f;
+}
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: rgba(7, 49, 100, 0.8);
+}
+input[type="range"]:hover::-moz-range-thumb {
+    background-color: rgba(7, 49, 100, 0.8);
+}
+input[type="range"]:hover::-ms-thumb {
+    background-color: rgba(7, 49, 100, 0.8);
+}
+input[type="range"]:active::-webkit-slider-thumb {
+    border-color: #ffffff76;
+}
+input[type="range"]:active::-moz-range-thumb {
+    border-color: #ffffff76;
+}
+input[type="range"]:active::-ms-thumb {
+    border-color: #ffffff76;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: .7em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+}
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: .7em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+}
+input[type="range"]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+</code></pre>
+            </div>
+    </details>               
+</div>
+<h3 class="t_tit2">JS 작성</h3>
+<p class="t_desc"><i>마우스 드래그 스크립트</i></p>
+<p class="t_desc2">마우스로 드래그할수 있도록 하는 스크립트입니다. 제이쿼리홈페이지에서 가져옵시다. 확장자 파일은 src로 사용합니다.</p>
+<div class="t_code">
+<pre><code class="language-js">&lt;script src="https://code.jquery.com/jquery-3.6.0.js"&gt;&lt;/script&gt;
+&lt;script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+const cursor = document.querySelector(".cursor");
+
+window.addEventListener("mousemove" , e => {
+    gsap.to(cursor, {duration: 0, left: e.pageX -1, top: e.pageY -3})
+})
+
+$( function() {
+    $(".icon1").draggable({
+        drag: function() {
+            $(".cursor img").attr("src", "../assets/img/cursor.png")
+        },
+    });
+    $(".icon2").draggable({
+        drag: function() {
+            $(".cursor img").attr("src", "../assets/img/cursor2.png")
+        },
+    });
+    $(".icon3").draggable({
+        drag: function() {
+            $(".cursor img").attr("src", "../assets/img/cursor3.png")
+        },
+    });
+    $(".icon4").draggable({
+        drag: function() {
+            $(".cursor img").attr("src", "../assets/img/cursor4.png")
+        },
+    });
+    $(".icon5").draggable({
+        drag: function() {
+            $(".cursor img").attr("src", "../assets/img/cursor5.png")
+        },
+    });
+    $(".icon6").draggable({
+        drag: function() {
+            $(".cursor img").attr("src", "../assets/img/cursor6.png")
+        },
+    });
+    $(".music__wrap").draggable({
+    });
+} );
+&lt;/script&gt;
+</code></pre>
+</div>
+<p class="t_desc"><i>날짜와 현재 시각</i></p>
+<p class="t_desc2">각 메서드들을 이용해 현재의 시, 분, 초를 불러오고, setTimeout함수로 1초마다 계속 실행시켜줍니다. 운영체제와, 화면의 크기도 메서드로 구해줍니다. 그리고 만들어진 함수를 윈도우가 켜지면 바로 실행되도록 실행시켜줍니다.</p>
+<div class="t_code">
+<pre><code class="language-js">&lt;script&gt;
+function printTime(){
+    const clock = document.querySelector(".time");
+    const now = new Date();
+
+    let nowHours = now.getHours();
+    let nowMinutes = now.getMinutes();
+    let nowSeconds = now.getSeconds();
+    if(nowHours > 12) nowHours = `0${nowHours - 12}`;
+    if(nowMinutes &lt; 10) nowMinutes = `0${nowMinutes}`;
+    if(nowSeconds &lt; 10) nowSeconds = `0${nowSeconds}`;                
+        
+    const nowTime = `오늘은 ${now.getFullYear()} 년 ${now.getMonth() + 1} 월 ${now.getDate()}일 ${nowHours} 시 ${nowMinutes}분 ${nowSeconds}초 입니다.`;
+
+    clock.innerText = nowTime;
+    setTimeout("printTime()", 1000);
+           
+}
+
+function printAgent(){
+    const agent = document.querySelector(".agent");
+    const os = navigator.userAgent.toLocaleLowerCase();
+
+
+    if(os.indexOf("window") >= 0){
+        agent.innerText = "현재 윈도우를 사용하고 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+        document.querySelector("body").classList.add("window");
+    } else if (os.indexOf("macintosh" >= 0)){
+        agent.innerText = "현재 맥을 사용하고 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+        document.querySelector("body").classList.add("mac");
+    } else if (os.indexOf("iphone" >= 0)){
+        agent.innerText = "현재 아이폰을 사용하고 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+        document.querySelector("body").classList.add("iphon");
+    } else if (os.indexOf("android" >= 0)){
+        agent.innerText = "현재 안드로이드를 사용하고 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+        document.querySelector("body").classList.add("android");
+    }
+}
+
+
+
+window.onload = function(){
+    printTime();
+    printAgent();
+}
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<p class="t_desc"><i>음악 플레이어</i></p>
+<p class="t_desc2">음악 이전 다음버튼은 슬라이드 이펙트에서 만든것처럼 삼항연산자로 식을 만들어줍니다. 음악 진행시간은 timeupdate을 사용해서 음악이 현재 진행되고있는 값을 불러와서 그 값만큼 width값을 넣어줍니다.
+    그래서 노래가 진행되는 만큼 width값으로 환산해서 실시간으로 게이지가 차는것처럼 만들어줍니다. 나머지 궁금하신 부분은 주석쪽을 확인해주시기 바랍니다.
+</p>
+<div class="t_code">
+<pre><code class="language-js">&lt;script&gt;
+    const allMusic = [
+    {
+        name : "1. Cottonmouth -",
+        artist : "Whole Other",
+        img: "img01",
+        audio: "music_audio01"
+    },
+    {
+        name : "2. Down With Your Getup -",
+        artist : "Mini Vandals",
+        img: "img02",
+        audio: "music_audio02"
+    },
+    {
+        name : "3. Hey There -",
+        artist : "half.cool",
+        img: "img03",
+        audio: "music_audio03"
+    },
+    {
+        name : "4. Keep On Movin' -",
+        artist : "King Canyon",
+        img: "img04",
+        audio: "music_audio04"
+    },
+    {
+        name : "5. Kind of a Party -",
+        artist : "Mini Vandals",
+        img: "img05",
+        audio: "music_audio05"
+    },
+    {
+        name : "6. Love the Messenger -",
+        artist : "Freedom Trail Studio",
+        img: "img06",
+        audio: "music_audio06"
+    },
+    {
+        name : "7. No Doubt -",
+        artist : "Yung Logos",
+        img: "img07",
+        audio: "music_audio07"
+    },
+    {
+        name : "8. South Street Strut -",
+        artist : "The Great North Sound Society",
+        img: "img08",
+        audio: "music_audio08"
+    },
+    {
+        name : "9. The Monuments and Tunnels -",
+        artist : "Bail Bonds",
+        img: "img09",
+        audio: "music_audio09"
+    },
+    {
+        name : "10. Yes and No at the Same Time -",
+        artist : "half.cool",
+        img: "img10",
+        audio: "music_audio10"
+    }
+]
+
+const musicWrap = document.querySelector(".music__wrap");
+const musicView = musicWrap.querySelector(".music__view .img img");
+const musicName = musicWrap.querySelector(".music__view .title h3"); 
+const musicArtist = musicWrap.querySelector(".music__view .title p");
+const musicAudio = musicWrap.querySelector("#main-audio");
+const musicPlay = musicWrap.querySelector("#control-play");
+const musicPrevBtn = musicWrap.querySelector("#control-prev");
+const musicNextBtn = musicWrap.querySelector("#control-next");
+const musicProgress = musicWrap.querySelector(".progress");
+const musicProgressBar = musicWrap.querySelector(".music__control .progress .bar");
+const musicProgressCurrent = musicWrap.querySelector(".music__control .timer .current");
+const musicProgressDuration = musicWrap.querySelector(".music__control .timer .duration");
+const musicRepeat = musicWrap.querySelector("#control-repeat");
+const musicListBtn = musicWrap.querySelector("#control-list");
+const musicList = musicWrap.querySelector(".music__list");
+const musicListUl = musicWrap.querySelector(".music__list ul");
+const closeBtn = musicWrap.querySelector(".music__list .close_btn");
+
+let musicIndex = 1;         // 현재 음악 인덱스
+
+// 음악 재생
+function loadMusic(num){
+    musicName.innerText = allMusic[num-1].name;             // 뮤직 이름 로드
+    musicArtist.innerText = allMusic[num-1].artist;         // 뮤직 아티스트 로드
+    musicView.src = `../assets/img/${allMusic[num-1].img}.png`;     // 뮤직 이미지 로드
+    musicView.alt = allMusic[num-1].name;                           // 뮤직 이미지 alt태그 로드
+    musicAudio.src = `../assets/audio/${allMusic[num-1].audio}.mp3` // 뮤직 로드
+}
+
+// 재생 버튼
+function playMusic(){
+    musicWrap.classList.add("paused");
+    musicPlay.setAttribute('title', '정지');
+    musicPlay.setAttribute('class', 'stop');
+    musicAudio.play();
+};
+
+// 정지 버튼
+function pauseMusic(){
+    musicWrap.classList.remove("paused");
+    musicPlay.setAttribute('title', '재생');
+    musicPlay.setAttribute('class', 'play');
+    musicAudio.pause();
+};
+
+// 이전곡 듣기
+function prevMusic(){
+    musicIndex == 1 ? musicIndex = allMusic.length : musicIndex--;
+    loadMusic(musicIndex);
+    playMusic();
+    playListMusic();
+};
+
+// 다음곡 듣기
+function nextMusic(){
+    musicIndex == allMusic.length ? musicIndex = 1 : musicIndex++;
+    loadMusic(musicIndex);
+    playMusic();
+    playListMusic();
+};
+
+// 뮤직 진행바
+musicAudio.addEventListener("timeupdate", e =&gt; {
+    const currentTime = e.target.currentTime;             //현재 재생되는 시간
+    const duration = e.target.duration;                   //오디오 총 길이
+    let progressWidth = (currentTime/duration) * 100;     //전체 길이에서 현재 진행되는 시간을 백분위로 나눈값
+    
+    musicProgressBar.style.width = `${progressWidth}%`;
+
+    // 전체 시간
+    musicAudio.addEventListener("loadeddata", ()=&gt;{
+        let audioDuration = musicAudio.duration;
+        let totalMin = Math.floor(audioDuration / 60);                         //전체 시간(초)을 분단위로 쪼갬
+        let totalSec = Math.floor(audioDuration % 60);                         //남은 초를 저장
+        if(totalSec &lt; 10) totalSec = `0${totalSec}`;                           //초가 한자릿수일때 앞에 0을 붙임
+        musicProgressDuration.innerText = `${totalMin}:${totalSec}`;           //완성된 시간 문자열 출력
+    })
+
+    // 진행시간
+    let currentMin = Math.floor(currentTime / 60);
+    let currentSec = Math.floor(currentTime % 60);
+    if(currentSec &lt; 10) currentSec = `0${currentSec}`;
+    musicProgressCurrent.innerText = `${currentMin}:${currentSec}`;
+
+});
+
+// 진행 버튼 클릭
+musicProgress.addEventListener("click", (e) =&gt; {
+    let progressWidth = musicProgress.clientWidth; // 진행바 전체 길이
+    let clickedOffsetX = e.offsetX; // 진행바 기준으로 측정되는 X 좌표값
+    let songDuration = musicAudio.duration; // 오디오 전체 길이
+    musicAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration; // 백분위로 나눈 숫자에 다시 전체 길이를 곱해서 현재 재생값으로 바꿈
+});
+
+// 반복 버튼 클릭
+musicRepeat.addEventListener("click",()=&gt;{
+    let getAttr = musicRepeat.getAttribute("class");
+
+    switch(getAttr){
+        case "repeat" :
+            musicRepeat.setAttribute("class", "repeat-one");
+            musicRepeat.setAttribute("title", "한곡 반복");
+        break;
+        case "repeat-one":
+            musicRepeat.setAttribute("class", "shuffle");
+            musicRepeat.setAttribute("title", "랜덤 반복");
+        break;
+        case "shuffle":
+            musicRepeat.setAttribute("class", "repeat");
+            musicRepeat.setAttribute("title", "전체 반복");
+        break;
+    }
+
+})
+
+// 오디오 끝나면
+musicAudio.addEventListener("ended", ()=&gt; {
+    let getAttr = musicRepeat.getAttribute("class");
+
+    switch(getAttr){
+        case "repeat" :
+            nextMusic();
+        break;
+        case "repeat-one" :
+            playMusic();
+        break;
+        case "shuffle" :
+            let randomIndex = Math.floor(Math.random() * allMusic.length + 1 );     //랜덤 인덱스 생성
+
+            do {
+                randomIndex = Math.floor(Math.random() * allMusic.length + 1 );
+            } while ( musicIndex == randomIndex )
+            musicIndex = randomIndex;           // 현재 인덱스를 랜덤 인덱스 변경
+            loadMusic(musicIndex);              // 랜덤 인덱스가 반영된 현재 인덱스 값으로 음악을 다시 로드
+            playMusic();                        // 로드한 음악을 재생
+        break;
+    }
+    playListMusic();        //재생목록 업데이트
+})
+
+// 플레이 버튼
+musicPlay.addEventListener("click", ()=&gt;{
+    const isMusicPaused = musicWrap.classList.contains("paused");     //음악이 재생중
+    isMusicPaused ? pauseMusic() : playMusic();
+})
+
+// 정지 버튼
+musicPlay.addEventListener("click", ()=&gt;{
+})
+
+// 다음곡 버튼
+musicNextBtn.addEventListener("click", ()=&gt;{
+    nextMusic();
+})
+
+// 이전곡 버튼
+musicPrevBtn.addEventListener("click", ()=&gt;{
+    prevMusic();
+})
+
+
+// 뮤직 리스트 버튼
+musicListBtn.addEventListener("click", ()=&gt;{
+    musicList.classList.toggle("show");
+})
+closeBtn.addEventListener("click", ()=&gt;{
+    musicList.classList.remove("show");
+})
+
+// 뮤직 리스트 구현하기
+for(let i = 0; i &lt; allMusic.length; i++){
+    let li = `
+            &lt;li data-index="${i+1}"&gt;
+                &lt;strong&gt;${allMusic[i].name}&lt;/strong&gt;
+                &lt;em&gt;${allMusic[i].artist}&lt;/em&gt;
+                &lt;audio class="${allMusic[i].audio}" src ="../assets/audio/${allMusic[i].audio}.mp3"&gt;&lt;/audio&gt;
+                &lt;span class="audio-duration" id="${allMusic[i].audio}"&gt;재생시간&lt;/span&gt;
+            &lt;/li&gt; 
+    `;
+
+    // musicListUl.innerHTML += li;         // 한번에 로딩되어서 인식이 잘 안됌
+    musicListUl.insertAdjacentHTML("beforeend", li);    // 하나씩 넣어져서 인식
+
+    // 리스트에 음악 시간 불러오기
+
+    let liAudioDuration = musicListUl.querySelector(`#${allMusic[i].audio}`);     // li 리스트에서 시간을 표시할 선택자를 가져옴
+    let liAudio = musicListUl.querySelector(`.${allMusic[i].audio}`);             // li 리스트에서 오디오를 가져옴
+    liAudio.addEventListener("loadeddata", ()=&gt;{
+        let audioDuration = liAudio.duration;                       // 오디오 전체 길이
+        let totalMin = Math.floor(audioDuration / 60);              // 전체 길이를 분 단위로 쪼갬
+        let totalSec = Math.floor(audioDuration % 60);              // 초 계산
+        if(totalSec &lt; 10) totalSec = `0${totalSec}`;                // 일 자리에 0 추가
+        liAudioDuration.innerText = `${totalMin}:${totalSec}`;      //문자열 출력
+        liAudioDuration.setAttribute("data-duration", `${totalMin}:${totalSec}`);
+        
+    });
+}
+
+// 뮤직 리스트를 클릭하면 재생
+function playListMusic(){
+    const musicListAll = musicListUl.querySelectorAll("li");        // 뮤직 리스트 목록
+    for(let i=0; i&lt;musicListAll.length; i++){
+        let audioTag = musicListAll[i].querySelector(".audio-duration");
+
+        if(musicListAll[i].classList.contains("playing")){          // 플레잉 클래스 존재 여부 확인
+            musicListAll[i].classList.remove("playing");            // 플레잉 클래스 제거
+            let adDuration = audioTag.getAttribute("data-duration");    //데이터 듀레이션 값 가져오기
+            audioTag.innerText = adDuration;                            // 오디오 태그에 데이터 듀레이션값 출력
+        }
+
+        if(musicListAll[i].getAttribute("data-index") == musicIndex){       //현재 실행중인 데이터 인덱스값과 뮤직 인덱스값이 같을 경우
+            musicListAll[i].classList.add("playing");       // 플레잉 클래스 추가
+            audioTag.innerText = "재생중"                   // 재생중일 경우 텍스트 '재생중' 출력
+        }
+
+
+        musicListAll[i].setAttribute("onclick", "clicked(this)");
+    }
+}
+
+// 뮤직 리스트 클릭하면...
+function clicked(el){
+    let getliIndex = el.getAttribute("data-index"); // 클릭한 리스트의 인덱스값 저장
+    musicIndex = getliIndex;                        // 클릭한 인덱스 값을 뮤직 인덱스에 저장
+    loadMusic(musicIndex);                          // 해당 인덱스 뮤직 로드
+    playMusic();                                    // 음악 재생
+    playListMusic();                                // 음악 리스트 업데이트
+}
+
+
+window.addEventListener("load", ()=&gt; {
+    loadMusic(musicIndex);  // 음악 재생
+    playListMusic();        // 리스트 초기화
+})
+
+// 볼륨 조절
+const audio = document.getElementById("main-audio");
+const audioVolume = document.getElementById("volume-control");
+const volumeIcon = document.querySelector(".volume_icon");
+const volumeOffIcon = document.querySelector(".volumeOff_icon");
+
+audioVolume.addEventListener("change", function (e) {
+    audio.volume = this.value / 10;
+    if (this.value == 0) {
+        volumeIcon.classList.add("hide");
+        volumeOffIcon.classList.add("show");
+    } else {
+        volumeIcon.classList.remove("hide");
+        volumeOffIcon.classList.remove("show");
+    }
+});
+&lt;/script&gt;
+</code></pre>
+</div>
+            
+                        
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

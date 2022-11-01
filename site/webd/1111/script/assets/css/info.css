@@ -1,0 +1,64 @@
+
+.infoType {
+
+}
+.info_inner {
+    display: flex;
+    justify-content: space-between;
+}
+.info {
+    width: 49%;
+}
+.i_border {
+    border: 1px solid #000;
+    width: calc(100%- 40px);
+    height: 170px;
+    padding: 40px;
+    position: relative;
+}
+.i_tit {
+
+}
+.i_desc {
+    position: absolute;
+    left: 450px;
+    top: 40px;
+}
+.top {
+    width: 100%;
+    display: flex;
+}
+.top img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 500px;
+    top: 39px;
+
+}
+.i_tit {
+    margin-bottom: 20px;
+}
+.i_tit2 {
+    margin-bottom: 15px;
+}
+.i_desc2 {
+    position: absolute;
+    left: 434px;
+    top: 85px;
+}
+.i_desc3 {
+    position: absolute;
+    left: 434px;
+    top: 115px;
+}
+.i_desc4 {
+    position: absolute;
+    left: 434px;
+    top: 145px;
+}
+.i_desc5 {
+    position: absolute;
+    left: 434px;
+    top: 175px;
+}

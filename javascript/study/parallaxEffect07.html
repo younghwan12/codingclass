@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">패럴랙스 효과</h2>
+            <p class="t_desc">패럴랙스 이펙트 - 리빌 효과</p>
+            <p class="t_box">글씨위에 가상변수로 덮어씌어서 글씨가 리빌하는 효과를 만들어보겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://younghwan12.github.io/coding3/javascript/effect/parallaxEffect07.html"></iframe>
+            </div>
+            <div class="t_link" style="display: flex;">
+                <a href="https://github.com/younghwan12/coding3/blob/main/javascript/effect/parallaxEffect07.html" target="_blank">원본 소스 보기</a>
+                <a href="https://younghwan12.github.io/coding3/javascript/effect/parallaxEffect07.html" target="_blank">원본 사이트 보기</a>
+            </div>
+            <hr>
+            <h3 class="t_tit2">HTML 작성</h3>
+            <p class="t_desc2">각각의 섹션을 만들어 줍니다.</p>
+            <div class="t_result">
+                <details>
+                    <summary>소스 보기</summary>
+                    <div class="t_code">
+<pre><code class="language-html">&lt;main id="parallax__cont"&gt;
+    &lt;div id="contents"&gt;
+        &lt;section id="section1" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;01&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section1&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal" data-delay="500"&gt;&lt;span&gt;산다는것 그것은 치열한 전투이다.&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section1 --&gt;
+
+        &lt;section id="section2" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;02&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section2&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal reveal-RTL"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal" data-delay="500"&gt;&lt;span&gt;하루에 3시간을 걸으면 7년 후에 지구를 한바퀴 돌 수 있다.&lt;/span&gt;&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section2 --&gt;
+
+        &lt;section id="section3" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;03&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section3&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal reveal-TTB"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal"&gt;내일은 내일의 태양이 뜬다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section3 --&gt;
+
+        &lt;section id="section4" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;04&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section4&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal reveal-BTT" data-delay="500"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal"&gt;배고픈 자 밥솥을 열어라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section4 --&gt;
+
+        &lt;section id="section5" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;05&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section5&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal"&gt;그대 자신의 영혼을 탐구하라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section5 --&gt;
+
+        &lt;section id="section6" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;06&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section6&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO reveal-RTL"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal"&gt;돈이 없는 것은 죄다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section6 --&gt;
+
+        &lt;section id="section7" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;07&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section7&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO reveal-TTB"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal"&gt;무전 유죄, 유전 무죄&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section7 --&gt;
+
+        &lt;section id="section8" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;08&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section8&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO reveal-BTT"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal"&gt;내 주머니의 푼돈이 남 주머니에 있는 거금보다 낫다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section8 --&gt;
+
+        &lt;section id="section9" class="content__item"&gt;
+            &lt;span class="content__item__num"&gt;09&lt;/span&gt;
+            &lt;h2 class="content__item__title"&gt;section9&lt;/h2&gt;
+            &lt;figure class="content__item__imgWrap reveal reveal-TWO reveal-TTB"&gt;
+                &lt;div class="content__item__img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="content__item__desc reveal"&gt;최고에 도달하려면 최저에서 시작하라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section9 --&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                        </div>
+                </details>               
+            </div>
+<h3 class="t_tit2">CSS 작성</h3>
+<p class="t_desc2">reveal 클래스에 show가 붙으면 애니메이션 효과를 넣어주었습니다.</p>
+<div class="t_result">
+    <details>
+        <summary>결과</summary>
+        <div class="t_code">
+<pre><code class="language-css">/* 07 Option */
+.reveal > div,
+.reveal > span {
+    opacity: 0;
+}
+.reveal.show > div,
+.reveal.show > span {
+    animation: opacity 1s linear forwards;
+}
+.reveal {
+    position: relative;
+}
+.reveal::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #ccc;
+    z-index: 1;
+}
+.reveal.reveal-TWO::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    background: #333;
+}
+
+/* 1개 */
+.reveal.show::before {
+    animation: reveal 1s;
+}
+.reveal.reveal-RTL.show::before {
+    animation: revealRTL 1s;
+}
+.reveal.reveal-TTB.show::before {
+    animation: revealTTB 1s;
+}
+.reveal.reveal-BTT.show::before {
+    animation: revealBTT 1s;
+}
+
+/* 2개 */
+.reveal.show::after {
+    animation: reveal 1s 0.3s;
+}
+.reveal.reveal-RTL.show::after {
+    animation: revealRTL 1s 0.3s;
+}
+.reveal.reveal-TTB.show::after {
+    animation: revealTTB 1s 0.3s;
+}
+.reveal.reveal-BTT.show::after {
+    animation: revealBTT 1s 0.3s;
+}
+
+@keyframes opacity {
+    0%   {opacity: 0;}
+    60%  {opacity: 0;}
+    70%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes reveal {
+    0%    {width: 0; left: 0;}
+    50%   {width: 100%; left: 0;}
+    80%   {width: 100%; left: 0;}
+    100%  {width: 0; left: 100%;}
+}
+@keyframes revealRTL {
+    0%    {width: 0; right: 0; left: auto;}
+    50%   {width: 100%; right: 0; left: auto;}
+    80%   {width: 100%; right: 0; left: auto;}
+    100%  {width: 0; right: 100%; left: auto;}
+}
+@keyframes revealTTB {
+    0%    {width: 100%;    height: 0;    top: 0;}
+    50%   {width: 100%; height: 100%; top: 0;}
+    80%   {width: 100%; height: 100%; top: 0;}
+    100%  {width: 100%;    height: 0;    top: 100%;}
+}
+@keyframes revealBTT {
+    0%    {width: 100%;    height: 0;    bottom: 0; top: auto;}
+    50%   {width: 100%;    height: 100%; bottom: 0; top: auto;}
+    80%   {width: 100%;    height: 100%; bottom: 0; top: auto;}
+    100%  {width: 100%;    height: 0;    bottom: 100%; top: auto;}
+}
+</code></pre>
+            </div>
+    </details>               
+</div>
+            <h3 class="t_tit2">JS 작성</h3>
+            <p class="t_desc2">
+                늘 만들던 대로 리빌 클래스에 스크롤값이 어느정도 가운데로 들어오면 show가 붙도록 CSS가 되도록 만들었습니다. revealText foreach문은 reveal문을 가지고있는데 아래쪽에 텍스트가 있다면 span을 감싸도록 만들었습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">const revealText = document.querySelectorAll(".reveal");
+// console.log(revealText)
+
+
+// 2022-10-06
+revealText.forEach((el)=>{
+    let splitText = el.innerText;
+
+    // console.log(splitText)
+    if(splitText){
+        el.innerHTML = '&lt;span>' + splitText + '&lt;/span>';
+    }
+})     
+
+function scroll(){
+    let ScrollTop = window.scrollY;
+
+    const reveal = document.querySelectorAll(".reveal");
+
+    reveal.forEach(el=> {
+        let revealOffset = el.offsetTop + el.parentElement.offsetTop;
+        let revealDelay = el.dataset.delay;
+
+        // if(ScrollTop > revealOffset - window.innerHeight/2){
+        //     el.classList.add("show");
+        // }
+
+        if(ScrollTop >= revealOffset - window.innerHeight){
+            if(revealDelay == undefined){
+                el.classList.add("show");
+            } else {
+                setTimeout(()=>{
+                    el.classList.add("show");
+                }, revealDelay);
+            }
+        }
+    })
+
+    requestAnimationFrame(scroll);
+}
+scroll();
+</code></pre>
+</div>                          
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>

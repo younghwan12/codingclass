@@ -1,0 +1,58 @@
+#footer {
+    background-color: #000;
+    margin-top: 50px;
+    height: 300px;
+}
+#footer .container {
+    position: relative;
+}
+.footarea {
+    width: 250px;
+    margin-left: 250px;
+}
+.footType {
+    display: flex;
+}
+.footarea img {
+    width: 250px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+}
+#footer p {
+    color: #fff;
+}
+.footer_menu {
+}
+.footer_menu ul {
+    text-align: center;
+}
+.footer_menu li {
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 50px;
+}
+.footer_menu li a {
+    text-align: left;
+    font-weight: 600;
+}
+.footer_menu a {
+    display: inline;
+    color: #fff;
+}
+.footer_menu .t_desc1 {
+    position: absolute;
+    left: 570px;
+    top: 110px;
+    color: #ccc;
+}
+.footer_menu .t_desc2 {
+    position: absolute;
+    left: 570px;
+    top: 140px;
+}
+.footer_menu .t_desc3 {
+    position: absolute;
+    left: 570px;
+    top: 190px;
+}

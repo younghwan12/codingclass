@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹 표준, 웹 호환성, 웹 접근성의 이해</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">CSS 애니메이션 연습하기</h2>
+            <p class="t_desc">오늘은 간단하게 css 애니메이션을 이용해서 두개의 원이 돌아가는것을 만들어 보겠습니다.</p>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe">
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Loading Circle" src="https://codepen.io/younghwan12/embed/mdxZQgY?result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/younghwan12/pen/mdxZQgY">
+                    Loading Circle</a> by younghwan12 (<a href="https://codepen.io/younghwan12">@younghwan12</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+            <h2 class="t_tit2">HTML</h2>
+            <p class="t_desc">HTML에 로딩태그 안에 원을 두개 만들거니 두개의 서클태그를 span태그로 만들어줍니다.</p>
+            <div class="t_code">
+<pre><code class="language-html">&lt;div class="loading">
+    &lt;span class="circle1"&gt;&lt;/span&gt;
+    &lt;span class="circle2"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+<h2 class="t_tit2">CSS</h2>
+            <p class="t_desc">배경색은 그라데이션을 넣어줍니다. 로딩을 position absolute를 이용해 정 중앙에 만들고, 크기값을 넣어서 영역을 만들어줍니다. 그리고
+                각각 원을 만들어 로딩 영역 끝에 배치를 해준뒤에 로딩태그에 애니메이션을 넣어서 회전하는듯한 모습을 표현했습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">body {
+    height: 100vh;
+    background-image: linear-gradient(-60deg, skyblue 0%, yellowgreen 100%);
+}
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 150px;
+    animation: loading 1s ease 100;
+}
+.loading .circle1 {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+}
+.loading .circle2 {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    margin-top: 110px;
+}  
+@keyframes loading {
+    0% { transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% { transform: translate(-50%, -50%) rotate(360deg);    
+    }
+}
+</code></pre>
+                </div>
+                <div class="t_link" style="display: flex;">
+                    <a href="https://codepen.io/younghwan12/pen/LYdKXrm" target="_blank">코드팬 보기</a>
+                </div>
+            </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    
+</body>
+</html>
+
+
+
+<!-- 웹 표준 준수 img에 alt태그에 사진이없을 때 사진을 대신하는 이름을 alt태그로 적는다 -->

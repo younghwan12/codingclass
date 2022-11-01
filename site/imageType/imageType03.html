@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형02</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/yangheeryu/GowunBatang.css');
+
+        .gowun {
+            font-family: 'GowunBatang';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            text-indent: -9999px;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+            
+        }
+        .container_fluid {
+            width: 100%;
+            padding: 0 100px;
+            box-sizing: border-box;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .image__inner {
+            display: grid;
+            grid-template-areas:
+                "box1 box1 box2 box3"
+                "box1 box1 box4 box5";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 20px;
+            padding: 0 120px;
+        }
+        .image {
+            position: relative;
+            overflow: hidden;
+        }
+        .image__inner .image {
+            
+        }
+        .image__inner .image:nth-child(1) {
+            grid-area: box1;
+            background: url(img/imageType03_01.jpg);
+            background-size: cover;
+        }
+        .image__inner .image:nth-child(2) {
+            grid-area: box2;
+        }
+        .image__inner .image:nth-child(3) {
+            grid-area: box3;
+        }
+        .image__inner .image:nth-child(4) {
+            grid-area: box4;
+        }
+        .image__inner .image:nth-child(5) {
+            grid-area: box5;
+        }
+        .image__desc {
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            background: rgba(225, 225, 225, 0.207);
+            padding: 16px;
+            box-sizing: border-box;
+            transition: all 0.4s ease;
+        }
+        .image:hover .image__desc {
+            bottom: 0;
+        }
+        .image__desc h3 {
+            color: #fff;
+            font-size: 20px;
+        }
+        .image__desc p {
+            font-size: 16px;
+            color: #fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .image__sns {
+            position: absolute;
+            right: -100px;
+            top: 10px;
+            transition: all 0.4s ease;
+        }
+        .image__sns a {
+            width: 36px;
+            height: 36px;
+            background: #fff;
+            border-radius: 50%;
+            display: block;
+            margin-bottom: 5px;
+            background: url(img/image_bg03_icon.svg) no-repeat;
+        }
+        .image__sns a:nth-child(1) {}
+        .image__sns a:nth-child(2) {
+            background-position: -50px 0;
+        }
+        .image__sns a:nth-child(3) {
+            background-position: -100px 0;
+        }
+        .image__sns a:nth-child(4) {
+            background-position: -150px 0;
+        }
+        .image__sns a:nth-child(5) {
+            background-position: -200px 0;
+        }
+        .image:hover .image__sns {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="imageType02" class="image__wrap gowun section">
+        <h2>자동차 리스트</h2>
+        <p>
+            제 미래의 차고에 있는 슈퍼카 리스트..<br>
+            여러분들께 지금 소개시켜드립니다. 안전벨트 꽉매고 쫒아오세요.
+        </p>
+        <div class="image__inner container-fluid">
+            <article class="image">
+                <!-- <figure class="image__box">
+                    <img src="img/imageType03_01.jpg" alt="세이크 로트폴라 모스크">
+                </figure>                 -->
+                <div class="image__desc">
+                    <h3>테슬라</h3>
+                    <p>미국의 전기자동차 제조업체이다. 본사는 미국 텍사스 오스틴에 두고 있다. 설립자인 일론 머스크가 테크노킹[3]을 맡고 있다.</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="ir">페이스북</span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imageType03_02.jpg" alt="벤츠">
+                </figure>                
+                <div class="image__desc">
+                    <h3>BENZ</h3>
+                    <p>독일 메르세데스-벤츠 그룹 산하의 프리미엄 자동차 제조사</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="ir">페이스북</span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imageType03_03.jpg" alt="세이크 로트폴라 모스크">
+                </figure>                
+                <div class="image__desc">
+                    <h3>LAMBORGHINI</h3>
+                    <p>1963년에 페루치오 람보르기니에 의해 설립된 이탈리아의</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="ir">페이스북</span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imageType03_04.jpg" alt="세이크 로트폴라 모스크">
+                </figure>                
+                <div class="image__desc">
+                    <h3>FERRARI</h3>
+                    <p>1947년 스쿠데리아 페라리[6]에 기초하여 설립된 이탈리아의</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="ir">페이스북</span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
+                </div>
+            </article>
+            <article class="image">
+                <figure class="image__box">
+                    <img src="img/imageType03_05.jpg" alt="세이크 로트폴라 모스크">
+                </figure>                
+                <div class="image__desc">
+                    <h3>BMW</h3>
+                    <p>독일의 프리미엄 자동차 및 오토바이 구독 서비스 제조사.</p>
+                </div>
+                <div class="image__sns">
+                    <a href="#" class="link"><span class="ir">페이스북</span></a>
+                    <a href="#" class="link"><span class="ir">페이지이동</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

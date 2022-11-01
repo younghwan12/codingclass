@@ -1,0 +1,17 @@
+.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.image {
+    width: 23%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.img_tit {
+    color: #000;
+    margin-top: 30px;
+}
+.img_desc {
+    margin-top: 30px;
+}
