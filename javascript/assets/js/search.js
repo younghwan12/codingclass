@@ -400,6 +400,7 @@ const searchTotal = document.querySelector(".search__info .search__total span");
 const searchResult = document.querySelector(".search__result .result");
 const searchResultWrap = document.querySelector(".search__result");
 const searchRestart = document.querySelector(".search__result .restart");
+const searchClose = document.querySelector(".search__header .search__close");
 
 let timeReamining = 120,    //남은시간
     timeInterval = "",    //시간 간격
@@ -528,7 +529,7 @@ function endQuiz(){
     //메세지 출력
     searchResultWrap.classList.add("show");
     let point = Math.round((Score / cssProperty.length)*100);
-    searchResult.innerHTML = `게임이 끝났습니다.<br> 당신은 ${cssProperty.length}개 중에 ${Score}개를 맟추셨습니다.<br>점수는 ${point}점 입니다.`;
+    searchResult.innerHTML = `게임이 끝났습니다.<br> 당신은 ${cssProperty.length}개 중에 ${Score}개를 맞추셨습니다.<br>점수는 ${point}점 입니다.`;
 
 };
 
@@ -561,3 +562,9 @@ searchAudioStop.addEventListener("click", ()=>{
     searchAudioStop.style.display = "none";
     searchAudio.play();
 });
+
+
+// 뮤직플레이어 종료
+searchClose.addEventListener("click", ()=>{
+    QuizGame.classList.remove("show")
+})

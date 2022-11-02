@@ -42,6 +42,12 @@ li {
     background-color: var(--htmlColor);
     padding: 10px 0;
 }
+.search__close {
+    cursor: pointer;
+}
+.search__close:hover {
+    color: red;
+}
 .search__header > div,
 h2 {
     color: #fff;
@@ -62,6 +68,7 @@ h2 {
     background-color: #f1f3f6;
     padding: 30px;
     text-align: center;
+    position: relative;
 }
 .search__wrap > span {
     font-size: 20px;
@@ -108,10 +115,11 @@ h2 {
 .search__box input {
     border: 2px solid var(--htmlColor);
     padding: 15px 40px;
-    width: 30%;
+    width: 70%;
     /* border-radius: 50px; */
     font-size: 20px;
     margin-top: 20px;
+    text-align: center;
 }
 .search__box .start {
     position: absolute;
@@ -119,7 +127,7 @@ h2 {
     bottom: 0;
     transform: translateX(-50%);
     background: #223547;
-    width: 30%;
+    width: 70%;
     /* border-radius: 50px; */
     font-size: 20px;
     border: 2px solid var(--htmlColor);
@@ -296,8 +304,8 @@ h2 {
     position: fixed;
     right: 1vw;
     top: 1vw;
-    width: 40vw;
-    height: 40vw;
+    width: 20vw;
+    height: 20vw;
     z-index: 10000;
     align-items: center;
     justify-content: center;
@@ -307,13 +315,18 @@ h2 {
     border: 6px solid var(--htmlColor);
 }
 .search__result.show {
+    position: absolute;
+    top: 1%;
+    width: 500px;
+    height: 500px;
+    right: -45%;
     display: flex;
     animation: rubberBand 1s 0.6s ease;
 }
 .search__result .result {
     margin-top: 30px;
-    font-size: 1.5vw;
-    line-height: 1.4;
+    font-size: 1.2vw;
+    line-height: 1.3s;
 }
 .search__result .restart {
     background: #000;
@@ -325,7 +338,12 @@ h2 {
     margin-top: 30px;
     cursor: pointer;
 }
-
+.svg__inner {
+    width: 70%;
+    height: 160px;
+}
+.svg__wrap {
+}
 @keyframes rubberBand {
     from {
         transform: translate(-50%, -50%) scale3d(1, 1, 1);
