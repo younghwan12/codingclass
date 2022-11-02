@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://webfontworld.github.io/kopus/KoPubWorldBatang.css" rel="stylesheet">
+
+    <link href="https://webfontworld.github.io/heiroflight/HeirofLight.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "KoPubWorldBatang";
+            background: #000;
+            color: #fff;
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .black {
+            width: 100%;
+            height: 100vh;
+            background: #000;
+        }
+        
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.3);
+            text-align: center;
+            line-height: 40px;
+            z-index: 100000;
+        }
+        /* layout */
+        #contents {}
+        #section1 {
+            height: 10000px;
+        }
+        #section1 {}
+        #section1 {}
+        #section1 {}
+        #section1 {}
+        #section1 {}
+
+        /* sec1 */
+        .sec1_text1 {
+            font-size: 8vw;
+            font-weight: 300;
+            white-space: nowrap;
+        }
+        .sec1_text2 {
+            font-size: 7vw;
+            white-space: nowrap;
+            font-family: 'HeirofLight';
+        }
+        .sec1_text3 {
+            font-size: 6vw;
+            white-space: nowrap;
+            font-family: 'HeirofLight';
+        }
+        .sect1_text4 {
+            width: 100%;
+            height: 100vh;
+            /* background: url(../assets/img/apple_Img01.jpg); */
+            background: url(https://images.unsplash.com/photo-1512168203104-3910bc2bcd54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+            background-size: cover;
+            background-position: center;
+        }
+        .sect1_text5 {
+            width: 100%;
+            height: 100vh;
+            background: url(https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3BhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+            background-size: cover;
+            background-position: center;
+            font-size: 25px;
+            color: #fff;
+        }
+        .sect1_text6 {
+            z-index: 10;
+            width: 350px;
+            height: 350px;
+            background: url(../assets/img/meImg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .sect1_text7 {
+            z-index: -1;
+            width: 350px;
+            height: 350px;
+            background: url(https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c29jY2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .sect1_text8 {
+            width: 350px;
+            height: 350px;
+            background: url(https://images.unsplash.com/photo-1611536326696-b52be8ef45f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGFsY2hvbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .sect1_text9 {
+            width: 350px;
+            height: 350px;
+            background: url(https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG9iYnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .sect1_text10 {
+            width: 350px;
+            height: 350px;
+            background: url(https://images.unsplash.com/photo-1593504891798-2bfb68bc51a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvYmJ5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .sect1_text11 {
+            width: 350px;
+            height: 350px;
+            background: url(https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .sect1_text12 {
+            z-index: 1;
+            font-size: 2vw;
+            white-space: nowrap;
+            font-family: 'HeirofLight';
+        }
+        .sect1_text13 {
+            font-size: 3vw;
+            white-space: nowrap;
+            font-family: 'HeirofLight';
+        }
+        .sect1_text14 {
+            z-index: 11;
+            width: 100%;
+            height: 100vh;
+            background: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .sect1_text15 {
+            font-size: 7vw;
+            white-space: nowrap;
+            font-family: 'HeirofLight';
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollTop"></div>
+    <main id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <div class="sec1_text1 fixed"
+                data-0 = "top: 50%; opacity: 1"
+                data-500 = "top: 30%; opacity: 0"
+                >Hello!</div>
+                <div class="sec1_text2 fixed"
+                data-550 = "opacity:  0; top: 70%; transform: translate(-50%, -50%) scale(1);"
+                data-1000 = "opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1);"
+                data-1500 = "opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(0);"
+                >프론트앤드 개발자입니다!</div>
+                <div class="sec1_text3 fixed"
+                data-1400 = "top: 30%; opacity:0; transform: translate(-50%, -50%) scale(0.8);"
+                data-1900 = "top: 50%; opacity:1; transform: translate(-50%, -50%) scale(1);"
+                data-2400 = "top: 70%; opacity:0; transform: translate(-50%, -50%) scale(0.8);"
+                >자기소개 시작합니다.</div>
+                <!-- <div class="sect1_text4 fixed"
+                data-2500 = "width:50vw; transform: translate(-50%, -50%) scale(0) rotate(360deg);"
+                data-3200 = "width:50vw; transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+                >지금부터 저를 소개해보려고 합니다.🤪</div> -->
+                <div class="sect1_text4 fixed"
+                data-2500 = "width:0%; transform: translate(-50%, -50%) scale(1); opacity:1;"
+                data-3100 = "width:100%; transform: translate(-50%, -50%) scale(2);"
+                data-3700 = "width:100%; opacity:0;"
+                ></div>
+                <div class="sect1_text5 fixed"
+                data-3700 = " transform: translate(-50%, -50%); opacity:0;"
+                data-4200 = " transform: translate(-50%, -50%); opacity:1;"
+                data-4900 = " opacity:0;"
+                ><span class="fixed">길을 헤매던 어린 소년은<br>꿈을 찾아 우주로 떠나게되고..</span></div>
+                <div class="sect1_text6 fixed"
+                data-5000 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                data-5600 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                data-6700 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                data-8000 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                ></div>
+                <div class="sect1_text7 fixed"
+                data-6300 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                data-6400 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                data-6900 = "z-index:1; transform: translate(15%, 15%) rotate(360deg); opacity:1;"
+                data-7500 = "z-index:1; transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                ></div>
+                <div class="sect1_text8 fixed"
+                data-6300 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                data-6400 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                data-6900 = "z-index:1; transform: translate(150%, 50%) rotate(360deg); opacity:1;"
+                data-7500 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                ></div>
+                <div class="sect1_text9 fixed"
+                data-6300 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                data-6400 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                data-6900 = "z-index:1; transform: translate(-150%, 50%) rotate(360deg); opacity:1;"
+                data-7500 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                ></div>
+                <div class="sect1_text10 fixed"
+                data-6300 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                data-6400 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                data-6900 = "z-index:1; transform: translate(-150%, -160%) rotate(360deg); opacity:1;"
+                data-7500 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                ></div>
+                <div class="sect1_text11 fixed"
+                data-6300 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                data-6400 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                data-6900 = "z-index:1; transform: translate(150%, -160%) rotate(360deg); opacity:1;"
+                data-7500 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                ></div>
+                <div class="sect1_text12 fixed"
+                data-6000 = " top:0%; rotate(0deg); opacity:0;"
+                data-6400 = " top:20%; rotate(0deg); opacity:1;"
+                data-7500 = " top:00%; rotate(0deg); opacity:0;"
+                >다양한 취미를 가지고있던 그 소년은</div>
+                <div class="sect1_text13 fixed"
+                data-8000 = " top:0%; rotate(0deg); opacity:0;"
+                data-8400 = " top:80%; rotate(0deg); opacity:1;"
+                data-9000 = " top:100%; rotate(0deg); opacity:0;"
+                >개발자의 길로 빠지게된다..</div>
+                <div class="sect1_text14 fixed"
+                data-8800 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                data-9000 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                data-9600 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                ></div>
+                <div class="sect1_text15 fixed"
+                data-10100 = " transform: translate(-50%, -50%) rotate(0deg); opacity:0;"
+                data-10700 = " transform: translate(-50%, -50%) rotate(0deg); opacity:1;"
+                >다음 시간에 계속....</div>
+            </div>
+        </section>
+        <!-- //section1-->
+        <section id="section2"></section><!-- //section2-->
+        <section id="section3"></section><!-- //section3-->
+        <section id="section4"></section><!-- //section4-->
+        <section id="section5"></section><!-- //section5-->
+        <section id="section6"></section><!-- //section6-->
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        const s = skrollr.init();
+
+
+        function scroll(){
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop)
+
+
+
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+    </script>
+</body>
+</html>
