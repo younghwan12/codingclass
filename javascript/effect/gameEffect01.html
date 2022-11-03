@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../assets/css/search_ani1.css">
 
     <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <style>
+        * {
+            z-index: 0;
+        }
+    </style>
     
 </head>
 <body>
@@ -84,7 +89,7 @@
     <!-- //footer -->
 
     <!-- 뮤직 플레이어 -->
-    <div class="music__wrap">
+    <div class="music__wrap wrap">
         <div class="music__inner">
             <div class="music__header">
                 <div>***</div>
@@ -145,7 +150,7 @@
     <!-- //뮤직 플레이어 -->
 
     <!-- 퀴즈게임 2번아이콘 -->
-    <div class="search__wrap">
+    <div class="search__wrap wrap">
         <div class="search__inner">
             <div class="search__header">
                 <div>***</div>
@@ -352,7 +357,7 @@
     <!-- //퀴즈게임 2번아이콘 -->
 
     <!-- 메모리게임 3번아이콘 -->
-    <div class="memory__wrap">
+    <div class="memory__wrap wrap">
         <div class="memory__inner">
             <div class="memory__header">
                 <h2>같은그림찾기</h2>
@@ -504,13 +509,8 @@
             </div>
             <div class="memory__result">           
                 <div class="result">게임 오버</div>
-                맞힌 개수 :<span class="resultScore">0개</span>
+                점수 : <span class="resultScore"></span>
                 <div class="result__restart">다시 시작하기</div>
-            </div>
-            <div class="memory__clear">           
-                <div class="clear">게임 승리</div>
-                틀린 개수 : <span class="clearScore">0개</span>
-                <div class="clear__restart">다시 시작하기</div>
             </div>
         </div>
     </div>
@@ -558,6 +558,10 @@
         window.addEventListener("mousemove" , e => {
             gsap.to(cursor, {duration: 0, left: e.pageX -1, top: e.pageY -3})
         })
+
+        $(".music__wrap").draggable({stack: ".wrap"});
+        $(".memory__inner").draggable({stack: ".wrap"});
+        $(".search__inner").draggable({stack: ".wrap"});
 
 
 

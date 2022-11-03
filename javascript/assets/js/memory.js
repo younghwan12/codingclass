@@ -13,13 +13,11 @@ const startBtn = document.querySelector(".memory__header .start");
 const chance = memoryWrap.querySelector(".card__header .chance");
 const memoryScore = memoryWrap.querySelector(".memory__card .score");
 const memoryResult = memoryWrap.querySelector(".memory__result");
+const ResultScore = memoryWrap.querySelector(".memory__result .resultScore");
 
 const resultRestart = memoryWrap.querySelector(".result__restart");
 const clearRestart = memoryWrap.querySelector(".clear__restart");
 
-const memoryClear = memoryWrap.querySelector(".memory__clear");
-const ClearScore = memoryWrap.querySelector(".memory__clear .clearScore");
-const ResultScore = memoryWrap.querySelector(".memory__clear .resultScore");
 
 
 
@@ -40,16 +38,11 @@ let sound = [
     "../assets/audio/fail.mp3",
     "../assets/audio/up.mp3"
 ]
+let Hiscore = 100;
 
 // 재시작버튼 클릭
 resultRestart.addEventListener("click", ()=>{
     memoryResult.classList.remove("show")
-    shuffleCard()
-})
-
-// 재시작버튼 클릭
-clearRestart.addEventListener("click", ()=>{
-    memoryClear.classList.remove("show")
     shuffleCard()
 })
 
@@ -99,7 +92,9 @@ function matchCards(img1, img2){
             // alert("게임 오버")
             soundSuccess.play();
 
-            memoryClear.classList.add("show");
+            ResultScore.innerHTML = ` ${Hiscore - missedCard * 33}점 입니다!`;
+
+            memoryResult.classList.add("show");
 
         }
         // 이벤트 제거하고 초기화하는 과정
@@ -110,6 +105,7 @@ function matchCards(img1, img2){
     } else {
         missedCard++;
         
+        
         // 일치하지 않는 경우(틀린음악, 이미지가 좌우로 흔들림)
         setTimeout(()=>{
             cardOne.classList.add("shakeX");
@@ -119,7 +115,6 @@ function matchCards(img1, img2){
             chance.innerText = missedCard + "회";
         }, 500);
         
-        ClearScore.innerText = matchedCard;
         setTimeout(()=>{
             cardOne.classList.remove("shakeX", "flip");
             cardTwo.classList.remove("shakeX", "flip");
@@ -129,7 +124,12 @@ function matchCards(img1, img2){
 
             if(missedCard == 3){
                 // alert("gameover")
-                memoryResult.classList.add("show")                
+                memoryResult.classList.add("show")  
+                
+                
+                ResultScore.innerHTML = ` ${Hiscore - matchedCard * 12}점 입니다!`;
+
+
             }
         }, 1500)
 

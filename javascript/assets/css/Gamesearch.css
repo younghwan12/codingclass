@@ -3,27 +3,11 @@
     --cssColor: #472222;
     --javascriptColor: #224736;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family: "NexonLv1Gothic"; */
-    /* color: var(--htmlColor); */
-    /* position: relative; */
-}
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-a {
-    color: var(--htmlColor);
-    text-decoration: none;
-}
-li {
-    list-style: none;
-}
 
+
+.search__wrap {
+    user-select: none;
+}
 .search__inner {
     font-family: "DungGeunMo";
     display: none;
@@ -52,16 +36,12 @@ li {
 h2 {
     color: #fff;
 }
-
-.search__wrap.show {
-    
-}
 .search__inner.show {
     width: 700px;
-    position: absolute;
-    left: 50%;
-    top: 30px;
-    display: block;
+    /* position: absolute; */
+    left: 34%;
+    top: 90px;
+    display: inline-block;
     /* max-width: 100%; */
     border: 10px solid var(--htmlColor);
     /* border-radius: 20px; */
@@ -306,7 +286,7 @@ h2 {
     top: 1vw;
     width: 20vw;
     height: 20vw;
-    z-index: 10000;
+    z-index: 10;
     align-items: center;
     justify-content: center;
     display: none;
@@ -341,8 +321,6 @@ h2 {
 .svg__inner {
     width: 70%;
     height: 160px;
-}
-.svg__wrap {
 }
 @keyframes rubberBand {
     from {
