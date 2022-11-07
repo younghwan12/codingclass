@@ -127,7 +127,7 @@ function matchCards(img1, img2){
                 memoryResult.classList.add("show")  
                 
                 
-                ResultScore.innerHTML = ` ${Hiscore - matchedCard * 12}점 입니다!`;
+                ResultScore.innerHTML = ` ${matchedCard * 12}점 입니다!`;
 
 
             }

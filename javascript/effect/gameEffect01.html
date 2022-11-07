@@ -15,11 +15,6 @@
     <link rel="stylesheet" href="../assets/css/search_ani1.css">
 
     <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
-    <style>
-        * {
-            z-index: 0;
-        }
-    </style>
     
 </head>
 <body>
@@ -558,9 +553,21 @@
             gsap.to(cursor, {duration: 0, left: e.pageX -1, top: e.pageY -3})
         })
 
-        $(".music__wrap").draggable({stack: ".wrap"});
-        $(".memory__inner").draggable({stack: ".wrap"});
-        $(".search__inner").draggable({stack: ".wrap"});
+
+        $('.music__wrap, .memory__inner, .search__inner').mousedown(function(){
+            var maxZIndex =0;
+            var curZIndex =0;
+            $('.music__wrap, .searchGame, .search__inner').each(function(index){
+                //숫자변환
+                curZIndex = parseInt( $(this).css('z-index') );
+                if(maxZIndex < curZIndex){
+                        maxZIndex = curZIndex;
+                }
+            });
+            // 드래그 팝업이 항상 위
+            $(this).css('z-index', maxZIndex + 3);
+            //console.log($(this).css('z-index'));
+        });
 
 
 
