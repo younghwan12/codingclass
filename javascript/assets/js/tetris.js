@@ -206,23 +206,23 @@ function checkMatch(){
 
 // 새로운 블럭 만들기
 function generateNewBlock(){
-
+    
     // 셋인터벌 중첩되는거 초기화하기
     clearInterval(downInterval);
-
+    
     downInterval = setInterval(()=>{
-        moveBlock("top", 1)
+        moveBlock("top" , 1)
     }, duration);
-
+    
     const blockArray = Object.entries(blocks);
     const randomIndex = Math.floor(Math.random() * blockArray.length);
     movingItem.type = blockArray[randomIndex][0];
-
-
+    
+    tempMovingItem = {...movingItem};
     movingItem.top = 0;
     movingItem.left = 5;
     movingItem.direction = 0;
-    tempMovingItem = {...movingItem};
+
 }
 
 

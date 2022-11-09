@@ -58,7 +58,6 @@
 .tetris__restart:hover {
     color: red;
 }
-.tetris__score {}
 .playground {
     display: none;
 }
