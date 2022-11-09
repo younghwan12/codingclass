@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/game.css">
     <link rel="stylesheet" href="../assets/css/music.css">
     <link rel="stylesheet" href="../assets/css/memory.css">
+    <link rel="stylesheet" href="../assets/css/tetris.css">
 
     <link rel="stylesheet" href="../assets/css/Gamesearch.css">  
     <link rel="stylesheet" href="../assets/css/search_ani1.css">
@@ -32,27 +33,27 @@
 
     <main id="main">
         <div class="icon_box">
-            <div class="icon1">
+            <div class="icon icon1">
                 <img src="../assets/img/icon1.png" alt="아이콘">
                 <span>음악</span>
             </div>
-            <div class="icon2">
+            <div class="icon icon2">
                 <img src="../assets/img/icon2.png" alt="아이콘">
                 <span>퀴즈</span>
             </div>
-            <div class="icon3">
+            <div class="icon icon3">
                 <img src="../assets/img/icon3.png" alt="아이콘">
                 <span>메모리</span>
             </div>
-            <div class="icon4">
+            <div class="icon icon4">
                 <img src="../assets/img/icon4.png" alt="아이콘">
-                <span>음악듣기</span>
+                <span>테트리스</span>
             </div>
-            <div class="icon5">
+            <div class="icon icon5">
                 <img src="../assets/img/icon5.png" alt="아이콘">
                 <span>음악듣기</span>
             </div>
-            <div class="icon6">
+            <div class="icon icon6">
                 <img src="../assets/img/icon6.png" alt="아이콘">
                 <span>음악듣기</span>
             </div>
@@ -84,8 +85,8 @@
     <!-- //footer -->
 
     <!-- 뮤직 플레이어 -->
-    <div class="music__wrap wrap">
-        <div class="music__inner">
+    <div class="music__wrap">
+        <div class="music__inner wrap">
             <div class="music__header">
                 <div>***</div>
                 <h2>Music player</h2>
@@ -145,8 +146,8 @@
     <!-- //뮤직 플레이어 -->
 
     <!-- 퀴즈게임 2번아이콘 -->
-    <div class="search__wrap wrap">
-        <div class="search__inner">
+    <div class="search__wrap">
+        <div class="search__inner wrap">
             <div class="search__header">
                 <div>***</div>
                 <h2>Quiz game</h2>
@@ -352,8 +353,8 @@
     <!-- //퀴즈게임 2번아이콘 -->
 
     <!-- 메모리게임 3번아이콘 -->
-    <div class="memory__wrap wrap">
-        <div class="memory__inner">
+    <div class="memory__wrap">
+        <div class="memory__inner wrap">
             <div class="memory__header">
                 <h2>같은그림찾기</h2>
                 <div class="memory__box">
@@ -508,6 +509,26 @@
             </div>
         </div>
     </div>
+    <!-- //메모이게임 3번아이콘 -->
+
+    <!-- 테트리스 4번아이콘 -->
+    <div class="tetris__wrap">
+        <div class="tetris__inner wrap">
+            <div class="tetris__header">
+                <p class="tetris__text">TETRIS</p>
+                <em class="tetris__score"></em>
+                <div class="tetris__start">START</div>
+                <div class="tetris__restart">START</div>
+            </div>            
+            <!-- <div class="tetris__score">SCORE</div> -->
+            <div class="tetris_play">
+                <div class="playground">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //테트리스 4번아이콘 -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -517,8 +538,9 @@
     <script src="../asset/js/music.js"></script>
     <script src="../assets/js/search.js"></script>
     <script src="../assets/js/memory.js"></script>
-    <script>
+    <script src="../assets/js/tetris.js"></script>
 
+    <script>
         const Musicplayer = document.querySelector(".icon_box .icon1");
 
         const QuizIcon = document.querySelector(".icon_box .icon2");
@@ -526,6 +548,9 @@
 
         const MemoryIcon = document.querySelector(".icon_box .icon3");
         const MemoryGame = document.querySelector(".memory__inner");
+
+        const TetrisIcon = document.querySelector(".icon_box .icon4");
+        const TetrisGame = document.querySelector(".tetris__inner");
 
         // 1번 아이콘
         Musicplayer.addEventListener("click",()=>{
@@ -538,10 +563,15 @@
             QuizGame.classList.toggle("show");
         })
 
+        // 3번 아이콘
         MemoryIcon.addEventListener("click",()=>{
             MemoryGame.classList.toggle("show");
         })
 
+        // 4번 아이콘
+        TetrisIcon.addEventListener("click", ()=>{
+            TetrisGame.classList.toggle("show");
+        })
         
 
 
@@ -554,62 +584,41 @@
         })
 
 
-        $('.music__wrap, .memory__inner, .search__inner').mousedown(function(){
-            var maxZIndex =0;
-            var curZIndex =0;
-            $('.music__wrap, .searchGame, .search__inner').each(function(index){
-                //숫자변환
-                curZIndex = parseInt( $(this).css('z-index') );
-                if(maxZIndex < curZIndex){
-                        maxZIndex = curZIndex;
-                }
-            });
-            // 드래그 팝업이 항상 위
-            $(this).css('z-index', maxZIndex + 3);
-            //console.log($(this).css('z-index'));
-        });
+        // $('.music__wrap, .memory__inner, .search__inner, tetris__inner').mousedown(function(){
+        //     var maxZIndex =0;
+        //     var curZIndex =0;
+        //     $('.music__wrap, .searchGame, .search__inner, .tetris__inner').each(function(index){
+        //         //숫자변환
+        //         curZIndex = parseInt( $(this).css('z-index') );
+        //         if(maxZIndex < curZIndex){
+        //                 maxZIndex = curZIndex;
+        //         }
+        //     });
+        //     // 드래그 팝업이 항상 위
+        //     $(this).css('z-index', maxZIndex + 3);
+        //     //console.log($(this).css('z-index'));
+        // });
+        
+        $(".icon").draggable({});
+        $(".music__inner").draggable({stack: ".wrap", opacity: 0.8});
+        $(".search__inner").draggable({stack: ".wrap", opacity: 0.8});
+        $(".memory__inner").draggable({stack: ".wrap", opacity: 0.8});
+        $(".tetris__inner").draggable({stack: ".wrap", opacity: 0.8});
 
 
-
-        $( function() {
-            $(".icon1").draggable({
-                drag: function() {
-                    $(".cursor img").attr("src", "../assets/img/cursor.png")
-                },
-            });
-            $(".icon2").draggable({
-                drag: function() {
-                    $(".cursor img").attr("src", "../assets/img/cursor2.png")
-                },
-            });
-            $(".icon3").draggable({
-                drag: function() {
-                    $(".cursor img").attr("src", "../assets/img/cursor3.png")
-                },
-            });
-            $(".icon4").draggable({
-                drag: function() {
-                    $(".cursor img").attr("src", "../assets/img/cursor4.png")
-                },
-            });
-            $(".icon5").draggable({
-                drag: function() {
-                    $(".cursor img").attr("src", "../assets/img/cursor5.png")
-                },
-            });
-            $(".icon6").draggable({
-                drag: function() {
-                    $(".cursor img").attr("src", "../assets/img/cursor6.png")
-                },
-            });
-            $(".music__wrap").draggable({
-
-            });
-            $(".search__inner").draggable({
-            });
-            $(".memory__inner").draggable({
-            });
-        } );
+        // $( function() {
+            
+        //     $(".music__wrap").draggable({
+                
+        //     });
+        //     $(".search__inner").draggable({
+        //     });
+        //     $(".memory__inner").draggable({
+        //     });
+        //     $(".tetris__inner").draggable({
+        //     });
+            
+        // } );
 
         function index(){
             let num = 0;
