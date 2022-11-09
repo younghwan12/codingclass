@@ -21,7 +21,7 @@
     left: -50px;
     top: 100px;
     width: 500px;
-    height: 250px;
+    height: 300px;
     background: rgba(0,0,0,0.6);
     animation: flicker 1.5s infinite alternate;
 }
@@ -36,7 +36,8 @@
     text-align: center;
     color: #fff;
     margin-bottom: 50px;
-    color: red;
+    color: gold;
+    font-size: 20px;
 }
 .tetris__start {
     margin: 0 auto;
@@ -45,7 +46,7 @@
     font-size: 25px;
 }
 .tetris__start:hover {
-    color: blue;
+    color: red;
 }
 .tetris__restart {
     display: none;
@@ -55,7 +56,7 @@
     font-size: 25px;
 }
 .tetris__restart:hover {
-    color: blue;
+    color: red;
 }
 .tetris__score {}
 .playground {
