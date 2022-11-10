@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../../javascript05.html">문자열 객체</a></li>
+                <li><a href="../../javascript06.html">배열 객체</a></li>
+                <li><a href="../../javascript07.html">수학 객체</a></li>
+                <li><a href="../../javascript08.html">숫자 객체</a></li>
+                <li><a href="../../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../../javascript10.html">요소 객체</a></li>
+                <li><a href="../../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">프로그래머스 1단계 : 나머지가 1이 되는 수 찾기</h2>
+            <p class="t_box">코딩테스트 연습 &gt; 연습문제 &gt; 나머지가 1이 되는 수 찾기</p>
+            <hr>
+            <h3 class="t_tit2">✔ 문제 설명</h3>
+            <p class="t_desc">자연수 n이 매개변수로 주어집니다. n을 x로 나눈 나머지가 1이 되도록 하는 가장 작은 자연수 x를 return 하도록 solution 함수를 완성해주세요. 답이 항상 존재함은 증명될 수 있습니다.</p>
+            <h3 class="t_tit2">✔ 제한 사항</h3>
+            <p class="t_desc2">3 ≤ n ≤ 1,000,000</p>
+            <h3 class="t_tit2">✔ 입출력 예</h3>
+            <table class="t_table">
+                <tbody>
+                    <tr>
+                        <th>n</th>
+                        <th>result</th>
+                    </tr>
+                    <tr>
+                        <td class="ce">10</td>
+                        <td class="ce">3</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">12</td>
+                        <td class="ce">11</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2" data-ke-size="size23">✔ 문제풀이</h3>
+            <div class="t_code">
+<pre><code>function solution(n) {
+    var answer = 0;
+    
+    for(i=2; i&lt;=n; i++){
+        if(n % i == 1){
+            answer = i;
+            break;
+        }
+    }
+    return answer;
+}
+// console.log(solution(15));
+</code></pre>
+            </div>
+            <p class="t_tit2">✔ 설명</p>
+            <p class="t_box">반복문에 조건을 걸어 뒤에 네자리전까지 별을 출력하고 뒤에 4자리는 숫자를 출력하도록 만들었습니다. 아직은 참 쉽죠?
+            </p>
+            <h3 class="t_tit2">✔ 다른사람의 풀이</h3>
+            <div class="t_code">
+<pre><code>const solution = function(n) {
+    for (let i=0; i&lt;n; i++){
+        if (n%i == 1){
+            return i
+        }
+    }
+}
+</code></pre>
+            </div>
+            <p class="t_box" data-ke-size="size16">저랑 똑같이 for문 안에 if문을 돌렸네요. 설명할게 없군요</p>
+            <div class="t_link" style="display: flex;"><a
+                    href="https://school.programmers.co.kr/learn/courses/30/lessons/87389" target="_blank"
+                    rel="noopener">문제 보기</a></div>
+        </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
