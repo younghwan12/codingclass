@@ -511,24 +511,24 @@
     </div>
     <!-- //메모이게임 3번아이콘 -->
 
-    <!-- 테트리스 4번아이콘 -->
+    <!-- 테트리스 게임 -->
     <div class="tetris__wrap">
         <div class="tetris__inner wrap">
-            <div class="tetris__header">
-                <p class="tetris__text">TETRIS</p>
-                <em class="tetris__score"></em>
-                <div class="tetris__start">START</div>
-                <div class="tetris__restart">START</div>
+            <div class="tetris__btn">
+                <div class="tetris__start">시작</div>
+                <div class="tetris__exit">종료</div>
             </div>
-            <div class="tetris_play">
+            <div class="tetris__play">
                 <div class="playground">
-
+                    <p>T E T R I S</p>
                     <ul></ul>
                 </div>
             </div>
+            <div class="tetris__msg">
+            </div>
         </div>
     </div>
-    <!-- //테트리스 4번아이콘 -->
+    <!-- // 테트리스 게임 -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -551,6 +551,11 @@
 
         const TetrisIcon = document.querySelector(".icon_box .icon4");
         const TetrisGame = document.querySelector(".tetris__inner");
+
+
+        const tetrisWrapIndex = document.querySelector('.tetris__wrap');
+
+        
 
         // 1번 아이콘
         Musicplayer.addEventListener("click",()=>{
@@ -669,6 +674,17 @@
             printTime();
             printAgent();
         }
+
+
+        // 테트리스
+        TstartBtn.addEventListener("click", init);
+        document.querySelector('.tetris__wrap .tetris__exit').addEventListener('click', () => {
+            tetrisWrapIndex.classList.remove('show');
+            gameover = true;
+            // TsoundBg.pause();
+            Tmsg.classList.remove("show");
+            playGround.innerHTML = '테트리스 게임입니다.';
+        });
 
 
     </script>
