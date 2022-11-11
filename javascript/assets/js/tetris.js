@@ -15,14 +15,14 @@ let tempMovingItem;
 let tID = 0;
 let gameover = false;
 
-// let Tsound = [
-//   "../asset/audio/02.mp3",
-//   "../asset/audio/match.mp3",
-//   "../asset/audio/unmatch.mp3",
-// ];
-// let TsoundBg = new Audio(Tsound[0]);
-// let TsoundMatch = new Audio(Tsound[1]);
-// let TsoundUnMatch = new Audio(Tsound[2]);
+let Tsound = [
+  "../assets/audio/music_audio02.mp3",
+  "../assets/audio/Success.m4a",
+  "../assets/audio/fail.mp3",
+];
+let TsoundBg = new Audio(Tsound[0]);
+let TsoundMatch = new Audio(Tsound[1]);
+let TsoundUnMatch = new Audio(Tsound[2]);
 
 // 블록정보
 const movingItem = {
@@ -221,7 +221,7 @@ const blocks = {
 // 시작하기
 function init() {
   gameover = false;
-//   TsoundBg.play();
+  TsoundBg.play();
   playGround.innerHTML = "";
   tempMovingItem = { ...movingItem };
   for (let i = 0; i < rows; i++) {
@@ -309,7 +309,7 @@ function checkLose() {
   childNodes.forEach((ch) => {
     if (ch.classList.contains("seized")) {
       gameover = true;
-    //   TsoundUnMatch;
+      TsoundUnMatch;
     }
   });
 }
@@ -328,7 +328,7 @@ function checkMatch() {
       child.remove();
       prependNewLine();
       Tscore++;
-    //   TsoundMatch.play();
+      TsoundMatch.play();
     }
   });
   generateNewBlock();
@@ -337,7 +337,7 @@ function checkMatch() {
 // 새로운 블럭 만들기
 function generateNewBlock() {
   if (gameover) {
-    // TsoundBg.pause();
+    TsoundBg.pause();
     Tmsg.classList.add("show");
     Tmsg.innerHTML = `
        당신의 점수 : ${Tscore}점
