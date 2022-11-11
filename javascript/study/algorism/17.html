@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../../javascript05.html">문자열 객체</a></li>
+                <li><a href="../../javascript06.html">배열 객체</a></li>
+                <li><a href="../../javascript07.html">수학 객체</a></li>
+                <li><a href="../../javascript08.html">숫자 객체</a></li>
+                <li><a href="../../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../../javascript10.html">요소 객체</a></li>
+                <li><a href="../../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">프로그래머스 1단계 : 나누어 떨어지는 숫자 배열</h2>
+            <p class="t_box">코딩테스트 연습 &gt; 연습문제 &gt; 나누어 떨어지는 숫자 배열</p>
+            <hr>
+            <h3 class="t_tit2">✔ 문제 설명</h3>
+            <p class="t_desc">array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.
+                divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.</p>
+            <h3 class="t_tit2">✔ 제한 사항</h3>
+            <p class="t_desc2">arr은 자연수를 담은 배열입니다.<br>
+                정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입니다.<br>
+                divisor는 자연수입니다.<br>
+                array는 길이 1 이상인 배열입니다.</p>
+            <h3 class="t_tit2">✔ 입출력 예</h3>
+            <table class="t_table">
+                <tbody>
+                    <tr>
+                        <th>arr</th>
+                        <th>divisor</th>
+                        <th>return</th>
+                    </tr>
+                    <tr>
+                        <td class="ce">[5, 9, 7, 10]</td>
+                        <td class="ce">5</td>
+                        <td class="ce">[5, 10]</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">[2, 36, 1, 3]</td>
+                        <td class="ce">1</td>
+                        <td class="ce">[1, 2, 3, 36]</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">[3,2,6]</td>
+                        <td class="ce">10</td>
+                        <td class="ce">[-1]</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2" data-ke-size="size23">✔ 문제풀이</h3>
+            <div class="t_code">
+<pre><code>function solution(arr, divisor) {
+    let answer = [];
+    
+    for(let i = 0; i &lt;=arr.length; i++){
+        if(arr[i] % divisor == 0) answer.push(arr[i]);
+    }
+    answer.sort(function(a,b){return a - b})
+    if(answer.length == 0) answer.push(-1);
+    
+    return answer;
+}
+
+console.log(solution([5,2,3,1],1))
+</code></pre>
+            </div>
+            <p class="t_tit2">✔ 설명</p>
+            <p class="t_box">for문으로 돌려봅니다. 입출력 설명에 맞게 조건문을 걸어 준 뒤, 0으로 나눠지면 push를 이용해 넣고, sort 메서드를 이용해서 순서대로 정렬합니다. 또한 만약 안 나누어 떨어진다면 -1을 리턴합니다.  참 쉽죠?
+            </p>
+            <h3 class="t_tit2">✔ 다른사람의 풀이</h3>
+            <div class="t_code">
+<pre><code>function solution(arr, divisor) {
+    var answer = arr.filter(v => v%divisor == 0);
+    return answer.length == 0 ? [-1] : answer.sort((a,b) => a-b);
+}
+</code></pre>
+            </div>
+            <p class="t_box" data-ke-size="size16">필터 메서드를 이용해서 조건을 만족하는 값을 찾아내고, 리턴 값으로 삼항연산자를 사용해서 sort정렬을 했군요!</p>
+            <div class="t_link" style="display: flex;"><a
+                    href="https://school.programmers.co.kr/learn/courses/30/lessons/12910" target="_blank"
+                    rel="noopener">문제 보기</a></div>
+        </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
