@@ -521,6 +521,7 @@
             <div class="tetris__play">
                 <div class="playground">
                     <p>T E T R I S</p>
+                    <p class="tetris__score"></p>
                     <ul></ul>
                 </div>
             </div>
@@ -675,15 +676,13 @@
             printAgent();
         }
 
-
         // 테트리스
         TstartBtn.addEventListener("click", init);
         document.querySelector('.tetris__wrap .tetris__exit').addEventListener('click', () => {
             tetrisWrapIndex.classList.remove('show');
+            TetrisGame.classList.remove("show");
             gameover = true;
-            // TsoundBg.pause();
-            Tmsg.classList.remove("show");
-            playGround.innerHTML = '테트리스 게임입니다.';
+            TsoundBg.pause();
         });
 
 
