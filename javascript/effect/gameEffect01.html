@@ -1228,21 +1228,33 @@
       // 1번 아이콘
       Musicplayer.addEventListener("click", () => {
         musicWrap.classList.toggle("show");
+        QuizGame.classList.remove("show");
+        MemoryGame.classList.remove("show");
+        TetrisGame.classList.remove("show");
       });
 
       // 2번 아이콘
       QuizIcon.addEventListener("click", () => {
         QuizGame.classList.toggle("show");
+        musicWrap.classList.remove("show");
+        MemoryGame.classList.remove("show");
+        TetrisGame.classList.remove("show");
       });
 
       // 3번 아이콘
       MemoryIcon.addEventListener("click", () => {
         MemoryGame.classList.toggle("show");
+        musicWrap.classList.remove("show");
+        QuizGame.classList.remove("show");
+        TetrisGame.classList.remove("show");
       });
 
       // 4번 아이콘
       TetrisIcon.addEventListener("click", () => {
         TetrisGame.classList.toggle("show");
+        musicWrap.classList.remove("show");
+        QuizGame.classList.remove("show");
+        MemoryGame.classList.remove("show");
         reset();
       });
 

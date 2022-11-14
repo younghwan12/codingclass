@@ -221,6 +221,7 @@ const blocks = {
 // 시작하기
 function init() {
   reset()
+  TsoundBg.play();
   tempMovingItem = { ...movingItem };
   for (let i = 0; i < rows; i++) {
     prependNewLine(); // 라인 만들기
@@ -247,7 +248,6 @@ function prependNewLine() {
 
 function reset(){
   gameover = false;
-  TsoundBg.play();
   playGround.innerHTML = "";
   tetrisScore.innerText = "";
   Tscore = 0;
