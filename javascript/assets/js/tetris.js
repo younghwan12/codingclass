@@ -17,7 +17,7 @@ let tID = 0;
 let gameover = false;
 
 let Tsound = [
-  "../assets/audio/music_audio02.mp3",
+  "../assets/audio/tetris.mp3",
   "../assets/audio/Success.m4a",
   "../assets/audio/fail.mp3",
 ];
