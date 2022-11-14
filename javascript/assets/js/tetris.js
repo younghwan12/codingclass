@@ -3,8 +3,7 @@ const tetrisWrap = document.querySelector(".tetris__wrap");
 const playGround = tetrisWrap.querySelector(".playground > ul");
 const TstartBtn = tetrisWrap.querySelector(".tetris__start");
 const Tmsg = tetrisWrap.querySelector(".tetris__msg");
-const tetrisScore = tetrisWrap.querySelector(".tetris__score")
-
+const tetrisScore = tetrisWrap.querySelector(".tetris__score");
 
 // 변수설정
 let rows = 15; // 가로줄 만들기
@@ -221,18 +220,13 @@ const blocks = {
 
 // 시작하기
 function init() {
-  gameover = false;
-  TsoundBg.play();
-  playGround.innerHTML = "";
-  tetrisScore.innerText = "";
-  Tscore = 0;
-  duration = 500;
+  reset()
   tempMovingItem = { ...movingItem };
   for (let i = 0; i < rows; i++) {
     prependNewLine(); // 라인 만들기
   }
   generateNewBlock(); // 블럭만들기
-  
+
   Tmsg.classList.remove("show");
 }
 TstartBtn.removeEventListener("click", init);
@@ -249,6 +243,15 @@ function prependNewLine() {
 
   li.prepend(ul);
   playGround.prepend(li);
+}
+
+function reset(){
+  gameover = false;
+  TsoundBg.play();
+  playGround.innerHTML = "";
+  tetrisScore.innerText = "";
+  Tscore = 0;
+  duration = 500;
 }
 
 // 블록 출력하기
@@ -333,9 +336,9 @@ function checkMatch() {
       prependNewLine();
       Tscore++;
       TsoundMatch.play();
-      duration = duration - 10;
+      duration = duration - 15;
 
-      tetrisScore.innerText = `점수 : ${Tscore}`
+      tetrisScore.innerText = `점수 : ${Tscore}`;
     }
   });
   generateNewBlock();
