@@ -333,7 +333,7 @@ function checkMatch() {
       prependNewLine();
       Tscore++;
       TsoundMatch.play();
-      duration = duration - 5;
+      duration = duration - 10;
 
       tetrisScore.innerText = `점수 : ${Tscore}`
     }
