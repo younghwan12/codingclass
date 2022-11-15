@@ -3,8 +3,6 @@
     --cssColor: #472222;
     --javascriptColor: #224736;
 }
-
-
 .search__wrap {
     user-select: none;
 }
