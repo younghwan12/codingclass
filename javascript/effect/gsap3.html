@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .horizontalWrap {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .horizontalSection {
+            overscroll-behavior: none;
+            width: 500%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .section {
+            width: 100%;
+            height: 100vh;
+        }
+        .section1 {
+            background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+        }
+        .section2 {
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        }
+        .section3 {
+            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+        .section4 {
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+        }
+        .section5 {
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="horizontalWrap">
+        <div class="horizontalSection">
+            <section class="section section1"></section>
+            <section class="section section2"></section>
+            <section class="section section3"></section>
+            <section class="section section4"></section>
+            <section class="section section5"></section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+            direction: 'vertical', // vertical, horizontal
+            gestureDirection: 'vertical', // vertical, horizontal, both
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        })
+
+        //get scroll value
+        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+        // console.log({ scroll, limit, velocity, direction, progress })
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+
+
+
+        const sections = gsap.utils.toArray(".section");      // gsap 다중 선택
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".horizontalWrap",
+                pin: true,
+                scrub: 1,
+                end: "+=4000",
+                markers: true,
+                // snap: 1 / (sections.length - 1),
+            }
+        })
+    </script>
+    
+</body>
+</html>

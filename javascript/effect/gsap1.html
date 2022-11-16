@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsap example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #contents > section {
+            min-height: 90vh;
+        }
+        #section1 {
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        }
+        #section2 {
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        }
+        #section3 {
+            background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        }
+        #section4 {
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        }
+        #section5 {
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+        #section6 {
+            background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+        }
+        .square {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+            background-blend-mode: normal, lighten, soft-light;
+        }
+        .square.red {
+            background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+        }
+        .square2 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        }
+
+        .panel {
+            height: 100vh;
+            background-color: beige;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+        .box-red {
+            background-color: red;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            transition: all 600ms ease-in-out;
+            background-color: tan;
+            color: #000;
+            text-align: center;
+        }
+        li {
+            padding: 20px;
+            display: inline-block;
+        }
+
+        .not-active {
+            background: #fff;
+            color: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>about</li>
+            <li>work</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+
+    <div class="panel">Registering a plugin with the GSAP core ensures that the two work seamlessly together and also prevents tree shaking issues in build tools/bundlers.</div>
+    <!-- <div class="box"></div>
+    <div class="panel"></div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+            trigger: ".panel",
+            start: "top 6%",
+            markers: true,
+            toggleClass: {targets:"nav", className:"not-active"},
+            onEnter: () => console.log("OnEnter"),
+            onLeave: () => console.log("onLeave"),
+            onEnterBack: () => console.log("onEnterBack"),
+            onLeaveBack: () => console.log("onLeaveBack"),
+        })
+        
+
+        
+    </script>
+
+    <script>
+        // 기본 애니메이션
+
+        // gsap.to('.square',{
+        //     x: 2000,
+        //     duration:3,
+        //     scrollTrigger: {
+        //         trigger: '.square',
+        //         start: "top 70%",
+        //         end: ()=> `+=${document.querySelector(".square").offsetHeight}`,
+        //         markers: true,
+        //         toggleClass: "red"
+        //     },
+        // })
+
+
+        // toggleActions: "play pause resume reset"
+        //              onEnter onLeave onEnterBack onLeaveBack
+        // play, pause, resume, reset, restart, complete, reverse, none        
+
+        // 스크롤 부드럽게 해줌
+        // scrub: 4
+        // 고정
+
+        // pin: ".square",
+        // pinSpacing: true,
+
+
+
+        // 타임라인
+
+        // gsap.to(".square", { x:1000, duration:2, rotation:100, skewX:1 })
+        // gsap.to(".square", { y:500, duration:2, rotation:300, skewX:15, delay:2, borderRadius:100})
+        // gsap.to(".square", { x:0, duration:2, rotation:150, skewY:35, delay:4, width:400 })
+        // gsap.to(".square", { y:0, duration:2, rotation:0, delay:6, height:50 })
+
+        // const tl = gsap.timeline({repeat:2,yoyo: true});
+        // tl.to(".square", { x:1000, duration:2, rotation:100, ease:"elastic", skewX:1 })
+        // .to(".square", { y:500, duration:2, rotation:300, skewX:15, ease:"elastic", borderRadius:100})
+        // .to(".square", { x:0, duration:2, rotation:150, skewY:35, ease:"elastic",  width:400 })
+        // .to(".square", { y:0, duration:2, rotation:0, height:50 })
+
+        // const tl = gsap.timeline({
+        //     scrollTrigger : {
+        //         trigger: ".square",
+        //         markers: true,
+        //         start: "top 80%",
+        //         end: "top 30%",
+        //         scrub: 5
+
+        //     }
+        // })
+        // tl.to(".square", { x:1000, duration:2, rotation:100, skewX:1 })
+        // .to(".square", { y:500, duration:2, rotation:300, skewX:15, borderRadius:100})
+        // .to(".square", { x:0, duration:2, rotation:150, skewY:35, ease:"elastic",  width:400 })
+        // .to(".square", { y:0, duration:2, rotation:0, height:50 })
+        
+    </script>
+</body>
+</html>
