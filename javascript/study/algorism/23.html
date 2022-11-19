@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../../javascript05.html">문자열 객체</a></li>
+                <li><a href="../../javascript06.html">배열 객체</a></li>
+                <li><a href="../../javascript07.html">수학 객체</a></li>
+                <li><a href="../../javascript08.html">숫자 객체</a></li>
+                <li><a href="../../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../../javascript10.html">요소 객체</a></li>
+                <li><a href="../../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">프로그래머스 1단계 : 음양 더하기</h2>
+            <p class="t_box">코딩테스트 연습 &gt; 월간 코드 챌린지 시즌2 &gt; 음양 더하기</p>
+            <hr>
+            <h3 class="t_tit2">✔ 문제 설명</h3>
+            <p class="t_desc">어떤 정수들이 있습니다. 이 정수들의 절댓값을 차례대로 담은 정수 배열 absolutes와 이 정수들의 부호를 차례대로 담은 불리언 배열 signs가 매개변수로 주어집니다. 실제 정수들의 합을 구하여 return 하도록 solution 함수를 완성해주세요.            </p>
+            <h3 class="t_tit2">✔ 제한 사항</h3>
+            <p class="t_desc2">absolutes의 길이는 1 이상 1,000 이하입니다.<br>
+                absolutes의 모든 수는 각각 1 이상 1,000 이하입니다.<br>
+                signs의 길이는 absolutes의 길이와 같습니다.<br>
+                signs[i] 가 참이면 absolutes[i] 의 실제 정수가 양수임을, 그렇지 않으면 음수임을 의미합니다.</p>
+            <h3 class="t_tit2">✔ 입출력 예</h3>
+            <table class="t_table">
+                <tbody>
+                    <tr>
+                        <th>absolutes</th>
+                        <th>signs</th>
+                        <th>result</th>
+                    </tr>
+                    <tr>
+                        <td class="ce">[4,7,12]</td>
+                        <td class="ce">[true,false,true]</td>
+                        <td class="ce">9</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">[1,2,3]</td>
+                        <td class="ce">[false,false,true]</td>
+                        <td class="ce">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2" data-ke-size="size23">✔ 문제풀이</h3>
+            <div class="t_code">
+<pre><code>function solution(absolutes, signs) {
+    let answer = 0;
+    for (let i = 0; i &lt; absolutes.length; i++) {
+        if (signs[i] === true) {
+            answer = answer + absolutes[i];
+        } else {
+            answer = answer - absolutes[i];
+        }
+    }
+    return answer
+}
+</code></pre>
+            </div>
+            <p class="t_tit2">✔ 설명</p>
+            <p class="t_box">반복문에 조건문을 걸어주는 아주 쉬운문제였습니다. 이런 꿀문제가 숨어있었네요 참 쉽죠?
+            </p>
+            <h3 class="t_tit2">✔ 다른사람의 풀이</h3>
+            <div class="t_code">
+<pre><code>return absolutes.reduce((acc, val, i) => acc + (val * (signs[i] ? 1 : -1)), 0);
+</code></pre>
+            </div>
+            <p class="t_box" data-ke-size="size16">1을 곱하거나 -1을 곱해서 음수 양수로 만들었네요. 발상의 전환입니다.</p>
+            <div class="t_link" style="display: flex;"><a
+                    href="https://school.programmers.co.kr/learn/courses/30/lessons/76501" target="_blank"
+                    rel="noopener">문제 보기</a></div>
+        </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
