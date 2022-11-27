@@ -48,62 +48,62 @@
     <!-- //header -->
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">프로그래머스 1단계 : 최대공약수와 최소공배수</h2>
-            <p class="t_box">코딩테스트 연습 &gt; 연습문제 &gt; 최대공약수와 최소공배수</p>
+            <h2 class="t_tit">프로그래머스 1단계 : 이상한 문자 만들기</h2>
+            <p class="t_box">코딩테스트 연습 &gt; 연습문제 &gt; 이상한 문자 만들기</p>
             <hr>
             <h3 class="t_tit2">✔ 문제 설명</h3>
-            <p class="t_desc">두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환하는 함수, solution을 완성해 보세요. 배열의 맨 앞에 최대공약수, 그다음 최소공배수를 넣어 반환하면 됩니다. 예를 들어 두 수 3, 12의 최대공약수는 3, 최소공배수는 12이므로 solution(3, 12)는 [3, 12]를 반환해야 합니다.</p>
+            <p class="t_desc">문자열 s는 한 개 이상의 단어로 구성되어 있습니다. 각 단어는 하나 이상의 공백문자로 구분되어 있습니다. 각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.</p>
             <h3 class="t_tit2">✔ 제한 사항</h3>
-            <p class="t_desc2">두 수는 1이상 1000000이하의 자연수입니다.</p>
+            <p class="t_desc2">문자열 전체의 짝/홀수 인덱스가 아니라, 단어(공백을 기준)별로 짝/홀수 인덱스를 판단해야합니다.<br>첫 번째 글자는 0번째 인덱스로 보아 짝수번째 알파벳으로 처리해야 합니다.</p>
             <h3 class="t_tit2">✔ 입출력 예</h3>
             <table class="t_table">
                 <tbody>
                     <tr>
-                        <th>n</th>
-                        <th>m</th>
+                        <th>s</th>
                         <th>return</th>
                     </tr>
                     <tr>
-                        <td class="ce">3</td>
-                        <td class="ce">2</td>
-                        <td class="ce">[3,12]</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">2</td>
-                        <td class="ce">5</td>
-                        <td class="ce">[1,10]</td>
+                        <td class="ce">"try hello world"</td>
+                        <td class="ce">"TrY HeLlO WoRlD"</td>
                     </tr>
                 </tbody>
             </table>
             <h3 class="t_tit2" data-ke-size="size23">✔ 문제풀이</h3>
             <div class="t_code">
-<pre><code>function solution(n, m) {
-    let a;
-    for(let i = 0; i &lt;= n; i++) {
-        if(n % i === 0 && m % i === 0) {
-          a = i;
+<pre><code>function solution(s) {
+    let answer = '';
+    let words = s.split(' ');
+    
+    for (let i = 0; i &lt; words.length; i++) {
+        for(let j = 0; j &lt; words[i].length; j++) {
+            if(j % 2 === 0) {
+                answer += words[i][j].toUpperCase();
+            } else {
+                answer += words[i][j].toLowerCase();
+            }
+        }
+        if (i &lt; words.length -1) {
+            answer += ' ';
         }
     }
-    let b = n * m / a;
-    return [a, b];
+    return answer;
 }
 </code></pre>
             </div>
             <p class="t_tit2">✔ 설명</p>
-            <p class="t_box">간단하게 최소공배수와 최대공약수를 구해준 뒤 조건에 맞게 출력해줍니다. 참 쉽죠?
+            <p class="t_box">일단 스플릿으로 단어를 쪼개준 뒤 반복문을 두번 걸어 단어의 위치값을 찾고 짝수는 대문자, 홀수는 소문자로 만들어줍니다. 참 쉽죠?
             </p>
             <h3 class="t_tit2">✔ 다른사람의 풀이</h3>
             <div class="t_code">
-<pre><code>function gcdlcm(a, b) {
-    var r;
-    for(var ab= a*b;r = a % b;a = b, b = r){}
-    return [b, ab/b];
+<pre><code>function toWeirdCase(s){
+    //함수를 완성해주세요
+    return s.toUpperCase().replace(/(\w)(\w)/g, function(a){return a[0].toUpperCase()+a[1].toLowerCase();})
 }
 </code></pre>
             </div>
-            <p class="t_box" data-ke-size="size16">for문의 숨겨진 기능인가요..? 반복문을 r=a%b 이 0이 된다면 종료되도록 만들었군요. 깔끔합니다.</p>
+            <p class="t_box" data-ke-size="size16">정규식 표현을 이용했네요 좋습니다.</p>
             <div class="t_link" style="display: flex;"><a
-                    href="https://school.programmers.co.kr/learn/courses/30/lessons/12940" target="_blank"
+                    href="https://school.programmers.co.kr/learn/courses/30/lessons/12930" target="_blank"
                     rel="noopener">문제 보기</a></div>
         </div>
         </div>
