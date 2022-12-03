@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../../javascript05.html">문자열 객체</a></li>
+                <li><a href="../../javascript06.html">배열 객체</a></li>
+                <li><a href="../../javascript07.html">수학 객체</a></li>
+                <li><a href="../../javascript08.html">숫자 객체</a></li>
+                <li><a href="../../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../../javascript10.html">요소 객체</a></li>
+                <li><a href="../../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">프로그래머스 1단계 : 완주하지 못한 선수</h2>
+            <p class="t_box">코딩테스트 연습 &gt; 완전탐색 &gt; 완주하지 못한 선수</p>
+            <hr>
+            <h3 class="t_tit2">✔ 문제 설명</h3>
+            <p class="t_desc">수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
+
+                마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열 completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.</p>
+            <h3 class="t_tit2">✔ 제한 사항</h3>
+            <p class="t_desc2">마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.<br>
+                completion의 길이는 participant의 길이보다 1 작습니다.<br>
+                참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.<br>
+                참가자 중에는 동명이인이 있을 수 있습니다.</p>
+            <h3 class="t_tit2">✔ 입출력 예</h3>
+            <table class="t_table">
+                <tbody>
+                    <tr>
+                        <th>participant</th>
+                        <th>completion</th>
+                        <th>return</th>
+                    </tr>
+                    <tr>
+                        <td class="ce">["leo", "kiki", "eden"]</td>
+                        <td class="ce">	["eden", "kiki"]</td>
+                        <td class="ce">"leo"</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">["marina", "josipa", "nikola", "vinko", "filipa"]</td>
+                        <td class="ce">["josipa", "filipa", "marina", "nikola"]</td>
+                        <td class="ce">"vinko"</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">["mislav", "stanko", "mislav", "ana"]</td>
+                        <td class="ce">["stanko", "ana", "mislav"]</td>
+                        <td class="ce">"mislav"</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2" data-ke-size="size23">✔ 문제풀이</h3>
+            <div class="t_code">
+<pre><code>function solution(participant, completion) {
+    participant.sort();
+    completion.sort();
+    for(var i=0;i &lt; participant.length;i++){
+        if(participant[i] !== completion[i]){
+            return participant[i];
+        }
+    }
+}
+</code></pre>
+            </div>
+            <p class="t_tit2">✔ 설명</p>
+            <p class="t_box">정렬 후 일치하지않으면 종료시켰습니다. 풀만했군요.
+            </p>
+            <h3 class="t_tit2">✔ 다른사람의 풀이</h3>
+            <div class="t_code">
+<pre><code>var solution=(_,$)=>_.find(_=>!$[_]--,$.map(_=>$[_]=($[_]|0)+1))
+</code></pre>
+            </div>
+            <p class="t_box" data-ke-size="size16">이런게.. 정규식..?</p>
+            <div class="t_link" style="display: flex;"><a
+                    href="https://school.programmers.co.kr/learn/courses/30/lessons/42576" target="_blank"
+                    rel="noopener">문제 보기</a></div>
+        </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
