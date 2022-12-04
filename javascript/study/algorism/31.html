@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+    <style>
+        body {
+            padding-bottom: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../../javascript05.html">문자열 객체</a></li>
+                <li><a href="../../javascript06.html">배열 객체</a></li>
+                <li><a href="../../javascript07.html">수학 객체</a></li>
+                <li><a href="../../javascript08.html">숫자 객체</a></li>
+                <li><a href="../../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../../javascript10.html">요소 객체</a></li>
+                <li><a href="../../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">프로그래머스 1단계 : 문자열 내 마음대로 정렬하기</h2>
+            <p class="t_box">코딩테스트 연습 &gt; 연습문제 &gt; 문자열 내 마음대로 정렬하기</p>
+            <hr>
+            <h3 class="t_tit2">✔ 문제 설명</h3>
+            <p class="t_desc">문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다. 예를 들어 strings가 ["sun", "bed", "car"]이고 n이 1이면 각 단어의 인덱스 1의 문자 "u", "e", "a"로 strings를 정렬합니다.</p>
+            <h3 class="t_tit2">✔ 제한 사항</h3>
+            <p class="t_desc2">strings는 길이 1 이상, 50이하인 배열입니다.<br>
+                strings의 원소는 소문자 알파벳으로 이루어져 있습니다.<br>
+                strings의 원소는 길이 1 이상, 100이하인 문자열입니다.<br>
+                모든 strings의 원소의 길이는 n보다 큽니다.<br>
+                인덱스 1의 문자가 같은 문자열이 여럿 일 경우, 사전순으로 앞선 문자열이 앞쪽에 위치합니다.
+            </p>
+            <h3 class="t_tit2">✔ 입출력 예</h3>
+            <table class="t_table">
+                <tbody>
+                    <tr>
+                        <th>strings</th>
+                        <th>n</th>
+                        <th>return</th>
+                    </tr>
+                    <tr>
+                        <td class="ce">["sun", "bed", "car"]</td>
+                        <td class="ce">	1</td>
+                        <td class="ce">["car", "bed", "sun"]</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">["abce", "abcd", "cdx"]</td>
+                        <td class="ce">2</td>
+                        <td class="ce">["abcd", "abce", "cdx"]</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2" data-ke-size="size23">✔ 문제풀이</h3>
+            <div class="t_code">
+<pre><code>function solution(strings, n) {
+    let answer = strings.sort((a, b) => {
+       if(a[n] > b[n]) return 1;
+        if(a[n] &lt; b[n]) return -1;
+        if(a[n] === b[n]){
+            if(a &gt; b) return 1;
+            if(a &lt; b) return -1;
+            return 0;
+        }
+    });    
+    return answer;
+}
+</code></pre>
+            </div>
+            <p class="t_tit2">✔ 설명</p>
+            <p class="t_box">sort 메서드를 이용해서 각 문자열의 n번째 글자를 비교해서 조건에 맞게 출력시켰습니다. 풀만하죠?
+            </p>
+            <h3 class="t_tit2">✔ 다른사람의 풀이</h3>
+            <div class="t_code">
+<pre><code>function solution(strings, n) {
+    // strings 배열
+    // n 번째 문자열 비교
+    return strings.sort((s1, s2) => s1[n] === s2[n] ? s1.localeCompare(s2) : s1[n].localeCompare(s2[n]));
+}
+</code></pre>
+            </div>
+            <p class="t_box" data-ke-size="size16">한줄로 풀리는 간단한 문제네요..?</p>
+            <div class="t_link" style="display: flex;"><a
+                    href="https://school.programmers.co.kr/learn/courses/30/lessons/12915" target="_blank"
+                    rel="noopener">문제 보기</a></div>
+        </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:leesh3432@naver.com">leesh3432@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
